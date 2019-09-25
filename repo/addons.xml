@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="repository.yellowdragon.libreelec.kodi" name="LibreELEC Kodi Yellow Dragon Repository" version="9.0" provider-name="YLLOW_DRAGON">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="LibreELEC Kodi Yellow Dragon Repository">
+        <info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.0/repo/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.0/repo/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.0/repo/</datadir>
+        <hashes>false</hashes>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">YLLOW_DRAGON addons repository for LibreELEC</summary>
+        <summary lang="ru">Репозиторий плагинов YLLOW_DRAGON для LibreELEC</summary>
+        <description  lang="en">Download and install YLLOW_DRAGON addons repository.</description>
+        <description  lang="ru">Загружайте и устанавливайте плагины из репозитория YLLOW_DRAGON.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+        <news></news>
+    </extension>
+</addon>
+</addons>
