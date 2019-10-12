@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="visualization.projectm" version="2.2.0.6" name="projectM" provider-name="Team Kodi">
+<addon id="visualization.projectm" version="2.3.2.6" name="projectM" provider-name="Team Kodi">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.visualization" version="2.0.1"/>
   </requires>
-  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.2.2.0">
+  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.2.3.2">
     <settings>
       <userdirs>
         <userdir path="special://profile/addon_data/visualization.projectm"/>
@@ -205,6 +205,8 @@ projectM 所要求的仅是一块有 3D 加速功能的显卡和你喜爱的音�
 projectM視覺效果是用OpenGL按照LGPL協議對Milkdrop的重新實現
 projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛的音樂。</description>
     <platform/>
+    <license>GPL-2.0</license>
+    <source>https://github.com/xbmc/visualization.projectm</source>
     <assets>
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
