@@ -166,7 +166,7 @@
   </extension>
 </addon>
 
-<addon id="imagedecoder.raw" version="2.0.1.6" name="libraw image decoder" provider-name="spiff">
+<addon id="imagedecoder.raw" version="2.0.1.2" name="libraw image decoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.imagedecoder" version="2.0.0"/>
@@ -372,7 +372,7 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Leia/RE
   </extension>
 </addon>
 
-<addon id="inputstream.rtmp" version="2.0.5.6" name="RTMP Input" provider-name="spiff">
+<addon id="inputstream.rtmp" version="2.0.5.2" name="RTMP Input" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.inputstream" version="2.0.8"/>
@@ -385,14 +385,14 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Leia/RE
   </extension>
 </addon>
 
-<addon id="repository.yellowdragon.libreelec.kodi" name="LibreELEC Kodi Yellow Dragon Repository" version="9.1" provider-name="YLLOW_DRAGON">
+<addon id="repository.yellowdragon.libreelec.kodi" name="LibreELEC Kodi Yellow Dragon Repository" version="9.2.0" provider-name="YLLOW_DRAGON">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
     <extension point="xbmc.addon.repository" name="LibreELEC Kodi Yellow Dragon Repository">
-        <info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.1/repo/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.1/repo/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.1/repo/</datadir>
+        <info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.2.0/repo/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.2.0/repo/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/9.2.0/repo/</datadir>
         <hashes>false</hashes>
     </extension>
     <extension point="xbmc.addon.metadata">
