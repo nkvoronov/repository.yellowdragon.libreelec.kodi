@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="audioencoder.flac" version="2.0.2.6" name="Flac Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.flac" version="2.0.4.6" name="Flac Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.audioencoder" version="2.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.2.0.2"/>
+  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.2.0.4"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">FLAC (Free Lossless Audio Codec) Encoder</summary>
     <description lang="en">FLAC stands for Free Lossless Audio Codec, an audio format similar to MP3, but lossless, meaning that audio is compressed in FLAC without any loss in quality. This is similar to how Zip works, except with FLAC you will get much better compression because it is designed specifically for audio, and you can play back compressed FLAC files in your favorite player (or your car or home stereo, see supported devices) just like you would an MP3 file.
