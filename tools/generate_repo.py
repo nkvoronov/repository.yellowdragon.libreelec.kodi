@@ -71,7 +71,7 @@ class Generator:
         os.system('git pull')
 
         # current revision + 1
-        if os.path.isfile( self.rev_path ): 
+        if os.path.isfile( self.rev_path ):
             self.revision = int(open(self.rev_path, "r").read()) + 1
         else:
             self.revision = 1
@@ -121,8 +121,10 @@ class Generator:
         author=self.config.get('addon', 'author')
         summary_en=self.config.get('addon', 'summary_en')
         summary_ru=self.config.get('addon', 'summary_ru')
+        summary_ua=self.config.get('addon', 'summary_ua')
         description_en=self.config.get('addon', 'description_en')
         description_ru=self.config.get('addon', 'description_ru')
+        description_ua=self.config.get('addon', 'description_ua')
         news=self.config.get('addon', 'news')
         branch=self.config.get('locations', 'branch')
         url=self.config.get('locations', 'url')
@@ -145,8 +147,10 @@ class Generator:
             author=author,
             summary_en=summary_en,
             summary_ru=summary_ru,
+            summary_ua=summary_ua,
             description_en=description_en,
             description_ru=description_ru,
+            description_ua=description_ua,
             news=news,
             branch=branch,
             url=url,
