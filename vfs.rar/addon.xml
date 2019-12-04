@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="vfs.rar" version="2.0.7.6" name="RAR archive support" provider-name="spiff">
+<addon id="vfs.rar" version="2.0.7.2" name="RAR archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.global.general" version="1.0.3"/>

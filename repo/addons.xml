@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="vfs.sftp" version="1.0.2.6" name="SFTP support" provider-name="spiff">
+<addon id="vfs.sftp" version="1.0.3.1" name="SFTP support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.global.general" version="1.0.3"/>
     <import addon="kodi.binary.instance.vfs" version="2.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.1.0.2"/>
+  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.1.0.3"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">SFTP support</summary>
     <description lang="en">SFTP support</description>
@@ -27,7 +27,7 @@
   </extension>
 </addon>
 
-<addon id="vfs.libarchive" version="1.0.5.6" name="Archive support" provider-name="spiff">
+<addon id="vfs.libarchive" version="1.0.5.2" name="Archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.global.general" version="1.0.3"/>
@@ -207,12 +207,12 @@ FLAC stands out as the fastest and most widely supported lossless audio codec, a
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="3.8.7.6" name="PVR IPTV Simple Client" provider-name="nightik">
+<addon id="pvr.iptvsimple" version="3.8.8.6" name="PVR IPTV Simple Client" provider-name="nightik">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.pvr" version="5.10.3"/>
   </requires>
-  <extension point="xbmc.pvrclient" library_linux="pvr.iptvsimple.so.3.8.7"/>
+  <extension point="xbmc.pvrclient" library_linux="pvr.iptvsimple.so.3.8.8"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">Kodi PVR byvoegsel vir IPTV ondersteuning. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.
@@ -372,12 +372,12 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Leia/RE
   </extension>
 </addon>
 
-<addon id="inputstream.rtmp" version="2.0.5.2" name="RTMP Input" provider-name="spiff">
+<addon id="inputstream.rtmp" version="2.0.6.1" name="RTMP Input" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.inputstream" version="2.0.8"/>
   </requires>
-  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" library_linux="inputstream.rtmp.so.2.0.5"/>
+  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" library_linux="inputstream.rtmp.so.2.0.6"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">InputStream Client for RTMP streams</summary>
     <description lang="en">InputStream Client for RTMP streams using librtmp</description>
@@ -649,7 +649,7 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
   </extension>
 </addon>
 
-<addon id="vfs.rar" version="2.0.7.6" name="RAR archive support" provider-name="spiff">
+<addon id="vfs.rar" version="2.0.7.2" name="RAR archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.global.general" version="1.0.3"/>
