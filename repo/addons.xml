@@ -14,16 +14,21 @@
   </extension>
 </addon>
 
-<addon id="audioencoder.wav" version="2.0.2.6" name="Wav Audio Encoder" provider-name="jmarshall">
+<addon id="audioencoder.wav" version="2.0.3.6" name="Wav Audio Encoder" provider-name="jmarshall">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.audioencoder" version="2.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.2.0.2"/>
+  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.2.0.3"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Waveform Audio File Format Encoder</summary>
     <description lang="en">WAV (Waveform Audio Format) is an uncompressed sound format.</description>
     <platform/>
+    <license>GPL-2.0</license>
+    <source>https://github.com/xbmc/audioencoder.wav</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -179,31 +184,41 @@
   </extension>
 </addon>
 
-<addon id="audioencoder.lame" version="2.0.3.6" name="Lame MP3 Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.lame" version="2.0.4.6" name="Lame MP3 Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.audioencoder" version="2.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.2.0.3"/>
+  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.2.0.4"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">LAME is a high quality MPEG Audio Layer III (MP3)</summary>
     <description lang="en">It use LAME, the high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.</description>
     <platform/>
+    <license>GPL-2.0</license>
+    <source>https://github.com/xbmc/audioencoder.lame</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
-<addon id="audioencoder.flac" version="2.0.5.6" name="Flac Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.flac" version="2.0.6.6" name="Flac Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.audioencoder" version="2.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.2.0.5"/>
+  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.2.0.6"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">FLAC (Free Lossless Audio Codec) Encoder</summary>
     <description lang="en">FLAC stands for Free Lossless Audio Codec, an audio format similar to MP3, but lossless, meaning that audio is compressed in FLAC without any loss in quality. This is similar to how Zip works, except with FLAC you will get much better compression because it is designed specifically for audio, and you can play back compressed FLAC files in your favorite player (or your car or home stereo, see supported devices) just like you would an MP3 file.
 
 FLAC stands out as the fastest and most widely supported lossless audio codec, and the only one that at once is non-proprietary, is unencumbered by patents, has an open-source reference implementation, has a well documented format and API, and has several other independent implementations.</description>
     <platform/>
+    <license>GPL-2.0</license>
+    <source>https://github.com/xbmc/audioencoder.flac</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -630,16 +645,21 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
   </extension>
 </addon>
 
-<addon id="audioencoder.vorbis" version="2.0.3.6" name="Vorbis Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.vorbis" version="2.0.4.6" name="Vorbis Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.audioencoder" version="2.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.2.0.3"/>
+  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.2.0.4"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Vorbis audio compression</summary>
     <description lang="en">Vorbis is a general purpose perceptual audio CODEC intended to allow maximum encoder flexibility, thus allowing it to scale competitively over an exceptionally wide range of bitrates.</description>
     <platform/>
+    <license>GPL-2.0</license>
+    <source>https://github.com/xbmc/audioencoder.vorbis</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
