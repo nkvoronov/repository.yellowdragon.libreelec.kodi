@@ -222,12 +222,12 @@ FLAC stands out as the fastest and most widely supported lossless audio codec, a
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="3.8.8.6" name="PVR IPTV Simple Client" provider-name="nightik">
+<addon id="pvr.iptvsimple" version="3.9.8.6" name="PVR IPTV Simple Client" provider-name="nightik">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.pvr" version="5.10.3"/>
   </requires>
-  <extension point="xbmc.pvrclient" library_linux="pvr.iptvsimple.so.3.8.8"/>
+  <extension point="xbmc.pvrclient" library_linux="pvr.iptvsimple.so.3.9.8"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">Kodi PVR byvoegsel vir IPTV ondersteuning. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.
@@ -426,12 +426,12 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Leia/RE
 	</extension>
 </addon>
 
-<addon id="visualization.projectm" version="2.3.4.6" name="projectM" provider-name="Team Kodi">
+<addon id="visualization.projectm" version="2.3.5.6" name="projectM" provider-name="Team Kodi">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.visualization" version="2.0.1"/>
   </requires>
-  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.2.3.4"/>
+  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.2.3.5"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">projectM vat jou op 'n vlug deur die klankgolwe wat jy hoor</summary>
     <summary lang="ar_SA">مشروع M يجعلك تطير بين موحات الصوت التي تسمعها</summary>
