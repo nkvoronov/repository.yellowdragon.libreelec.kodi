@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="vfs.sftp" version="1.0.5.1" name="SFTP support" provider-name="spiff">
+<addon id="vfs.sftp" version="1.0.6.1" name="SFTP support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.global.general" version="1.0.3"/>
     <import addon="kodi.binary.instance.vfs" version="2.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.1.0.5"/>
+  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.1.0.6"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">SSH File Transfer Protocol support</summary>
-    <description lang="en">The SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
+    <summary lang="en_GB">SSH File Transfer Protocol support</summary>
+    <description lang="en_GB">The SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
 
 This addon allows file access to data in it.</description>
     <platform/>
-    <license>GPL-2.0</license>
+    <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/vfs.sftp</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -36,23 +39,23 @@ This addon allows file access to data in it.</description>
   </extension>
 </addon>
 
-<addon id="vfs.libarchive" version="1.0.6.1" name="Archive support" provider-name="spiff">
+<addon id="vfs.libarchive" version="1.0.7.1" name="Archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.global.general" version="1.0.3"/>
     <import addon="kodi.binary.global.filesystem" version="1.0.2"/>
     <import addon="kodi.binary.instance.vfs" version="2.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="archive|rar" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.rar|.tgz|.tbz2|.gz|.bz2|.xz|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.1.0.6"/>
+  <extension point="kodi.vfs" protocols="archive|rar" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.rar|.tgz|.tbz2|.gz|.bz2|.xz|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.1.0.7"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Multi-format archive and compression addon</summary>
-    <description lang="en">This add-on uses the libarchive library to read a variety of archive and compression formats.
+    <summary lang="en_GB">Multi-format archive and compression addon</summary>
+    <description lang="en_GB">This add-on uses the libarchive library to read a variety of archive and compression formats.
 
 Supported formats are:
 7z, tar.gz, tar.bz2, tar.xz, zip, rar, tgz, tbz2, gz, bz2, xz, cbr
 </description>
     <platform/>
-    <license>GPL-2.0</license>
+    <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/vfs.libarchive</source>
     <assets>
       <icon>resources/icon.png</icon>
@@ -184,6 +187,24 @@ Supported formats are:
   </extension>
 </addon>
 
+<addon id="imagedecoder.mpo" version="1.1.0.1" name="MPO image decoder" provider-name="spiff">
+  <requires>
+    <import addon="kodi.binary.global.main" version="1.0.14"/>
+    <import addon="kodi.binary.instance.imagedecoder" version="2.0.0"/>
+  </requires>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.mpo.so.1.1.0" extension=".mpo" mimetype="image/mpo"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Multi Picture Object (MPO) image decoder</summary>
+    <description>An addon to decode MPO (multiple picture object) files. These are used mainly for 3D cameras and the Nintendo 3DS.</description>
+    <platform/>
+    <license>GPL-2.0+</license>
+    <source>https://github.com/xbmc/imagedecoder.mpo</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="imagedecoder.raw" version="2.0.1.2" name="libraw image decoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
@@ -212,6 +233,83 @@ Supported formats are:
     <assets>
       <icon>icon.png</icon>
     </assets>
+  </extension>
+</addon>
+
+<addon id="imagedecoder.heif" version="1.1.0.1" name="HEIF image decoder" provider-name="spiff">
+  <requires>
+    <import addon="kodi.binary.global.main" version="1.0.14"/>
+    <import addon="kodi.binary.instance.imagedecoder" version="2.0.0"/>
+  </requires>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.heif.so.1.1.0" extension=".heif|.heic" mimetype="image/heif|image/heic"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>HEIF file format decoder</summary>
+    <description>High Efficiency Image File Format (HEIF) is a file format employing HEVC (h.265) image coding for the best compression ratios currently possible.
+
+Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</description>
+    <platform/>
+    <license>GPL-2.0</license>
+    <source>https://github.com/xbmc/imagedecoder.heif</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="inputstream.adaptive" version="2.4.3.1" name="InputStream Adaptive" provider-name="peak3d">
+  <requires>
+    <import addon="kodi.binary.global.main" version="1.0.14"/>
+    <import addon="kodi.binary.global.general" version="1.0.3"/>
+    <import addon="kodi.binary.global.filesystem" version="1.0.2"/>
+    <import addon="kodi.binary.instance.inputstream" version="2.0.8"/>
+    <import addon="kodi.binary.instance.videocodec" version="1.0.1"/>
+  </requires>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|media_renewal_url|media_renewal_time|max_bandwidth|play_timeshift_buffer" library_linux="inputstream.adaptive.so.2.4.3"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">InputStream client for adaptive streams</summary>
+    <description lang="en">InputStream client for adaptive streams</description>
+    <platform/>
+    <news>
+v2.4.3 (2020-02-25)
+- Backport of Matrix features (v2.5.0 upwards)
+
+v2.4.2 (2019-09-02)
+- Fix versioning
+
+v2.3.22 (2019-06-14)
+- Bento4: sample duration workaround (24/1)
+- WVDecrypter: remove sleep between decrypt calls
+
+v2.3.21 (2019-06-07)
+- [DASH] initialize segment::range_begin_ for URL segments (youtube)
+
+v2.3.20 (2019-06-07)
+- Fix parsing PR ContentProtection KID
+
+v2.3.19 (2019-06-02)
+- [widevine] remove API 8 / Add API 11
+- [TS] Signal configuration change if extra-data has changed
+- [DASH] Use PlayReady WRMHEADER to retrieve DefaultKID
+- [DASH] Allow URL_SEGMENTS + Range-Bytes
+
+v2.3.18 (2019-05-11)
+- align settings with internal resolution check
+- [HLS] support single playlists
+
+v2.3.17 (2019-04-16)
+- Fix KID's with 0 char inside
+
+v2.3.16 (2019-03-25)
+- TTML parser fix
+- [HLS] Add HEVC streams / Fix extra_data_size in ts parser
+- [HLS] effective URL for license
+
+v2.3.15 (2019-02-11)
+- Fix windows build
+
+v2.3.14 (2019-02-10)
+- Add WebM container parser
+	</news>
   </extension>
 </addon>
 
@@ -684,23 +782,32 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
   </extension>
 </addon>
 
-<addon id="vfs.rar" version="2.0.8.1" name="RAR archive support" provider-name="spiff">
+<addon id="vfs.rar" version="2.3.1.1" name="RAR archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.global.general" version="1.0.3"/>
+    <import addon="kodi.binary.global.gui" version="5.12.0"/>
+    <import addon="kodi.binary.global.filesystem" version="1.0.2"/>
     <import addon="kodi.binary.instance.vfs" version="2.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.2.0.8"/>
+  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.2.3.1"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Unarchiver for .rar files</summary>
-    <description lang="en">This addon is an extraction utility for RAR archives.
+    <summary lang="de_DE">Entpacker für .rar Dateien</summary>
+    <summary lang="en_GB">Unarchiver for .rar files</summary>
+    <description lang="de_DE">Dieses Addon dient zum entpacken von RAR-Archiven.
+
+Es ermöglicht das direkte Lesen nicht komprimierter RAR-Dateien, sodass ein vorheriges Entpacken nicht erforderlich ist. Bei allen anderen Typen wird es vorübergehend entpackt und an Kodi übertragen.
+
+Achtung: Der Archivtyp "Solid RAR" erfordert ein vollständiges Entpacken, um die darin enthaltenen Dateien zu verwenden. Daher können die Zugriffszeiten für größere Pakete länger dauern.</description>
+    <description lang="en_GB">This addon is an extraction utility for RAR archives.
 
 It allows direct reading of uncompressed RAR files, so prior unpacking is not necessary. For all other types, it is temporarily unpacked and passed to Kodi.
 
-Attention: A "Solid RAR" archive type requires complete unpacking to use files within it. Hence access times may be long for larger packages.
-</description>
+Attention: A "Solid RAR" archive type requires complete unpacking to use files within it. Hence access times may be long for larger packages.</description>
+    <disclaimer lang="de_DE">Diese Version erfordert mindestens Kodi Leia 18.6; Bitte verwenden Sie 2.0.8 für frühere Leia-Versionen</disclaimer>
+    <disclaimer lang="en_GB">This version requires at least Kodi Leia 18.6; please use 2.0.8 for earlier Leia versions</disclaimer>
     <platform/>
-    <license>GPL-2.0</license>
+    <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/vfs.rar</source>
     <assets>
       <icon>resources/icon.png</icon>
