@@ -227,12 +227,12 @@ Supported formats are:
   </extension>
 </addon>
 
-<addon id="audioencoder.lame" version="2.0.4.6" name="Lame MP3 Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.lame" version="2.0.5.7" name="Lame MP3 Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.audioencoder" version="2.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.2.0.4"/>
+  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.2.0.5"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">LAME is a high quality MPEG Audio Layer III (MP3)</summary>
     <description lang="en">It use LAME, the high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.</description>
@@ -353,12 +353,12 @@ FLAC stands out as the fastest and most widely supported lossless audio codec, a
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="3.10.0.6" name="PVR IPTV Simple Client" provider-name="nightik">
+<addon id="pvr.iptvsimple" version="3.10.1.7" name="PVR IPTV Simple Client" provider-name="nightik">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
     <import addon="kodi.binary.instance.pvr" version="5.10.3"/>
   </requires>
-  <extension point="xbmc.pvrclient" library_linux="pvr.iptvsimple.so.3.10.0"/>
+  <extension point="xbmc.pvrclient" library_linux="pvr.iptvsimple.so.3.10.1"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">Kodi PVR byvoegsel vir IPTV ondersteuning. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.
