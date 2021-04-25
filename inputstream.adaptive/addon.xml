@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="inputstream.adaptive" version="2.6.8.3" name="InputStream Adaptive" provider-name="peak3d">
+<addon id="inputstream.adaptive" version="2.6.13.1" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -8,7 +8,7 @@
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
   </requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|media_renewal_url|media_renewal_time|max_bandwidth|play_timeshift_buffer" library_linux="inputstream.adaptive.so.2.6.8"/>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|media_renewal_url|media_renewal_time|max_bandwidth|play_timeshift_buffer" library_linux="inputstream.adaptive.so.2.6.13"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
@@ -16,6 +16,26 @@
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
     <platform/>
     <news>
+v2.6.13 (2021-04-10)
+- Fix Debian packaging
+
+v2.6.12 (2021-04-09)
+- Remove Android specific decrypter search paths
+- Move Android addon to binary addons repo
+
+v2.6.11 (2021-04-08)
+- Fix ampersand in changelog causing issues from v2.6.9 and v2.6.10
+
+v2.6.10 (2021-04-08)
+- Fix release build
+
+v2.6.9 (2021-04-08)
+- Fix MPD Timing (remove publishTime and presentationTimeOffset)
+- [Dash] Correctly set timeshift_buffer (live)
+- [Dash] Support fpsScale in AdaptationSets
+- [Dash] Fix missing audio languages
+- [DASH] Support ec-3 channel count (urn:mpeg:mpegB:cicp:ChannelConfiguration)
+
 v2.6.8 (2021-03-26)
 - [Dash] Append / to baseurl if required
 - Fix Base Domain (fixes uri=/path/)

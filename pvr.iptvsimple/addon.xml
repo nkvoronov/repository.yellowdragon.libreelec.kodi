@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="pvr.iptvsimple" version="7.5.1.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
+<addon id="pvr.iptvsimple" version="7.6.1.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -10,7 +10,7 @@
     <import addon="inputstream.adaptive" minversion="2.6.6"/>
     <import addon="inputstream.rtmp" minversion="3.4.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.7.5.1"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.7.6.1"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">Kodi PVR byvoegsel vir IPTV ondersteuning. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.
@@ -174,6 +174,17 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
       <icon>icon.png</icon>
     </assets>
     <news>
+v7.6.1
+- Fixed: Allow ignoring M3U logos when using local logo path
+
+v7.6.0
+- Added: Support url-tvg in M3U header in addition to x-tvg-url
+- Added: Add support for XZ compression of XMLTV data
+- Fixed: Allow flusonnic channel ids containing forward slashes
+- Fixed: Disable other catchup settings if catched is not enabled
+- Added: Add setting for catchup correction
+- Added: Support xeev XC catchup prefixes
+
 v7.5.1
 - Fixed: Treat 'tvg-rec' catchup tag like the siptv 'timeshift' tag
 - Fixed: Ensure channel's catchup window is used instead of value from settings

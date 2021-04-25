@@ -30,7 +30,7 @@ msgstr ""
 #. label-option: General - logoPathType
 #. label-option: General - genresPathType
 msgctxt "#30001"
-msgid "Local path (include local network)"
+msgid "Local path (includes local network)"
 msgstr ""
 
 #. label-option: General - m3uPathType
@@ -389,7 +389,12 @@ msgctxt "#30074"
 msgid "Only load Radio channels in groups"
 msgstr ""
 
-#empty strings from id 30075 to 30099
+#. help: Channel Logos - useLogosLocalPathOnly
+msgctxt "#30075"
+msgid "For local logos path ignore M3U logos"
+msgstr ""
+
+#empty strings from id 30076 to 30099
 
 #. label-category: catchup
 #. label-group: Catchup - Catchup
@@ -533,7 +538,12 @@ msgctxt "#30127"
 msgid "Enable timeshift for UDP based streams"
 msgstr ""
 
-#empty strings from id 30128 to 30449
+#. label-option: Catchup - catchupCorrection
+msgctxt "#30128"
+msgid "Catchup correction"
+msgstr ""
+
+#empty strings from id 30129 to 30449
 
 #. label: TV
 msgctxt "#30450"
@@ -707,7 +717,7 @@ msgstr ""
 
 #. help: EPG Settings - epgTimeShift
 msgctxt "#30625"
-msgid "Adjust the EPG times by this value in minutes, range is from -720 mins to +840 mins (- 12 hours to +14 hours)."
+msgid "Adjust the EPG times by this value, from -12 hours to +14 hours."
 msgstr ""
 
 #. help: EPG Settings - epgTSOverside
@@ -744,7 +754,12 @@ msgctxt "#30644"
 msgid "Preference on how to handle channel logos. The options are: [B]Ignore[/B] - Don't use channel logos from an XMLTV file; [B]Prefer M3U[/B] - Use the channel logo from the M3U if available otherwise use the XMLTV logo; [B]Prefer XMLTV[/B] - Use the channel logo from the XMLTV file if available otherwise use the M3U logo."
 msgstr ""
 
-#empty strings from id 30645 to 30659
+#. help: Channel Logos - useLogosLocalPathOnly
+msgctxt "#30645"
+msgid "If a local path is selected for logos ignore any logos from the M3U file."
+msgstr ""
+
+#empty strings from id 30646 to 30659
 
 #. help info - Genres
 
@@ -876,7 +891,12 @@ msgctxt "#30709"
 msgid "Set the scope for overriding the catchup mode. Options are: [B]without catchup mode[/B] - Only include channels with no catchup mode set (except legacy SIP [I]timeshift[/I] catchup mode); [B]with catchup mode[/B] - Only include channels with catchup mode set (ignore those without a catchup mode); [B]with and without catchup mode (all channels)[/B] - Include all channels ignoring any catchup mode from the M3U."
 msgstr ""
 
-#empty strings from id 30710 to 307019
+#. help: Catchup - catchupCorrection
+msgctxt "#30710"
+msgid "Adjust the time used for catchup stream URL generation by this value, from -12 hours to +14 hours. Useful for catchup streams which are geo mis-matched to the wrong time. Note that this value can be overridden by values in the M3U file."
+msgstr ""
+
+#empty strings from id 30711 to 307019
 
 #. help info - Timeshift
 
