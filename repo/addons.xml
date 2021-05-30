@@ -268,12 +268,12 @@ Supported formats are:
   </extension>
 </addon>
 
-<addon id="imagedecoder.heif" version="1.3.0.4" name="HEIF image decoder" provider-name="spiff">
+<addon id="imagedecoder.heif" version="1.4.0.1" name="HEIF image decoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
   </requires>
-  <extension point="kodi.imagedecoder" library_linux="imagedecoder.heif.so.1.3.0" extension=".heif|.heic" mimetype="image/heif|image/heic"/>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.heif.so.1.4.0" extension=".heif|.heic" mimetype="image/heif|image/heic"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">HEIF file format decoder</summary>
     <description lang="en_GB">High Efficiency Image File Format (HEIF) is a file format employing HEVC (h.265) image coding for the best compression ratios currently possible.
@@ -288,7 +288,7 @@ Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</descri
   </extension>
 </addon>
 
-<addon id="inputstream.adaptive" version="2.6.13.1" name="InputStream Adaptive" provider-name="peak3d">
+<addon id="inputstream.adaptive" version="2.6.14.1" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -297,7 +297,7 @@ Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</descri
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
   </requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|media_renewal_url|media_renewal_time|max_bandwidth|play_timeshift_buffer" library_linux="inputstream.adaptive.so.2.6.13"/>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|media_renewal_url|media_renewal_time|max_bandwidth|play_timeshift_buffer" library_linux="inputstream.adaptive.so.2.6.14"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
@@ -305,6 +305,15 @@ Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</descri
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
     <platform/>
     <news>
+v2.6.14 (2021-04-22)
+- Don't overwrite manifest headers with stream headers
+- Stream headers default to manifest headers
+- ac3 is recognised separately to eac3
+- [DASH] time and number placeholders can be used simultaneously
+- [DASH] manifest_update_parameter property defaults to 'full' for SegmentTimeline
+- [DASH] pssh attribute in ContentProtection tag allowed without cenc namespace
+- [DASH] support ttml subs where codec isn't specified
+
 v2.6.13 (2021-04-10)
 - Fix Debian packaging
 
@@ -467,7 +476,7 @@ FLAC stands out as the fastest and most widely supported lossless audio codec, a
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="7.6.1.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
+<addon id="pvr.iptvsimple" version="7.6.5.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -478,7 +487,7 @@ FLAC stands out as the fastest and most widely supported lossless audio codec, a
     <import addon="inputstream.adaptive" minversion="2.6.6"/>
     <import addon="inputstream.rtmp" minversion="3.4.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.7.6.1"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.7.6.5"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">Kodi PVR byvoegsel vir IPTV ondersteuning. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.
@@ -642,6 +651,20 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
       <icon>icon.png</icon>
     </assets>
     <news>
+v7.6.5
+- Fixed: Allow embedded commas in channel name in M3U
+
+v7.6.4
+- Fixed: Only use Local logo location if file is relative
+- Fixed: Add string initialisation from macros as some linux fail to compile without it
+
+v7.6.3
+- Skipped
+
+v7.6.2
+- Fixed: Allow catchup correction (timezone shift) when live URLs have catchup placeholders
+- Fixed: Always load EPG data if we prefer XMLTV logos or catchup is enabled
+
 v7.6.1
 - Fixed: Allow ignoring M3U logos when using local logo path
 

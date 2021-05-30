@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="inputstream.adaptive" version="2.6.13.1" name="InputStream Adaptive" provider-name="peak3d">
+<addon id="inputstream.adaptive" version="2.6.14.1" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -8,7 +8,7 @@
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
   </requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|media_renewal_url|media_renewal_time|max_bandwidth|play_timeshift_buffer" library_linux="inputstream.adaptive.so.2.6.13"/>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|media_renewal_url|media_renewal_time|max_bandwidth|play_timeshift_buffer" library_linux="inputstream.adaptive.so.2.6.14"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
@@ -16,6 +16,15 @@
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
     <platform/>
     <news>
+v2.6.14 (2021-04-22)
+- Don't overwrite manifest headers with stream headers
+- Stream headers default to manifest headers
+- ac3 is recognised separately to eac3
+- [DASH] time and number placeholders can be used simultaneously
+- [DASH] manifest_update_parameter property defaults to 'full' for SegmentTimeline
+- [DASH] pssh attribute in ContentProtection tag allowed without cenc namespace
+- [DASH] support ttml subs where codec isn't specified
+
 v2.6.13 (2021-04-10)
 - Fix Debian packaging
 
