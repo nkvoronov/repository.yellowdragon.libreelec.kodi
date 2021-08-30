@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="imagedecoder.raw" version="3.0.1.4" name="libraw image decoder" provider-name="spiff">
+<addon id="imagedecoder.raw" version="3.0.1.5" name="libraw image decoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
