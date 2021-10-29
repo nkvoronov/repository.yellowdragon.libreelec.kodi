@@ -5,16 +5,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
-"Language-Team: Tamil (India) (http://www.transifex.com/projects/p/xbmc-main/language/ta_IN/)\n"
+"PO-Revision-Date: 2021-07-31 16:04+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"Language-Team: Tamil (India) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/visualization-projectm/ta_in/>\n"
+"Language: ta_in\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ta_IN\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7.2\n"
+
+msgctxt "Addon Summary"
+msgid "projectM takes you flying through the soundwaves you're hearing"
+msgstr "projectM நீங்கள் கேட்கும் ஒலி அலைகளின் வடிவங்களின் மூலம் பறக்க செய்யும்"
+
+msgctxt "Addon Description"
+msgid "projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&#10;projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL&#10;All projectM requires is a video card with 3D acceleration and your favourite music."
+msgstr "projectM ஒரு அற்புதமான இசை விசுவலைஸர் ஆகும். யூனிக்ஸ் உலகில் இதைவிட சிறந்தது இல்லை. projectM உடைய சிறப்புத்தன்மை கடினமான சமூகத்தின் உழைப்பில் இருந்து வருகிறது. உங்களை போன்ற பயனர்களாலும் நம்பமுடியாத இசை முன்னமைவுகளை உருவாக்க முடியும். முயற்சித்துபாரும்!⏎ projectM காட்சியாக்கம் OpenGL கீழ் Milkdrop உடைய மறு தயாரிப்பாக உள்ளது⏎ projectM க்கு தேவைப்படுவதெல்லாம் ஒரு 3D முடுக்கம் அட்டை மற்றும் உங்களுக்கு பிடித்த இசை."
 
 msgctxt "#30000"
 msgid "Render Quality"
@@ -67,6 +76,55 @@ msgstr "பயனர் வரையறுக்கப்பட்ட முன�
 msgctxt "#30012"
 msgid "User Preset Folder"
 msgstr "பயனர் முன்னமைவு கோப்புறை"
+
+msgctxt "#30013"
+msgid "General"
+msgstr ""
+
+# empty strings from id 30013 to 30019
+msgctxt "#30020"
+msgid "bltc201"
+msgstr ""
+
+msgctxt "#30021"
+msgid "Milkdrop"
+msgstr ""
+
+msgctxt "#30022"
+msgid "Milkdrop 1.04"
+msgstr ""
+
+msgctxt "#30023"
+msgid "Milkdrop 2.00"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Mischa's Collection"
+msgstr ""
+
+msgctxt "#30025"
+msgid "projectM"
+msgstr ""
+
+msgctxt "#30026"
+msgid "Stock"
+msgstr ""
+
+msgctxt "#30027"
+msgid "Tryptonaut"
+msgstr ""
+
+msgctxt "#30028"
+msgid "Yin"
+msgstr ""
+
+msgctxt "#30029"
+msgid "Tests"
+msgstr ""
+
+msgctxt "#30030"
+msgid "Eyetune"
+msgstr ""
 
 msgctxt "#30050"
 msgid "{0:d} sec"

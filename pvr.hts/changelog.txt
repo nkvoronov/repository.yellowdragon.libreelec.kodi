@@ -1,3 +1,14 @@
+v19.0.2
+- Translations updates from Weblate
+	- da_dk
+
+v19.0.1
+- Fix AAC RDS parser
+
+v19.0.0
+- Translations updates from Weblate
+- Version numbering scheme change.
+
 v8.4.0
 - Add support for RDS data contained in AAC streams.
 - Translations updates from Weblate

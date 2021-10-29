@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="vfs.sftp" version="2.0.0.4" name="SFTP support" provider-name="spiff">
+<addon id="vfs.sftp" version="19.0.0.4" name="SFTP support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
     <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.2.0.0"/>
+  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Unterstützung für SSH File Transfer Protocol</summary>
-    <summary lang="en_GB">SSH File Transfer Protocol support</summary>
-    <description lang="de_DE">Das SSH File Transfer Protocol (auch Secure File Transfer Protocol oder SFTP) ist ein Netzwerkprotokoll, das Dateizugriff, Dateiübertragung und Dateiverwaltung über jeden zuverlässigen Datenstrom ermöglicht.
-
-Dieses Addon ermöglicht den Dateizugriff auf darin enthaltene Daten.</description>
-    <description lang="en_GB">The SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
-
-This addon allows file access to data in it.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/vfs.sftp</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="de_DE">Unterstützung für SSH File Transfer Protocol</summary>
+    <summary lang="en_GB">SSH File Transfer Protocol support</summary>
+    <description lang="de_DE">Das SSH File Transfer Protocol (auch Secure File Transfer Protocol oder SFTP) ist ein Netzwerkprotokoll, das Dateizugriff, Dateiübertragung und Dateiverwaltung über jeden zuverlässigen Datenstrom ermöglicht.[CR][CR]Dieses Addon ermöglicht den Dateizugriff auf darin enthaltene Daten.</description>
+    <description lang="en_GB">The SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.[CR][CR]This addon allows file access to data in it.</description>
   </extension>
 </addon>
 
-<addon id="audioencoder.wav" version="3.0.0.4" name="Wav Audio Encoder" provider-name="jmarshall">
+<addon id="audioencoder.wav" version="19.0.0.4" name="Wav Audio Encoder" provider-name="jmarshall">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.3.0.0"/>
+  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Waveform Audio File Format Encoder</summary>
-    <summary lang="en_GB">Waveform Audio File Format Encoder</summary>
-    <description lang="de_DE">WAV (Waveform Audio Format) ist ein unkomprimiertes Klangformat.</description>
-    <description lang="en_GB">WAV (Waveform Audio Format) is an uncompressed sound format.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/audioencoder.wav</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="de_DE">Waveform Audio File Format Encoder</summary>
+    <summary lang="en_GB">Waveform Audio File Format Encoder</summary>
+    <description lang="de_DE">WAV (Waveform Audio Format) ist ein unkomprimiertes Klangformat.</description>
+    <description lang="en_GB">WAV (Waveform Audio Format) is an uncompressed sound format.</description>
   </extension>
 </addon>
 
-<addon id="vfs.libarchive" version="2.0.1.1" name="Archive support" provider-name="spiff">
+<addon id="vfs.libarchive" version="19.0.0.1" name="Archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -54,28 +50,36 @@ This addon allows file access to data in it.</description>
   </requires>
   <!-- Note: .rar is partially supported by this addon, but since the other
              addon vfs.rar also supports it, support is removed here. -->
-  <extension point="kodi.vfs" protocols="archive" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.tgz|.tbz2|.gz|.bz2|.xz|.tar" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.2.0.1"/>
+  <extension point="kodi.vfs" protocols="archive" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.tgz|.tbz2|.gz|.bz2|.xz|.tar" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Addon zur Verarbeitung mehrerer Archivformate</summary>
-    <summary lang="en_GB">Multi-format archive and compression addon</summary>
-    <description lang="de_DE">Dieses Add-On verwendet die libarchive Bibliothek, um verschiedene Archiv- und Komprimierungsformate zu verarbeiten.
-
-Unterstützte Formate sind:
-7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
-    <description lang="en_GB">This add-on uses the libarchive library to read a variety of archive and compression formats.
-
-Supported formats are:
-7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/vfs.libarchive</source>
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
+    <summary lang="ca_ES">Complement d'arxiu i compressió multi-format</summary>
+    <summary lang="da_DK">Multiformat arkiverings- og komprimerings-add-on</summary>
+    <summary lang="de_DE">Addon zur Verarbeitung mehrerer Archivformate</summary>
+    <summary lang="en_GB">Multi-format archive and compression addon</summary>
+    <summary lang="es_MX">Complemento de compresión y archivado en múltiples formatos</summary>
+    <summary lang="ko_KR">다중 형식 아카이브 및 압축 애드온</summary>
+    <summary lang="pl_PL">Dodatek wieloformatowych archiwów i kompresji</summary>
+    <summary lang="ru_RU">Дополнение для архивирования и сжатия в нескольких форматах</summary>
+    <summary lang="zh_CN">多格式文档和压缩插件</summary>
+    <description lang="ca_ES">Aquest complement utilitza la llibreria libarchive per llegir diversos formats d'arxiu i compressió.[CR][CR]Els formats compatibles són:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
+    <description lang="da_DK">Dette add-on anvender libarchive-biblioteket til at læse en række arkiv- og komprimeringsformater.[CR][CR]Understøttede formater er:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz , tgz, tbz2, xz, zip</description>
+    <description lang="de_DE">Dieses Addon verwendet die Bibliothek libarchive, um verschiedene Archiv- und Komprimierungsformate zu verarbeiten.[CR][CR]Unterstützte Formate sind:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
+    <description lang="en_GB">This add-on uses the libarchive library to read a variety of archive and compression formats.[CR][CR]Supported formats are:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
+    <description lang="es_MX">Este complemento utiliza libarchive para leer una variedad de formatos de archivado y compresión. [CR][CR]Los formatos soportados son:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
+    <description lang="ko_KR">이 추가 기능은 libarchive 라이브러리를 사용하여 다양한 아카이브 및 압축 형식을 읽습니다.[CR][CR]지원되는 형식은 다음과 같습니다.[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz , tgz, tbz2, xz, zip</description>
+    <description lang="pl_PL">Dodatek ten używa biblioteki libarchive do odczytu różnych formatów archiwów i kompresji.[CR][CR]Obsługiwane formaty to:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
+    <description lang="ru_RU">Это дополнение использует библиотеку libarchive для чтения различных форматов архивов и сжатия.[CR][CR]Поддерживаемые форматы:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
+    <description lang="zh_CN">此插件使用 libarchive 库读取各种文档和压缩格式。[CR][CR]支持的格式有：[CR]7z、bz2、gz、tar、tar.bz2、tar.gz、tar.xz、tgz、tbz2、xz、zip</description>
   </extension>
 </addon>
 
-<addon id="pvr.hts" version="8.4.0.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
+<addon id="pvr.hts" version="19.0.2.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -84,7 +88,7 @@ Supported formats are:
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.pvr" minversion="7.1.0" version="7.1.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.8.4.0"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.2"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -94,7 +98,6 @@ Supported formats are:
       <icon>icon.png</icon>
     </assets>
     <summary lang="af_ZA">Kodi se voorprogram vir Tvheadend</summary>
-    <summary lang="be_BY">Kodi's frontend for Tvheadend</summary>
     <summary lang="bg_BG">Клиент за „Tvheadend“</summary>
     <summary lang="ca_ES">Frontal de Kodi per a Tvheadend</summary>
     <summary lang="cs_CZ">Rozhraní Kodi pro Tvheadend</summary>
@@ -124,9 +127,8 @@ Supported formats are:
     <summary lang="ko_KR">Tvheadend 을 위한 Kodi 프론트엔드</summary>
     <summary lang="lt_LT">Kodi naudotojo sąsaja skirta Tvheadend</summary>
     <summary lang="lv_LV">Kodi galasistēma Tvheadend</summary>
-    <summary lang="mk_MK">Kodi's frontend for Tvheadend</summary>
     <summary lang="mn_MN">Tvheadend зориулагдсан Kodi-ийн нүүр</summary>
-    <summary lang="ms_MY">Bahagian hadapan Kodi untuk </summary>
+    <summary lang="ms_MY">Bahagian hadapan Kodi untuk</summary>
     <summary lang="mt_MT">Faċċata ta' Kodi għat- TVheadend</summary>
     <summary lang="nb_NO">Kodis grenseflate for Tvheadend</summary>
     <summary lang="nl_NL">Kodi's frontend voor Tvheadend</summary>
@@ -150,13 +152,12 @@ Supported formats are:
     <summary lang="zh_CN">Kodi 的 Tvheadend 前端</summary>
     <summary lang="zh_TW">Kodi的Tvheadend前端介面</summary>
     <description lang="af_ZA">Tvheadend voorprogram; ondersteun stroom van Lewendige TV &amp; Opnames, EPG, Tydhouers</description>
-    <description lang="be_BY">Tvheadend frontend; supporting streaming of Live TV &amp; Recordings, EPG, Timers</description>
     <description lang="bg_BG">Клиент за „Tvheadend“. Поддържа телевизия на живо, записване, електронен програмен справочник и броячи.</description>
     <description lang="ca_ES">Frontal de Tvheadend; compatible amb la transmissió de TV en directe i enregistraments, guia electrònica de programació (EPG), temporitzadors</description>
     <description lang="cs_CZ">Rozhraní Tvheadend; podporuje streamování živého vysílání a nahrávání, televizní program, časovače.</description>
     <description lang="cy_GB">Blaen Tvheadend: cefnogi ffrydio Teledu Byw a Recordio, Amserlenni, Amseryddion</description>
     <description lang="da_DK">Tvheadend-brugerflade; understøtter streaming af direkte tv og optagelser, EPG og timere</description>
-    <description lang="de_DE">PVR-Client für Tvheadend. Unterstützt TV &amp; Aufnahmen, Programm-Guide (EPG) und Timer.</description>
+    <description lang="de_DE">PVR-Client für Tvheadend. Unterstützt TV, Aufnahmen, Programm-Guide (EPG) und Timer</description>
     <description lang="el_GR">Frontend για το Tvheadend. Υποστηρίζει ροές Live TV &amp; Εγγραφές, EPG, Χρονοδιακόπτες</description>
     <description lang="en_AU">Tvheadend frontend; supporting streaming of Live TV &amp; Recordings, EPG, Timers</description>
     <description lang="en_GB">Tvheadend frontend; supporting streaming of Live TV &amp; Recordings, EPG, Timers</description>
@@ -180,13 +181,12 @@ Supported formats are:
     <description lang="ko_KR">Tvheadend 프론트엔드; TV 시청 &amp; 녹화, EPG, 타이머 지원</description>
     <description lang="lt_LT">Tvheadend naudotojo sąsaja; palaiko televizijos transliacijas ir įrašus, EPG, laikmačius</description>
     <description lang="lv_LV">Tvheadend galasistēma; atbalsta tieštaides TV un ierakstu straumēšanu, EPG, taimerus</description>
-    <description lang="mk_MK">Tvheadend frontend; supporting streaming of Live TV &amp; Recordings, EPG, Timers</description>
     <description lang="mn_MN">Tvheadend нүүр; Live TV &amp; бичлэг дамжуулалт, EPG, Timer</description>
-    <description lang="ms_MY">Bahagian hadapan Tvheadend; menyokong penstriman  Langsung &amp; Rakaman, EPG, Pemasa TV</description>
+    <description lang="ms_MY">Bahagian hadapan Tvheadend; menyokong penstriman Langsung &amp; Rakaman, EPG, Pemasa TV</description>
     <description lang="mt_MT">Faċċata ta' TVheadend; jiflaħ għal streaming ta' TV Lajv u rekordings, EPG, Arloġġi</description>
     <description lang="nb_NO">Tvheadend-grenseflate; støtte for visning av direkte-TV og opptak, EPG, tidsur</description>
     <description lang="nl_NL">Tvheadend frontend. Ondersteuning van streaming, Live-TV &amp; opnames, EPG, Timers</description>
-    <description lang="pl_PL">Klient telewizji dla Tvheadend obsługuje transmisję kanałów radiowych i telewizyjnych, nagrywanie i harmonogram nagrań oraz funkcje przewodnika telewizyjnego.</description>
+    <description lang="pl_PL">Klient telewizji dla Tvheadend obsługuje transmisję kanałów radiowych i telewizyjnych, nagrywanie i harmonogram nagrań oraz funkcje przewodnika telewizyjnego</description>
     <description lang="pt_BR">Tvheadend; suporta streaming de TV Ao Vivo e Gravada, EPG, Agendamentos</description>
     <description lang="pt_PT">Interface Tvheadend. Suporta transmissão e gravação de TV em direto, EPG e temporizadores.</description>
     <description lang="ro_RO">Partea din față pentru Tvheadend; suportă difuzarea în flux a televiziunii în direct și a înregistrăriilor, EPG, Cronometre</description>
@@ -208,87 +208,98 @@ Supported formats are:
   </extension>
 </addon>
 
-<addon id="imagedecoder.mpo" version="2.0.1.4" name="MPO image decoder" provider-name="spiff">
+<addon id="imagedecoder.mpo" version="19.0.0.4" name="MPO image decoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
   </requires>
-  <extension point="kodi.imagedecoder" library_linux="imagedecoder.mpo.so.2.0.1" extension=".mpo" mimetype="image/mpo"/>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.mpo.so.19.0.0" extension=".mpo" mimetype="image/mpo"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Multi Picture Object (MPO) image decoder</summary>
-    <summary lang="de_DE">Multi Picture Object (MPO) Bilddekodierer</summary>
-    <description lang="en_GB">An addon to decode MPO (multiple picture object) files. These are used mainly for 3D cameras and the Nintendo 3DS.</description>
-    <description lang="de_DE">Ein Addon zum Dekodieren von MPO-Dateien (Multiple Picture Object). Diese werden hauptsächlich für 3D-Kameras und den Nintendo 3DS verwendet.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/imagedecoder.mpo</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="de_DE">Multi Picture Object (MPO) Bilddekodierer</summary>
+    <summary lang="en_GB">Multi Picture Object (MPO) image decoder</summary>
+    <description lang="de_DE">Ein Addon zum Dekodieren von MPO-Dateien (Multiple Picture Object). Diese werden hauptsächlich für 3D-Kameras und den Nintendo 3DS verwendet.</description>
+    <description lang="en_GB">An addon to decode MPO (multiple picture object) files. These are used mainly for 3D cameras and the Nintendo 3DS.</description>
   </extension>
 </addon>
 
-<addon id="imagedecoder.raw" version="3.0.1.5" name="libraw image decoder" provider-name="spiff">
+<addon id="imagedecoder.raw" version="19.0.0.5" name="libraw image decoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
   </requires>
-  <extension point="kodi.imagedecoder" library_linux="imagedecoder.raw.so.3.0.1" extension=".3fr|.arw|.cr2|.crw|.dcr|.dng|.erf|.kdc|.mdc|.mef|.mos|.mrw|.nef|.nrw|.orf|.pef|.ppm|.raf|.raw|.rw2|.srw|.x3f" mimetype="image/3fr|image/arw|image/cr2|image/crw|image/dcr|image/dng|image/erf|image/kdc|image/mdc|image/mef|image/mos|image/mrw|image/nef|image/nrw|image/orf|image/pef|image/x-portable-pixmap|image/raf|image/raw|image/rw2|image/srw|image/x3f"/>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.raw.so.19.0.0" extension=".3fr|.arw|.cr2|.crw|.dcr|.dng|.erf|.kdc|.mdc|.mef|.mos|.mrw|.nef|.nrw|.orf|.pef|.ppm|.raf|.raw|.rw2|.srw|.x3f" mimetype="image/3fr|image/arw|image/cr2|image/crw|image/dcr|image/dng|image/erf|image/kdc|image/mdc|image/mef|image/mos|image/mrw|image/nef|image/nrw|image/orf|image/pef|image/x-portable-pixmap|image/raf|image/raw|image/rw2|image/srw|image/x3f"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Reading of RAW digicam images</summary>
-    <summary lang="de_DE">Lesen von RAW-Digicam Bildern</summary>
-    <description lang="en_GB">Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported).</description>
-    <description lang="de_DE">Addon basierend auf LibRaw zum Lesen von Dateien im Rohdatenformat der digitalen Fotokameras (CRW / CR2, NEF, RAF, DNG, MOS, KDC, DCR und andere; praktisch alle RAW-Formate werden unterstützt).</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/imagedecoder.raw</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="de_DE">Lesen von RAW-Digicam Bildern</summary>
+    <summary lang="en_GB">Reading of RAW digicam images</summary>
+    <description lang="de_DE">Addon basierend auf LibRaw zum Lesen von Dateien im Rohdatenformat der digitalen Fotokameras (CRW / CR2, NEF, RAF, DNG, MOS, KDC, DCR und andere; praktisch alle RAW-Formate werden unterstützt).</description>
+    <description lang="en_GB">Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported).</description>
   </extension>
 </addon>
 
-<addon id="audioencoder.lame" version="3.0.2.2" name="Lame MP3 Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.lame" version="19.1.0.2" name="Lame MP3 Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.3.0.2"/>
+  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.19.1.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">LAME ist ein hochwertiger MPEG Audio Layer III (MP3)</summary>
-    <summary lang="en_GB">LAME is a high quality MPEG Audio Layer III (MP3)</summary>
-    <description lang="de_DE">Es verwendet LAME, den hochwertigen MPEG Audio Layer III (MP3) Encoder, der unter der LGPL lizenziert ist.</description>
-    <description lang="en_GB">It use LAME, the high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/audioencoder.lame</source>
     <assets>
       <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
     </assets>
+    <summary lang="da_DK">LAME er en højkvalitets MPEG Audio Layer III (MP3)</summary>
+    <summary lang="de_DE">LAME ist ein hochwertiger MPEG Audio Layer III (MP3)</summary>
+    <summary lang="en_GB">LAME is a high quality MPEG Audio Layer III (MP3)</summary>
+    <summary lang="es_ES">LAME es MPEG Audio Layer III (MP3) de alta calidad</summary>
+    <summary lang="ko_KR">LAME은 고품질 MPEG Audio Layer III (MP3)입니다</summary>
+    <summary lang="pl_PL">LAME to wysokiej jakości MPEG Audio Layer III (MP3)</summary>
+    <summary lang="ru_RU">LAME - это высококачественный MPEG Audio Layer III (MP3)</summary>
+    <summary lang="zh_CN">LAME 是一种高质量的 MPEG 音频第三层（MP3）</summary>
+    <description lang="da_DK">LAME anvendes: højkvalitets MPEG Audio Layer III (MP3)-indkoderen, der er licenseret under LGPL.</description>
+    <description lang="de_DE">Es verwendet LAME, den hochwertigen MPEG Audio Layer III (MP3) Encoder, der unter der LGPL lizenziert ist.</description>
+    <description lang="en_GB">It use LAME, the high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.</description>
+    <description lang="es_ES">Usa LAME, el codificador de alta calidad MPEG Audio Layer III (MP3) licenciado bajo LGPL.</description>
+    <description lang="ko_KR">LGPL 라이센스에 따른 LAME, 고품질 MPEG Audio Layer III (MP3) 인코더를 사용합니다.</description>
+    <description lang="pl_PL">Używa LAME, wysokiej jakości kodera MPEG Audio Layer III (MP3) na licencji LGPL.</description>
+    <description lang="ru_RU">LAME – высококачественный кодировщик MPEG Audio Layer III (MP3), лицензированный под LGPL.</description>
+    <description lang="zh_CN">它使用 LAME，即遵从 LGPL 许可的高质量 MPEG 音频第三层（MP3）编码器。</description>
   </extension>
 </addon>
 
-<addon id="imagedecoder.heif" version="1.4.0.1" name="HEIF image decoder" provider-name="spiff">
+<addon id="imagedecoder.heif" version="19.0.0.1" name="HEIF image decoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
   </requires>
-  <extension point="kodi.imagedecoder" library_linux="imagedecoder.heif.so.1.4.0" extension=".heif|.heic" mimetype="image/heif|image/heic"/>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.heif.so.19.0.0" extension=".heif|.heic" mimetype="image/heif|image/heic"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">HEIF file format decoder</summary>
-    <description lang="en_GB">High Efficiency Image File Format (HEIF) is a file format employing HEVC (h.265) image coding for the best compression ratios currently possible.
-
-Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/imagedecoder.heif</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="en_GB">HEIF file format decoder</summary>
+    <description lang="en_GB">High Efficiency Image File Format (HEIF) is a file format employing HEVC (h.265) image coding for the best compression ratios currently possible.[CR][CR]Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</description>
   </extension>
 </addon>
 
-<addon id="inputstream.adaptive" version="2.6.22.1" name="InputStream Adaptive" provider-name="peak3d">
+<addon id="inputstream.adaptive" version="19.0.0.1" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -297,10 +308,21 @@ Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</descri
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
   </requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_linux="inputstream.adaptive.so.2.6.22"/>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_linux="inputstream.adaptive.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <news>
+v19.0.0 (2021-09-14)
+- Change test builds to released 'Kodi 19 Matrix'
+- Increase version to 19.0.0
+  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
+    This done to know easier to which Kodi the addon works.
+
+v2.6.23 (2021-08-06)
+- Translations from weblate - de_de, ja_jp, ko_kr
+ - [Android] use multiple drm sessions (solves stuttering)
+ - [DASH] allow for misaligned segs in SegmentTimeline
+
 v2.6.22 (2021-07-18)
 - Automation test release
 
@@ -487,38 +509,62 @@ v2.3.15 (2019-02-11)
 v2.3.14 (2019-02-10)
 - Add WebM container parser
     </news>
+    <summary lang="ca_ES">Client InputStream per a transmissions adaptatives</summary>
+    <summary lang="da_DK">InputStream-klient til adaptive streams</summary>
+    <summary lang="de_DE">InputStream-Client für adaptive Streams</summary>
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
+    <summary lang="he_IL">לקוח InputStream לתזרימים מסתגלים</summary>
+    <summary lang="hu_HU">InputStream kliens az adaptív streamekhez</summary>
+    <summary lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</summary>
+    <summary lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</summary>
+    <summary lang="ru_RU">InputStream клиент для адаптивных трансляций</summary>
+    <description lang="ca_ES">Client InputStream per a transmissions adaptatives</description>
+    <description lang="da_DK">InputStream-klient til adaptive streams</description>
+    <description lang="de_DE">InputStream-Client für adaptive Streams</description>
     <description lang="en_GB">InputStream client for adaptive streams</description>
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
+    <description lang="he_IL">לקוח InputStream לתזרימים מסתגלים</description>
+    <description lang="hu_HU">InputStream kliens az adaptív streamekhez</description>
+    <description lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</description>
+    <description lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</description>
+    <description lang="ru_RU">InputStream клиент для адаптивных трансляций</description>
   </extension>
 </addon>
 
-<addon id="audioencoder.flac" version="3.0.0.4" name="Flac Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.flac" version="19.0.0.4" name="Flac Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.3.0.0"/>
+  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">FLAC-Encoder (Free Lossless Audio Codec)</summary>
-    <summary lang="en_GB">FLAC (Free Lossless Audio Codec) Encoder</summary>
-    <description lang="de_DE">FLAC steht für Free Lossless Audio Codec, ein Audioformat ähnlich wie MP3, jedoch verlustfrei, was bedeutet, dass Audio in FLAC ohne Qualitätsverlust komprimiert wird. Dies ähnelt der Funktionsweise von Zip, außer dass Sie mit FLAC eine viel bessere Komprimierung erhalten, da es speziell für Audio entwickelt wurde und Sie komprimierte FLAC-Dateien nun in Ihrem Lieblingsplayer (oder in Ihrem Auto oder Ihrer Heimstereoanlage; siehe ünterstützte Geräte) wiedergeben können, als wären Sie eine MP3-Datei.
-
-FLAC ist der schnellste und am weitesten verbreitete verlustfreie Audio-Codec und der einzige, der gleichzeitig nicht proprietär ist, nicht durch Patente belastet ist, aus einer Open-Source-Referenzimplementierung besteht, über ein gut dokumentiertes API verfügt und über andere unabhängige Implementierungen verfügt.</description>
-    <description lang="en_GB">FLAC stands for Free Lossless Audio Codec, an audio format similar to MP3, but lossless, meaning that audio is compressed in FLAC without any loss in quality. This is similar to how Zip works, except with FLAC you will get much better compression because it is designed specifically for audio, and you can play back compressed FLAC files in your favorite player (or your car or home stereo, see supported devices) just like you would an MP3 file.
-
-FLAC stands out as the fastest and most widely supported lossless audio codec, and the only one that at once is non-proprietary, is unencumbered by patents, has an open-source reference implementation, has a well documented format and API, and has several other independent implementations.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/audioencoder.flac</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="da_DK">FLAC (Free Lossless Audio Codec) Indkoder</summary>
+    <summary lang="de_DE">FLAC-Encoder (Free Lossless Audio Codec)</summary>
+    <summary lang="en_GB">FLAC (Free Lossless Audio Codec) Encoder</summary>
+    <summary lang="es_ES">Codificador FLAC (Free Lossless Audio Codec)</summary>
+    <summary lang="ko_KR">FLAC (Free Lossless Audio Codec) 인코더</summary>
+    <summary lang="pl_PL">Koder FLAC (Free Lossless Audio Codec)</summary>
+    <summary lang="ru_RU">Кодер FLAC (Free Lossless Audio Codec)</summary>
+    <summary lang="tr_TR">FLAC (Ücretsiz Kayıpsız Ses Codec Bileşeni) Kodlayıcı</summary>
+    <description lang="da_DK">FLAC står for Free Lossless Audio Codec (gratis tabsfri lydcodec); et lydformat tilsvarende mp3, men tabsfrit, hvilket betyder, at lyd komprimeres i FLAC uden tab af kvalitet. Dette svarer til, hvordan Zip fungerer, undtagen med FLAC får du langt bedre komprimering, fordi den er designet specielt til lyd, og du kan afspille komprimerede FLAC-filer i din yndlingsafspiller (eller i din bil- eller hjemmeanlæg - se understøttede enheder), præcis som du ville gøre med en MP3-fil.[CR][CR]FLAC skiller sig ud som den hurtigste og bredest understøttede tabsfri lydcodec og den eneste, der på én gang er ikke-proprietær, ikke er behæftet med patenter, har en open source referenceimplementering, har et veldokumenteret format og API og har adskillige andre uafhængige implementeringer.</description>
+    <description lang="de_DE">FLAC steht für Free Lossless Audio Codec, ein Audioformat ähnlich wie MP3, jedoch verlustfrei, was bedeutet, dass Audio in FLAC ohne Qualitätsverlust komprimiert wird. Dies ähnelt der Funktionsweise von Zip, außer dass Sie mit FLAC eine viel bessere Komprimierung erhalten, da es speziell für Audio entwickelt wurde und Sie komprimierte FLAC-Dateien nun in Ihrem Lieblingsplayer (oder in Ihrem Auto oder Ihrer Heimstereoanlage; siehe ünterstützte Geräte) wiedergeben können, als wären Sie eine MP3-Datei.[CR][CR]FLAC ist der schnellste und am weitesten verbreitete verlustfreie Audio-Codec und der einzige, der gleichzeitig nicht proprietär ist, nicht durch Patente belastet ist, aus einer Open-Source-Referenzimplementierung besteht, über ein gut dokumentiertes API verfügt und über andere unabhängige Implementierungen verfügt.</description>
+    <description lang="en_GB">FLAC stands for Free Lossless Audio Codec, an audio format similar to MP3, but lossless, meaning that audio is compressed in FLAC without any loss in quality. This is similar to how Zip works, except with FLAC you will get much better compression because it is designed specifically for audio, and you can play back compressed FLAC files in your favorite player (or your car or home stereo, see supported devices) just like you would an MP3 file.[CR][CR]FLAC stands out as the fastest and most widely supported lossless audio codec, and the only one that at once is non-proprietary, is unencumbered by patents, has an open-source reference implementation, has a well documented format and API, and has several other independent implementations.</description>
+    <description lang="es_ES">FLAC es Free Lossles Audio Codec, un formato de audio similar al MP3 pero sin pérdida, ya que comprime el audio en FLAC sin ninguna pérdida de calidad. Es parecido a como funciona Zip, excepto que con FLAC se consigue mucha mas compresión porque está diseñaodo especificamente para audio, y puedes reproducir directamente archivos comprimidos en FLAC con su reproductor favorito (o equipo de musica de casa o del coche, segun los equipos soportados) como si fuera un MP3.[CR][CR]FLAC es el codificador de audio sin pérdida más rápido y más soportado, y el único que no es propietario, no tiene patentes, con indicaciones para la implementación libres, muy bien documentado, con API y multiples desarrollos independientes.</description>
+    <description lang="ko_KR">FLAC은 Free Lossless Audio Codec의 약자로, MP3와 유사하지만, 손실이 없는, 즉 FLAC으로 압축한 오디오는 품질면에서 무손실인 오디오 포맷입니다. 원리는 Zip과 유사하지만, FLAC을 사용하면 압축률이 훨씬 좋은데, 왜냐하면 이것은 오디오를 위해 특별히 설계되었기 때문이고, 또한 압축된 FLAC 파일을 마치 MP3 파일을 재생하듯이 원하는 플레이어(자신의 차량, 홈스테레오, 등)에서 재생할 수 있습니다. [CR]CR] FLAC은 가장 빠르고 가장 많이 지원되는 무손실 오디오 코덱이 되었고, 비독점적이고 특허에 간섭받지 않고 오프소스 레프런스가 있고 잘 문서화된 포맷과 API를 가지고 몇 종류의 독립적인 실행사례가 있는 오디오 코덱입니다.</description>
+    <description lang="pl_PL">FLAC oznacza Free Lossless Audio Codec, format audio podobny do MP3, ale bezstratny, co oznacza, że dźwięk jest skompresowany w formacie FLAC bez utraty jakości. Jest to podobne do działania Zip, jednak FLAC zapewnia znacznie lepszą kompresję, ponieważ został zaprojektowany specjalnie dla dźwięku, a skompresowane pliki FLAC można odtwarzać w ulubionym odtwarzaczu (także w samochodowym lub domowym zestawie stereo, patrz obsługiwane urządzenia) tak jak w przypadku plików MP3.[CR][CR]FLAC wyróżnia się jako najszybszy i najszerzej obsługiwany bezstratny kodek audio, a jedyny, który jednocześnie nie jest zastrzeżony, nie jest obciążony patentami, ma dobrze udokumentowany format i API oraz ma kilka innych niezależnych implementacji.</description>
+    <description lang="ru_RU">FLAC (Free Lossless Audio Codec) — аудиоформат (как MP3), в котором звук сжимается без потери качества. Это похоже на то, как работает Zip, только в FLAC вы получите гораздо лучшее сжатие, поскольку он разработан специально для аудио, и вы сможете воспроизводить сжатые файлы FLAC в своём любимом плеере (или в автомобильной, или домашней стереосистеме, см. поддерживаемые устройства) точно так же, как и файлы MP3.[CR][CR]FLAC выделяется как самый быстрый и широко поддерживаемый аудиокодек без потерь, и единственный, который одновременно является непроприетарным, не обременён патентами, имеет эталонную реализацию с открытым исходным кодом, хорошо документированный формат и API, а также имеет несколько других независимых реализаций.</description>
+    <description lang="tr_TR">FLAC, MP3'e benzer, ancak kayıpsız bir ses formatı olan Free Lossless Audio Codec'in kısaltmasıdır; bu, sesin herhangi bir kalite kaybı olmadan FLAC'ta sıkıştırıldığı anlamına gelir. Bu, Zip'in çalışma şekline benzer, ancak FLAC ile özellikle ses için tasarlandığından çok daha iyi sıkıştırma elde edersiniz ve sıkıştırılmış FLAC dosyalarını favori oynatıcınızda (veya arabanızda veya ev stereo sisteminizde, desteklenen cihazlara bakın) oynatabilirsiniz. tıpkı bir MP3 dosyası gibi.[CR][CR]FLAC, en hızlı ve en yaygın olarak desteklenen kayıpsız ses codec'i olarak öne çıkıyor ve aynı anda tescilli olmayan, patentsiz olan, açık kaynak referansına sahip olan tek kod uygulama, iyi belgelenmiş bir biçime ve API'ye sahiptir ve başka birçok bağımsız uygulamaya sahiptir.</description>
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="7.6.13.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
+<addon id="pvr.iptvsimple" version="19.0.2.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -529,7 +575,7 @@ FLAC stands out as the fastest and most widely supported lossless audio codec, a
     <import addon="inputstream.adaptive" minversion="2.6.6"/>
     <import addon="inputstream.rtmp" minversion="3.4.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.7.6.13"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.19.0.2"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -539,6 +585,18 @@ FLAC stands out as the fastest and most widely supported lossless audio codec, a
       <icon>icon.png</icon>
     </assets>
     <news>
+v19.0.2
+- Release bump
+
+v19.0.1
+- Set default player as VideoPlayer for ffmpegdirect so Timeshift works for PVR Radio
+
+v19.0.0
+- Changed: Test builds to 'Kodi 19 Matrix'
+- Increased version to 19.0.0
+  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
+    This done to know easier to which Kodi the addon works.
+
 v7.6.13
 - Fixed: Apply timezone for first aired date if after 1970
 
@@ -1056,29 +1114,28 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
   </extension>
 </addon>
 
-<addon id="inputstream.rtmp" version="3.4.0.4" name="RTMP Input" provider-name="spiff">
+<addon id="inputstream.rtmp" version="19.0.0.4" name="RTMP Input" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
   </requires>
-  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_linux="inputstream.rtmp.so.3.4.0"/>
+  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_linux="inputstream.rtmp.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Client für RTMP-Streams</summary>
-    <summary lang="en_GB">Client for RTMP streams</summary>
-    <description lang="de_DE">Das Real Time Messaging Protocol (RTMP) ist ein proprietäres Netzwerkprotokoll, das von Adobe Inc. entwickelt wurde, um Audio-, Video- und andere Daten über das Internet von einem Medienserver zu einem Flash Player zu übertragen.
-
-Dieses Addon implementiert die RTMP-Streaming-Unterstützung für Kodi und installierte Add-Ons.</description>
-    <description lang="en_GB">The Real Time Messaging Protocol (RTMP) is a proprietary network protocol developed by Adobe Inc. to transmit audio, video and other data over the Internet from a media server to a flash player.
-
-This addon implements RTMP streaming support for Kodi and installed add-ons.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/inputstream.rtmp</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>v3.4.0
+    <news>v19.0.0
+- Changed test builds to released 'Kodi 19 Matrix'
+- Prepared for new language translation by Weblate
+- Increased version to 19.0.0
+  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
+    This done to know easier to which Kodi the addon works.
+
+v3.4.0
 - Update: inputstream API 3.0.1
   - Fix wrong flags bit shift
 
@@ -1114,6 +1171,10 @@ v3.0.4
 v3.0.3
 - Matrix API change to v2.2.0 - Allows upto 256 streams
     </news>
+    <summary lang="de_DE">Client für RTMP-Streams</summary>
+    <summary lang="en_GB">Client for RTMP streams</summary>
+    <description lang="de_DE">Das Real Time Messaging Protocol (RTMP) ist ein proprietäres Netzwerkprotokoll, das von Adobe Inc. entwickelt wurde, um Audio-, Video- und andere Daten über das Internet von einem Medienserver zu einem Flash Player zu übertragen.[CR][CR]Dieses Addon implementiert die RTMP-Streaming-Unterstützung für Kodi und installierte Add-Ons.</description>
+    <description lang="en_GB">The Real Time Messaging Protocol (RTMP) is a proprietary network protocol developed by Adobe Inc. to transmit audio, video and other data over the Internet from a media server to a flash player.[CR][CR]This addon implements RTMP streaming support for Kodi and installed add-ons.</description>
   </extension>
 </addon>
 
@@ -1143,34 +1204,50 @@ v3.0.3
 	</extension>
 </addon>
 
-<addon id="visualization.projectm" version="3.3.0.4" name="projectM" provider-name="Team Kodi">
+<addon id="visualization.projectm" version="19.0.0.4" name="projectM" provider-name="Team Kodi">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.visualization" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.3.3.0"/>
+  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
+    <platform/>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/xbmc/visualization.projectm</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.png</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+      <screenshot>resources/screenshot-04.jpg</screenshot>
+      <screenshot>resources/screenshot-05.jpg</screenshot>
+      <screenshot>resources/screenshot-06.jpg</screenshot>
+      <screenshot>resources/screenshot-07.jpg</screenshot>
+      <screenshot>resources/screenshot-08.jpg</screenshot>
+      <screenshot>resources/screenshot-09.jpg</screenshot>
+      <screenshot>resources/screenshot-10.jpg</screenshot>
+    </assets>
     <summary lang="af_ZA">projectM vat jou op 'n vlug deur die klankgolwe wat jy hoor</summary>
     <summary lang="ar_SA">مشروع M يجعلك تطير بين موحات الصوت التي تسمعها</summary>
-    <summary lang="be_BY">projectM takes you flying through the soundwaves you're hearing</summary>
     <summary lang="bg_BG">"projectM" ще Ви отведе на пътешествие между звуковите вълни, които чувате</summary>
     <summary lang="ca_ES">projectM et fa volar a través de les ones de so que escoltes</summary>
     <summary lang="cs_CZ">projectM s Vámi proletí zvukovými vlnamy, které posloucháte</summary>
     <summary lang="cy_GB">Mae projectM yn eich hedeg drwy'r tonnau sain</summary>
     <summary lang="da_DK">projectM tager dig på en flyvetur gennem lydbølgerne, du lytter til</summary>
-    <summary lang="de_DE">projectM lässt euch durch den Sound fliegen, den Ihr gerade hört</summary>
+    <summary lang="de_DE">projectM lässt Dich durch den Sound fliegen, den Du gerade hörst</summary>
     <summary lang="el_GR">Το projectM σας ταξιδεύει μέσα στα ηχητικά κύματα που ακούτε</summary>
-    <summary lang="en_GB">projectM takes you flying through the soundwaves you're hearing</summary>
     <summary lang="en_AU">projectM takes you flying through the soundwaves you're hearing</summary>
+    <summary lang="en_GB">projectM takes you flying through the soundwaves you're hearing</summary>
     <summary lang="en_NZ">projectM takes you flying through the soundwaves you're hearing</summary>
     <summary lang="en_US">projectM takes you flying through the soundwaves you're hearing</summary>
-    <summary lang="es_ES">projectM te lleva volando a través de las ondas que estás escuchando</summary>
     <summary lang="es_AR">projectM te lleva volando a través de las ondas que estás escuchando</summary>
+    <summary lang="es_ES">projectM te lleva volando a través de las ondas que estás escuchando</summary>
     <summary lang="es_MX">projectM te lleva volando a través de las ondas de sonido que estás escuchando</summary>
     <summary lang="et_EE">projectM viib sind lennates läbi helilainete mida kuulad</summary>
     <summary lang="fi_FI">projectM lennättää sinut ääniaaltojen läpi</summary>
-    <summary lang="fr_FR">projectM vous entraine à travers les ondes sonores que vous écoutez</summary>
     <summary lang="fr_CA">projectM vous entraine à travers les ondes sonores que vous écoutez</summary>
+    <summary lang="fr_FR">projectM vous entraine à travers les ondes sonores que vous écoutez</summary>
     <summary lang="gl_ES">projectM lévao voando a través das ondas de son que está a ouvir</summary>
     <summary lang="he_IL">projectM לוקח אותך לתעופה דרך גלי הסאונד שאתה שומע</summary>
     <summary lang="hr_HR">projectM vam omogućuje let kroz zvuk koji čujete</summary>
@@ -1179,15 +1256,15 @@ v3.0.3
     <summary lang="is_IS">Með projectM flýgurðu í gegnum hljóðbylgjurnar sem þú heyrir</summary>
     <summary lang="it_IT">projectM ti fa volare tra le onde sonore di ciò che stai ascoltando</summary>
     <summary lang="ja_JP">projectM - 音楽の波の上を飛ぶ</summary>
-    <summary lang="ko_KR">projectM 은 사운드웨이브 속으로 날아가는듯한 효과를 보여줍니다.</summary>
+    <summary lang="ko_KR">projectM 은 사운드웨이브 속으로 날아가는듯한 효과를 보여줍니다</summary>
     <summary lang="lt_LT">projectM nukelia Jus į nuostabų skrydį virš debesų, ištiesų fantastiškų garsų gausą</summary>
     <summary lang="lv_LV">projectM paņem Jūs līdzi lidojumā cauri skaņu viļņiem, kurus dzirdat</summary>
     <summary lang="mk_MK">projectM ве води на летање низ звучните бранови на музиката што ја слушате</summary>
-    <summary lang="nl_NL">projectM-visualisatie</summary>
     <summary lang="nb_NO">projectM tar deg på en reise flygende gjenom lydbølgene du hører</summary>
+    <summary lang="nl_NL">projectM-visualisatie</summary>
     <summary lang="pl_PL">projectM zabiera Cię w niesamowity lot w chmurach aktualnie słuchanych dźwięków</summary>
-    <summary lang="pt_PT">O projectM leva-o num voo através das ondas sonoras que está a ouvir</summary>
     <summary lang="pt_BR">O projectM leva-o a voar nas ondas sonoras que está a ouvir</summary>
+    <summary lang="pt_PT">O projectM leva-o num voo através das ondas sonoras que está a ouvir</summary>
     <summary lang="ro_RO">projectM îți oferă o senzație auditivă unică astfel încât simți că zbori printre undele sonore pe care le asculți</summary>
     <summary lang="ru_RU">projectM отправит вас в полёт через звуковые волны, которые вы слышите</summary>
     <summary lang="sk_SK">projektM s Vami poletí zvukovými vlnami, ktoré počúvate</summary>
@@ -1224,18 +1301,18 @@ Vše co projectM vyžaduje je grafická karta s 3D akcelerací a vaši oblíbeno
 Mae projectM yn ailgyflwyniad LGPL o Milkdrop o dan OpenGL.
 Yr unig beth sydd ei angen ar projectM yw cerdyn video gyda chyflymu 3D a'ch hoff gerddoriaeth.</description>
     <description lang="da_DK">projectM er en fantastisk musikvisualisering. Der findes intet bedre i Unix-verdenen. projectMs storhed kommer fra brugerbasens hårde arbejde. Brugere, som dig selv, kan skabe forudindstillinger, som forbinder musik med utrolige visualiseringer. Prøv det!
-projectM Visualization er en LGPLed reimplementation af Milkdrop under OpenGL.
+projectM Visualization er en LGPLed reimplementering af Milkdrop under OpenGL.
 Alt hvad projectM kræver er et grafikkort med 3D-acceleration og din yndlingsmusik.</description>
-    <description lang="de_DE">projectM ist eine unglaublicher Musik-Visualisierung. In der Unix-Welt gibt es nichts besseres. Die Einzigartigkeit kommt durch die harte Arbeit der Community. User wie du können "Presets" schreiben, welche sich mit der Musik verbinden. Versuche es selber!
-projectM ist die LGPL Reimplementierung von Milkdrop als OpenGL Variante
-Alles was prjectM benötigt ist eine Grafikkarte mit 3D Beschleunigung und deine Lieblingmusik</description>
+    <description lang="de_DE">projectM ist eine unglaubliche Musik-Visualisierung. In der Unix-Welt gibt es nichts Besseres. Die Einzigartigkeit ist Ergebnis der harten Arbeit der Community. Jeder Anwender kann "Presets" schreiben, welche Musik mit unglaublichen visuellen effekten verbinden.
+projectM ist die LGPL Reimplementierung von Milkdrop mit OpenGL
+Alles was projectM benötigt, ist eine Grafikkarte mit 3D-Beschleunigung und coole Musik.</description>
     <description lang="el_GR">Το projectM είναι ένας φοβερός μουσικός οπτικοποιητής. Δεν υπάρχει τίποτα καλύτερο στον κόσμο του Unix. Το μεγαλείο του projectM πηγάζει από τη σκληρή δουλειά της κοινότητας. Χρήστες όπως εσείς μπορούν να δημιουργήσουν προρυθμίσεις συνδέοντας τη μουσική με απίστευτες απεικονίσεις. Δοκιμάστε το!
 Η Οπτικοποίηση projectM αποτελεί μία νέα LGPL υλοποίηση του Milkdrop υπό το OpenGL
 Το μόνο που απαιτείται από το projectM είναι μία κάρτα γραφικών με τρισδιάστατη (3D) επιτάχυνση, και την αγαπημένη σας μουσική.</description>
-    <description lang="en_GB">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
+    <description lang="en_AU">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
 projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL
 All projectM requires is a video card with 3D acceleration and your favourite music.</description>
-    <description lang="en_AU">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
+    <description lang="en_GB">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
 projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL
 All projectM requires is a video card with 3D acceleration and your favourite music.</description>
     <description lang="en_NZ">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
@@ -1244,12 +1321,12 @@ All projectM requires is a video card with 3D acceleration and your favourite mu
     <description lang="en_US">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
 projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL
 All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="es_ES">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como usted pueden crear ajustes preestablecidos que conecten la música con visualizaciones increibles. ¡Pruébelo!
-projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.
-Todo lo que projectM necesita es una tarjeta de vídeo con aceleración 3D y su música favorita.</description>
     <description lang="es_AR">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tu pueden crear ajustes preestablecidos que conecten la música con visualizaciones increíbles. ¡Pruebalo!
 projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.
 Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
+    <description lang="es_ES">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como usted pueden crear ajustes preestablecidos que conecten la música con visualizaciones increibles. ¡Pruébelo!
+projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.
+Todo lo que projectM necesita es una tarjeta de vídeo con aceleración 3D y su música favorita.</description>
     <description lang="es_MX">projectM es un visualizador de música sorprendente. No hay nada mejor en el mundo de Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tú pueden crear preaujstes que conectan la música con increíbles imágenes. Inténtalo!
 La visualización projectM es una reimplementación en LGPL de Milkdrop bajo OpenGL.
 Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
@@ -1258,13 +1335,13 @@ Ainus mida projectM vajab, on 3D kiirendusega videokaart ja sinu lemmikmuusika.<
     <description lang="fi_FI">projectM on uskomaton musiikkivisualisointi, joka on yhteisön kovan työn tulos. Käyttäjät voivat luoda esiasetuksia, jotka yhdistävät musiikin kuviin.
 projectM -visualisointi on LGPL-lisensoitu Milkdropin uudelleenimplementointi OpenGL:llä.
 projectM tarvitsee vain 3D-kiihdyttävän näytönohjaimen ja lempimusiikkisi.</description>
-    <description lang="fr_FR">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!
-La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.
-Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
     <description lang="fr_CA">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!
 La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.
 Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
-    <description lang="gl_ES">projectM é unha impresionante Visualización de música. Non hai nada mellor no mundo Unix.  A grandeza de projectM ven da dura xeira da comunidade. Usuarios coma vostede poden crear preconfiguracións que conectan a música con incribles visualizacións. Próbeo!
+    <description lang="fr_FR">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!
+La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.
+Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
+    <description lang="gl_ES">projectM é unha impresionante Visualización de música. Non hai nada mellor no mundo Unix. A grandeza de projectM ven da dura xeira da comunidade. Usuarios coma vostede poden crear preconfiguracións que conectan a música con incribles visualizacións. Próbeo!
 A Visualización projectM é unha reimplementación de Milkdrop empregando OpenGL e con licencia LGPL.
 Todo o que precisa projectM é unha tarxeta gráfica con aceleración 3D e a súa música favorita.</description>
     <description lang="he_IL">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
@@ -1279,7 +1356,9 @@ Minden projectM látványbeállításhoz 3D gyorsításra képes videókártya �
     <description lang="id_ID">projectM merupakan visualiser musik yang keren. Tak ada yng lebih baik di dunia Unix. Kebesaran projectM berasa dari kerja keras dari komunitas. Pengguna seperti anda dapat membuat preset yang menghubungkan musik dengan visual yang luarbiasa. Cobalah!!!
 Visualisasi projectM merupakan produk berlisensi LGPL reimplementasi dari Milkdrop dibawah OpenGL
 Semua projectM membutuhkan kartu grafis dengan akselerasi 3D dan musik favorit anda.</description>
-    <description lang="is_IS">projectM er frábær myndskreyting. það er ekkert betra í Unix heiminum. Gæði projectM koma til vegna framlags samfélagsins.Notendur eins og þú geta búið til forstillingar sem tengja tónlist við ótrúlega myndræna upplifun. Prófaðu!⏎ projectM myndskreyting er LGPL útgáfa af Milkdrop með OpenGL⏎ Allt sem projectM þarfnast er skjákort með þrívíddar hraðli  3D og uppáhalds tónlistin þín.</description>
+    <description lang="is_IS">projectM er frábær myndskreyting. það er ekkert betra í Unix heiminum. Gæði projectM koma til vegna framlags samfélagsins.Notendur eins og þú geta búið til forstillingar sem tengja tónlist við ótrúlega myndræna upplifun. Prófaðu!
+projectM myndskreyting er LGPL útgáfa af Milkdrop með OpenGL
+Allt sem projectM þarfnast er skjákort með þrívíddar hraðli 3D og uppáhalds tónlistin þín.</description>
     <description lang="it_IT">projectM è un incredibile visualizzazione musicale. E' il meglio del mondo Unix. La grandezza di projectM proviene dal duro lavoro della comunità. Gli utenti come te possono creare preset che connetto la musica con incredibili grafiche. Provalo!
 projectM è una reimplementazione LGPL di Milkdrop sotto OpenGL
 Tutti i projectM richiedono una scheda video con accelerazione 3D e la tua musica preferita.</description>
@@ -1287,25 +1366,25 @@ Tutti i projectM richiedono una scheda video con accelerazione 3D e la tua music
 projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL
 All projectM requires is a video card with 3D acceleration and your favorite music.</description>
     <description lang="ko_KR">projectM은 멋진 음악 시각화입니다. Unix에는 이것보다 좋은것은 없습니다. projectM은 많은 사람들에 의해 개발되었습니다. 여러분과 같은 유저들이 음악을 표현하는 프리셋을 만들었습니다. projectM 음악시각화는 OpenGL에서 작동하도록 Milkdrop를 새로 만든것입니다. 모든 projectM은 3D 가속이 되는 비디오카드와 음악이 필요합니다.</description>
-    <description lang="lt_LT">ProjectM yra išskirtinė muzikos vizualizacija. Nėra nieko geriau, Unix pasaulyje. ProjectM spindesys tai sunkus darbas bendruomenėje. Naudotojai, tokie kaip Jūs galite sukurti ir suderinti muziką su puikiais vizualizacijos  efektais. Sužinokite!
+    <description lang="lt_LT">ProjectM yra išskirtinė muzikos vizualizacija. Nėra nieko geriau, Unix pasaulyje. ProjectM spindesys tai sunkus darbas bendruomenėje. Naudotojai, tokie kaip Jūs galite sukurti ir suderinti muziką su puikiais vizualizacijos efektais. Sužinokite!
 ProjectM yra įgyvendinimas iš Milkdrop pagal LGPL licenciją, ir naudoja OpenGL
 Viskas ko reikia projectM tai vaizdo plokštės su 3D akceleracija (greitėjimu) ir geros muzikos.</description>
     <description lang="lv_LV">projectM ir brīnišķīgs mūzikas vizualizētājs. Nav nekā labāka Unix pasaulē. projectM's izcilība rodas no smagā darba komūnā. Lietotāji, kas ir tādi paši kā Jūs, var radīt sagataves, kas savieno mūziku ar neticami skaistām vizualizācijām. Pamēģiniet!
 projectM Vizualizācija ir Milkdrop LGPL reimplementācija zem OpenGL
 Visi projectM pieprasa video karti ar 3D paātrinājumu un Jūsu mīļākās mūzikas izlasi.</description>
     <description lang="mk_MK">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!⏎ projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL⏎ All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="nl_NL">ProjectM is een geweldige muziekvisualisatie. Er bestaat niets beters in de UNIX-wereld. Het success van ProjectM is het resultaat van het harde werk van de XBMC-gemeenschap. U kunt hun eigen presets instellen die muziek linken aan verbluffende visualisaties. Probeer het uit!
-ProjectM-visualisatie is beschikbaar onder de LGPL-licentie en is een herimplementatie van Milkdrop (OpenGL). Alles wat projectM vereist is een videokaart met 3D-versnelling en jouw favoriete muziek.</description>
     <description lang="nb_NO">projectM er en awesome musikk visualisering. Der er ingenting bedre i Unix verden. projectM er så flott takket være et hardt arbeidende felleskap. Brukere som deg kan lage forhåndsinnstillinger som kobler musikk med utrolige visualiseringer. Prøv det!
 projectM visualiseringen er en LGPL reinplimentasjon av Milkdrop under OpenGL
 Alt projectM trenger er et grafikkort med 3D støtte og din favoritt musikk</description>
+    <description lang="nl_NL">ProjectM is een geweldige muziekvisualisatie. Er bestaat niets beters in de UNIX-wereld. Het success van ProjectM is het resultaat van het harde werk van de XBMC-gemeenschap. U kunt hun eigen presets instellen die muziek linken aan verbluffende visualisaties. Probeer het uit!
+ProjectM-visualisatie is beschikbaar onder de LGPL-licentie en is een herimplementatie van Milkdrop (OpenGL). Alles wat projectM vereist is een videokaart met 3D-versnelling en jouw favoriete muziek.</description>
     <description lang="pl_PL">projectM to rewelacyjna wizualizacją muzyki. Nie ma nic lepszego w świecie Unixa. Wspaniałość projectM wywodzi się ciężkiej pracy społeczności. Użytkownicy tacy jak Ty, mogą tworzyć efekty łączące muzykę z niesamowitymi efektami wizualnymi. Przekonaj się!
 projectM jest reimplementacją Milkdropa na licencji LGPL i używa OpenGL
 Wszystko czego wymaga projectM, to karta graficzna wspierająca akcelerację 3D oraz zasoby Twojej muzyki.</description>
-    <description lang="pt_PT">O projectM é uma fantástica visualização de música. Não há melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Qualquer utilizador pode criar pré-selecções que combinam a música com visualizações incríveis. Experimente!
-O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM precisa é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
     <description lang="pt_BR">O projectM é um fantástico visualizador de música. Não existe nenhum melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Utilizadores como você podem criar pré-definições que ligam a música a visualizações incríveis. Experimente!
 O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM necessita é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
+    <description lang="pt_PT">O projectM é uma fantástica visualização de música. Não há melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Qualquer utilizador pode criar pré-selecções que combinam a música com visualizações incríveis. Experimente!
+O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM precisa é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
     <description lang="ro_RO">projectM este un plugin uimitor. Nu există nimic mai bun în lumea Unix. Măreția projectM vine din munca întregii comunități. Utilizatori ca și tine pot crea presetări care conectează muzica cu vizualizări incredibile. Încearcă și tu!
 Vizualizarea projectM este o reimplementare LGPL a lui Milkdrop sub OpenGL.
 Tot ceea ce necesită projectM este o placă video cu accelerare 3D și muzica ta favorită.</description>
@@ -1322,7 +1401,7 @@ Të gjith që projectM kërkon është një kartë grafike me përshpejtim për 
     <description lang="sv_SE">projectM är en fantastisk musikvisualisering. Det finns inget bättre i Unixvärlden. projectM's storhet kommer från gemenskapens hårda jobb. Användare som du kan skapa förval som förenar musiken med otroliga visualiseringar. Prova det!
 projectM visualisering är en LGPL-implementation av Milkdrop i OpenGL
 Alla projectM kräver ett grafikkort med 3D-acceleration och din favoritmusik.</description>
-    <description lang="ta_IN">projectM ஒரு அற்புதமான இசை விசுவலைஸர் ஆகும். யூனிக்ஸ் உலகில் இதைவிட சிறந்தது இல்லை. projectM உடைய சிறப்புத்தன்மை கடினமான சமூகத்தின் உழைப்பில் இருந்து வருகிறது. உங்களை போன்ற பயனர்களாலும் நம்பமுடியாத இசை முன்னமைவுகளை உருவாக்க முடியும். முயற்சித்துபாரும்!⏎ projectM காட்சியாக்கம் OpenGL கீழ்  Milkdrop உடைய மறு தயாரிப்பாக உள்ளது⏎ projectM க்கு தேவைப்படுவதெல்லாம் ஒரு 3D முடுக்கம் அட்டை மற்றும் உங்களுக்கு பிடித்த இசை.</description>
+    <description lang="ta_IN">projectM ஒரு அற்புதமான இசை விசுவலைஸர் ஆகும். யூனிக்ஸ் உலகில் இதைவிட சிறந்தது இல்லை. projectM உடைய சிறப்புத்தன்மை கடினமான சமூகத்தின் உழைப்பில் இருந்து வருகிறது. உங்களை போன்ற பயனர்களாலும் நம்பமுடியாத இசை முன்னமைவுகளை உருவாக்க முடியும். முயற்சித்துபாரும்!⏎ projectM காட்சியாக்கம் OpenGL கீழ் Milkdrop உடைய மறு தயாரிப்பாக உள்ளது⏎ projectM க்கு தேவைப்படுவதெல்லாம் ஒரு 3D முடுக்கம் அட்டை மற்றும் உங்களுக்கு பிடித்த இசை.</description>
     <description lang="tg_TJ">projectM таҷассуми мусиқии аҷоиб мебошад. Чезе беҳтар аз projectM дар ҷаҳони Unix вуҷуд надорад. projectM натиҷаи кори вазнини ҷамъияташ мебошад. Корбарони монанди шумо метавонанд танзимотеро, ки мусиқиро бо таҷассуми аҷоиб пайваст мекунед, эҷод кунанд. Кӯшиш кунед!
 Таҷассуми projectM дар асоси LGPL-и Milkdrop бо OpenGL эҷод карда шуд
 Таҷассуми projectM танҳо корти видеоӣ бо шитобдиҳандаи 3D ва файлҳои мусиқии дӯстдоштаи шуморо талаб мекунад.</description>
@@ -1335,54 +1414,51 @@ projectM' in tek ihtiyacı 3D hızlandırıcılı bir görüntü kartı ve sizin
     <description lang="uk_UA">projectM - це чудовий візуалізатор відео. Немає нічого кращого в світі Unix. projectM створений тяжкою роботою спільноти. Користувачі, такі як Ви, можуть створювати різні візуалізації. Спробуйте!
 Візуалізація projectM - це LGPLівська імплементація Milkdrop під ліцензією OpenGL
 Все, що потрібно для projectM - це відео карта з 3D прискоренням і Ваша улюблена музика.</description>
-    <description lang="vi_VN">projectM là chương trình trình chiếu nhạc tuyệt vời. Không có gì tuyệt hơn nó trong thế giới Unix. Sự tuyệt vời của projectM đến từ thành quả vất vả của cộng đồng. Những người sử dụng như bạn có thể tạo ra những bộ preset mà kết nối âm nhạc với hiệu ứng hình ảnh tuyệt vời. Hãy thử nó!\n Chương trình này là một phiên bản LGPL được phát triển dựa trên Milkdrop qua OpenGL\n Tất cả bạn cần chỉ là một card đồ họa 3D và bài hát ưa thích của mình.</description>
+    <description lang="vi_VN">projectM là chương trình trình chiếu nhạc tuyệt vời. Không có gì tuyệt hơn nó trong thế giới Unix. Sự tuyệt vời của projectM đến từ thành quả vất vả của cộng đồng. Những người sử dụng như bạn có thể tạo ra những bộ preset mà kết nối âm nhạc với hiệu ứng hình ảnh tuyệt vời. Hãy thử nó!
+Chương trình này là một phiên bản LGPL được phát triển dựa trên Milkdrop qua OpenGL
+Tất cả bạn cần chỉ là một card đồ họa 3D và bài hát ưa thích của mình.</description>
     <description lang="zh_CN">projectM 是一个音乐可视化效果。它是 Unix 世界中最好的。它的伟大来自于社区的辛苦工作。使用者可以创建预设参数把音乐和难以置信的可视化效果连接起来。试试吧！
 projectM 可视化效果是用 OpenGL 按照 LGPL 协议对 Milkdrop 的重新实现
 projectM 所要求的仅是一块有 3D 加速功能的显卡和你喜爱的音乐。</description>
     <description lang="zh_TW">projectM是一個令人驚豔的音樂視覺效果。它是Unix世界中最好的。projectM的偉大成果來自於社群創作者的投入與心血。使用者可以創建把音樂和難以置信的視覺效果連接起來的預設值。快來嘗鮮一下吧！
 projectM視覺效果是用OpenGL按照LGPL協議對Milkdrop的重新實現
 projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛的音樂。</description>
-    <platform/>
-    <license>GPL-2.0-or-later</license>
-    <source>https://github.com/xbmc/visualization.projectm</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
-      <screenshot>resources/screenshot-01.jpg</screenshot>
-      <screenshot>resources/screenshot-02.png</screenshot>
-      <screenshot>resources/screenshot-03.jpg</screenshot>
-      <screenshot>resources/screenshot-04.jpg</screenshot>
-      <screenshot>resources/screenshot-05.jpg</screenshot>
-      <screenshot>resources/screenshot-06.jpg</screenshot>
-      <screenshot>resources/screenshot-07.jpg</screenshot>
-      <screenshot>resources/screenshot-08.jpg</screenshot>
-      <screenshot>resources/screenshot-09.jpg</screenshot>
-      <screenshot>resources/screenshot-10.jpg</screenshot>
-    </assets>
   </extension>
 </addon>
 
-<addon id="audioencoder.vorbis" version="3.0.1.4" name="Vorbis Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.vorbis" version="19.0.0.4" name="Vorbis Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.3.0.1"/>
+  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Vorbis-Audiokomprimierung</summary>
-    <summary lang="en_GB">Vorbis audio compression</summary>
-    <description lang="de_DE">Vorbis ist ein Allzweck-Audio-Codec, der hohe Encoderflexibilität bringen soll und somit eine wettbewerbsfähige Skalierung über einen außergewöhnlich großen Bereich von Bitraten ermöglicht.</description>
-    <description lang="en_GB">Vorbis is a general purpose perceptual audio CODEC intended to allow maximum encoder flexibility, thus allowing it to scale competitively over an exceptionally wide range of bitrates.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/audioencoder.vorbis</source>
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="da_DK">Vorbis lydkomprimering</summary>
+    <summary lang="de_DE">Vorbis-Audiokomprimierung</summary>
+    <summary lang="en_GB">Vorbis audio compression</summary>
+    <summary lang="es_ES">Compresión de audio Vorbis</summary>
+    <summary lang="ko_KR">Vorbis 오디오 압축</summary>
+    <summary lang="nl_NL">Vorbis audio-compressie</summary>
+    <summary lang="pl_PL">Kompresja dźwięku Vorbis</summary>
+    <summary lang="ru_RU">Сжатие аудиофайлов Vorbis</summary>
+    <description lang="da_DK">Vorbis er et perceptuelt lydcodec til generel anvendelse beregnet til at tillade maksimal indkoderfleksibilitet, hvilket gør det muligt at skalere konkurrencedygtigt over en usædvanligt bred vifte af bitrates.</description>
+    <description lang="de_DE">Vorbis ist ein Allzweck-Audio-Codec, der hohe Encoderflexibilität bringen soll und somit eine wettbewerbsfähige Skalierung über einen außergewöhnlich großen Bereich von Bitraten ermöglicht.</description>
+    <description lang="en_GB">Vorbis is a general purpose perceptual audio CODEC intended to allow maximum encoder flexibility, thus allowing it to scale competitively over an exceptionally wide range of bitrates.</description>
+    <description lang="es_ES">Vorbis es un CODEC de audio perceptual de propósito general que permite la máxima flexibilidad de codificación a la vez que escala competitivamente en un excepcionalmente amplio abanico de tasas de bits.</description>
+    <description lang="ko_KR">Vorbis는 최대 인코더 유연성을 허용하여 예외적으로 광범위한 비트 전송률에 대해 경쟁력 있게 확장할 수 있도록 고안된 범용 지각 오디오 코덱입니다.</description>
+    <description lang="nl_NL">Vorbis is a algemeen toegepaste audio-codec bedoeld om maximale encodeerflexibiliteit toe te staan, en daardoor dus het competitatief te schalen over een uitzonderlijk wijde gebied van bitrates.</description>
+    <description lang="pl_PL">Vorbis to kodek percepcyjny audio ogólnego przeznaczenia, którego celem jest zapewnienie maksymalnej elastyczności kodera, co pozwala na konkurencyjne skalowanie w wyjątkowo szerokim zakresie przepływności.</description>
+    <description lang="ru_RU">Vorbis - это аудиокодек общего назначения, предназначенный для обеспечения максимальной гибкости кодера, что позволяет ему быть достаточно эффективным в очень широком диапазоне битрейтов.</description>
   </extension>
 </addon>
 
-<addon id="vfs.rar" version="4.0.0.4" name="RAR archive support" provider-name="spiff">
+<addon id="vfs.rar" version="19.0.0.4" name="RAR archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -1390,26 +1466,8 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
     <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
     <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.4.0.0"/>
+  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.19.0.0"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Entpacker für .rar Dateien</summary>
-    <summary lang="en_GB">Unarchiver for .rar files</summary>
-    <summary lang="sv_SE">Uppackare för .rar-filer</summary>
-    <description lang="de_DE">Dieses Addon dient zum entpacken von RAR-Archiven.
-
-Es ermöglicht das direkte Lesen nicht komprimierter RAR-Dateien, sodass ein vorheriges Entpacken nicht erforderlich ist. Bei allen anderen Typen wird es vorübergehend entpackt und an Kodi übertragen.
-
-Achtung: Der Archivtyp "Solid RAR" erfordert ein vollständiges Entpacken, um die darin enthaltenen Dateien zu verwenden. Daher können die Zugriffszeiten für größere Pakete länger dauern.</description>
-    <description lang="en_GB">This addon is an extraction utility for RAR archives.
-
-It allows direct reading of uncompressed RAR files, so prior unpacking is not necessary. For all other types, it is temporarily unpacked and passed to Kodi.
-
-Attention: A "Solid RAR" archive type requires complete unpacking to use files within it. Hence access times may be long for larger packages.</description>
-    <description lang="sv_SE">Detta tillägg är ett uppackningsverktyg för RAR-arkiv.
-
-Detta gör det möjligt att spela upp okomprimerade RAR-filer utan att de först packas upp. För alla andra typer, packas den upp tillfälligt och skickas sedan till Kodi.
-
-Observera: Ett "Fast" arkiv kräver en komplett uppackning av arkivet. Därför kan uppstartstiden ta lång tid om det är ett stort arkiv.</description>
     <platform/>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/vfs.rar</source>
@@ -1417,6 +1475,22 @@ Observera: Ett "Fast" arkiv kräver en komplett uppackning av arkivet. Därför 
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
+    <summary lang="ca_ES">Desarxivador per fitxers .rar</summary>
+    <summary lang="de_DE">Entpacker für Rar-Dateien</summary>
+    <summary lang="en_GB">Unarchiver for .rar files</summary>
+    <summary lang="ko_KR">.rar 파일용 아카이브 추출</summary>
+    <summary lang="pl_PL">Ekstraktor plików .rar</summary>
+    <summary lang="ru_RU">Распаковщик для архивов .rar</summary>
+    <summary lang="sv_SE">Uppackare för .rar-filer</summary>
+    <summary lang="zh_CN">解压 .rar 文件</summary>
+    <description lang="ca_ES">Aquest complement és una utilitat d'extracció per a arxius RAR.[CR][CR]Permet la lectura directa de fitxers RAR sense comprimir, de manera que no és necessari desempaquetar prèviament. Per a la resta de tipus, es desempaqueta temporalment i es passa a Kodi.[CR][CR]Atenció: el tipus d'arxiu "RAR sòlid" requereix descomprimir completament per utilitzar els fitxers. Per tant, els temps d'accés poden ser llargs pels paquets més grans.</description>
+    <description lang="de_DE">Dieses Addon dient zum Entpacken von RAR-Archiven.[CR][CR]Es ermöglicht das direkte Lesen nicht komprimierter RAR-Dateien, sodass ein vorheriges Entpacken nicht erforderlich ist. Bei allen anderen Typen wird der Inhalt temporär entpackt und an Kodi übertragen.[CR][CR]Achtung: Der Archivtyp "Solid RAR" erfordert ein vollständiges Entpacken, um die darin enthaltenen Dateien zu verwenden. Daher können die Zugriffszeiten für größere Pakete länger sein.</description>
+    <description lang="en_GB">This addon is an extraction utility for RAR archives.[CR][CR]It allows direct reading of uncompressed RAR files, so prior unpacking is not necessary. For all other types, it is temporarily unpacked and passed to Kodi.[CR][CR]Attention: A "Solid RAR" archive type requires complete unpacking to use files within it. Hence access times may be long for larger packages.</description>
+    <description lang="ko_KR">이 애드온은 RAR 아카이브용 추출 유틸리티입니다.[CR][CR]압축되지 않은 RAR 파일을 직접 읽을 수 있으므로 사전 압축 풀기가 필요하지 않습니다. 다른 모든 유형의 경우 일시적으로 압축을 풀고 Kodi로 전달됩니다.[CR][CR]주의: "Solid RAR" 아카이브 유형은 그 안에 있는 파일을 사용하기 위해 완전히 압축을 풀어야 합니다. 따라서 더 큰 패키지의 경우 액세스 시간이 길어질 수 있습니다.</description>
+    <description lang="pl_PL">Ten dodatek jest narzędziem do ekstrakcji archiwów RAR.[CR][CR]Pozwala na bezpośredni odczyt nieskompresowanych plików RAR, więc wcześniejsze rozpakowanie nie jest konieczne. W przypadku wszystkich innych typów są one tymczasowo rozpakowywane i przekazywane do Kodi.[CR][CR]Uwaga: typ archiwum „Ciągły RAR” wymaga całkowitego rozpakowania, aby móc korzystać z zawartych w nim plików. Z tego powodu czasy dostępu mogą być długie w przypadku większych pakietów.</description>
+    <description lang="ru_RU">Это дополнение представляет собой утилиту для работы с архивами RAR.[CR][CR]Оно позволяет напрямую читать несжатые файлы RAR, поэтому предварительная распаковка не требуется. Для всех остальных типов архив временно распаковывается и данные передаются в Kodi.[CR][CR]Внимание: Тип архива "Непрерывный" требует полной распаковки для использования файлов из него. Поэтому для больших пакетов время доступа увеличится.</description>
+    <description lang="sv_SE">Detta tillägg är ett uppackningsverktyg för RAR-arkiv.[CR][CR]Detta gör det möjligt att spela upp okomprimerade RAR-filer utan att de först packas upp. För alla andra typer, packas den upp tillfälligt och skickas sedan till Kodi.[CR][CR]Observera: Ett "Fast" arkiv kräver en komplett uppackning av arkivet. Därför kan uppstartstiden ta lång tid om det är ett stort arkiv.</description>
+    <description lang="zh_CN">此插件是 RAR 压缩文件的解压实用程序。[CR][CR]它允许直接读取 RAR 文件，因此无需事先解压缩。对于所有其他类型，它会临时解包并传递给 Kodi。[CR][CR]注意：“Solid RAR”压缩类型需要完全解包才能使用其中的文件。对于较大的压缩包，访问时间可能较长。</description>
   </extension>
 </addon>
 </addons>
