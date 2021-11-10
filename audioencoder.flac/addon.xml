@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="audioencoder.flac" version="19.0.0.4" name="Flac Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.flac" version="19.0.0.1" name="Flac Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
