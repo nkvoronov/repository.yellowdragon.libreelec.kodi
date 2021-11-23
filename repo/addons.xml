@@ -21,12 +21,12 @@
   </extension>
 </addon>
 
-<addon id="audioencoder.wav" version="19.0.0.1" name="Wav Audio Encoder" provider-name="jmarshall">
+<addon id="audioencoder.wav" version="19.0.1.1" name="Wav Audio Encoder" provider-name="jmarshall">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.19.0.0"/>
+  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -34,10 +34,20 @@
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="da_DK">Waveform lydfilformat indkoder</summary>
     <summary lang="de_DE">Waveform Audio File Format Encoder</summary>
     <summary lang="en_GB">Waveform Audio File Format Encoder</summary>
+    <summary lang="ko_KR">Waveform 오디오 파일 형식 인코더</summary>
+    <summary lang="pl_PL">Koder formatu pliku dźwiękowego Waveform</summary>
+    <summary lang="ru_RU">Кодировщик аудиофайлов Waveform (WAV)</summary>
+    <summary lang="zh_CN">Waveform 音频文件格式编码器</summary>
+    <description lang="da_DK">WAV (Waveform Audio Format) er et ukomprimeret lydformat.</description>
     <description lang="de_DE">WAV (Waveform Audio Format) ist ein unkomprimiertes Klangformat.</description>
     <description lang="en_GB">WAV (Waveform Audio Format) is an uncompressed sound format.</description>
+    <description lang="ko_KR">WAV(Waveform Audio Format)는 압축되지 않은 사운드 형식입니다.</description>
+    <description lang="pl_PL">WAV (Waveform Audio Format) to nieskompresowany format dźwięku.</description>
+    <description lang="ru_RU">WAV (Waveform Audio Format) - это формат аудиофайла с несжатым звуковым потоком.</description>
+    <description lang="zh_CN">WAV（Waveform 音频格式）是一种未压缩的声音格式。</description>
   </extension>
 </addon>
 
@@ -79,7 +89,7 @@
   </extension>
 </addon>
 
-<addon id="pvr.hts" version="19.0.2.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
+<addon id="pvr.hts" version="19.0.3.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -88,7 +98,7 @@
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.pvr" minversion="7.1.0" version="7.1.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.2"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.3"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -248,12 +258,12 @@
   </extension>
 </addon>
 
-<addon id="audioencoder.lame" version="19.1.0.1" name="Lame MP3 Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.lame" version="19.1.1.1" name="Lame MP3 Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.19.1.0"/>
+  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.19.1.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -532,12 +542,12 @@ v2.3.14 (2019-02-10)
   </extension>
 </addon>
 
-<addon id="audioencoder.flac" version="19.0.0.1" name="Flac Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.flac" version="19.0.1.1" name="Flac Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.19.0.0"/>
+  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -553,6 +563,7 @@ v2.3.14 (2019-02-10)
     <summary lang="pl_PL">Koder FLAC (Free Lossless Audio Codec)</summary>
     <summary lang="ru_RU">Кодер FLAC (Free Lossless Audio Codec)</summary>
     <summary lang="tr_TR">FLAC (Ücretsiz Kayıpsız Ses Codec Bileşeni) Kodlayıcı</summary>
+    <summary lang="zh_CN">FLAC（免费无损音频编解码器）编码器</summary>
     <description lang="da_DK">FLAC står for Free Lossless Audio Codec (gratis tabsfri lydcodec); et lydformat tilsvarende mp3, men tabsfrit, hvilket betyder, at lyd komprimeres i FLAC uden tab af kvalitet. Dette svarer til, hvordan Zip fungerer, undtagen med FLAC får du langt bedre komprimering, fordi den er designet specielt til lyd, og du kan afspille komprimerede FLAC-filer i din yndlingsafspiller (eller i din bil- eller hjemmeanlæg - se understøttede enheder), præcis som du ville gøre med en MP3-fil.[CR][CR]FLAC skiller sig ud som den hurtigste og bredest understøttede tabsfri lydcodec og den eneste, der på én gang er ikke-proprietær, ikke er behæftet med patenter, har en open source referenceimplementering, har et veldokumenteret format og API og har adskillige andre uafhængige implementeringer.</description>
     <description lang="de_DE">FLAC steht für Free Lossless Audio Codec, ein Audioformat ähnlich wie MP3, jedoch verlustfrei, was bedeutet, dass Audio in FLAC ohne Qualitätsverlust komprimiert wird. Dies ähnelt der Funktionsweise von Zip, außer dass Sie mit FLAC eine viel bessere Komprimierung erhalten, da es speziell für Audio entwickelt wurde und Sie komprimierte FLAC-Dateien nun in Ihrem Lieblingsplayer (oder in Ihrem Auto oder Ihrer Heimstereoanlage; siehe ünterstützte Geräte) wiedergeben können, als wären Sie eine MP3-Datei.[CR][CR]FLAC ist der schnellste und am weitesten verbreitete verlustfreie Audio-Codec und der einzige, der gleichzeitig nicht proprietär ist, nicht durch Patente belastet ist, aus einer Open-Source-Referenzimplementierung besteht, über ein gut dokumentiertes API verfügt und über andere unabhängige Implementierungen verfügt.</description>
     <description lang="en_GB">FLAC stands for Free Lossless Audio Codec, an audio format similar to MP3, but lossless, meaning that audio is compressed in FLAC without any loss in quality. This is similar to how Zip works, except with FLAC you will get much better compression because it is designed specifically for audio, and you can play back compressed FLAC files in your favorite player (or your car or home stereo, see supported devices) just like you would an MP3 file.[CR][CR]FLAC stands out as the fastest and most widely supported lossless audio codec, and the only one that at once is non-proprietary, is unencumbered by patents, has an open-source reference implementation, has a well documented format and API, and has several other independent implementations.</description>
@@ -561,6 +572,7 @@ v2.3.14 (2019-02-10)
     <description lang="pl_PL">FLAC oznacza Free Lossless Audio Codec, format audio podobny do MP3, ale bezstratny, co oznacza, że dźwięk jest skompresowany w formacie FLAC bez utraty jakości. Jest to podobne do działania Zip, jednak FLAC zapewnia znacznie lepszą kompresję, ponieważ został zaprojektowany specjalnie dla dźwięku, a skompresowane pliki FLAC można odtwarzać w ulubionym odtwarzaczu (także w samochodowym lub domowym zestawie stereo, patrz obsługiwane urządzenia) tak jak w przypadku plików MP3.[CR][CR]FLAC wyróżnia się jako najszybszy i najszerzej obsługiwany bezstratny kodek audio, a jedyny, który jednocześnie nie jest zastrzeżony, nie jest obciążony patentami, ma dobrze udokumentowany format i API oraz ma kilka innych niezależnych implementacji.</description>
     <description lang="ru_RU">FLAC (Free Lossless Audio Codec) — аудиоформат (как MP3), в котором звук сжимается без потери качества. Это похоже на то, как работает Zip, только в FLAC вы получите гораздо лучшее сжатие, поскольку он разработан специально для аудио, и вы сможете воспроизводить сжатые файлы FLAC в своём любимом плеере (или в автомобильной, или домашней стереосистеме, см. поддерживаемые устройства) точно так же, как и файлы MP3.[CR][CR]FLAC выделяется как самый быстрый и широко поддерживаемый аудиокодек без потерь, и единственный, который одновременно является непроприетарным, не обременён патентами, имеет эталонную реализацию с открытым исходным кодом, хорошо документированный формат и API, а также имеет несколько других независимых реализаций.</description>
     <description lang="tr_TR">FLAC, MP3'e benzer, ancak kayıpsız bir ses formatı olan Free Lossless Audio Codec'in kısaltmasıdır; bu, sesin herhangi bir kalite kaybı olmadan FLAC'ta sıkıştırıldığı anlamına gelir. Bu, Zip'in çalışma şekline benzer, ancak FLAC ile özellikle ses için tasarlandığından çok daha iyi sıkıştırma elde edersiniz ve sıkıştırılmış FLAC dosyalarını favori oynatıcınızda (veya arabanızda veya ev stereo sisteminizde, desteklenen cihazlara bakın) oynatabilirsiniz. tıpkı bir MP3 dosyası gibi.[CR][CR]FLAC, en hızlı ve en yaygın olarak desteklenen kayıpsız ses codec'i olarak öne çıkıyor ve aynı anda tescilli olmayan, patentsiz olan, açık kaynak referansına sahip olan tek kod uygulama, iyi belgelenmiş bir biçime ve API'ye sahiptir ve başka birçok bağımsız uygulamaya sahiptir.</description>
+    <description lang="zh_CN">FLAC 代表免费的无损音频编解码器，一种类似于 MP3 的音频格式，但无损，这意味着音频在 FLAC 中被压缩而质量没有任何损失。它与 Zip 的工作原理类似，但 FLAC 专为音频设计，因而有更好的压缩效果，您可以在您喜爱的播放器（或您的车载或家用立体声设备，请参阅支持的设备）中播放压缩的 FLAC 文件，就像播放 MP3 文件一样。[CR][CR]FLAC 是速度最快、支持最广泛的无损音频编解码器，也是唯一一款同时非专利、不受专利限制、具有开源参考实现、具有完善的格式和 API 以及其他几个独立实现的编解码器。</description>
   </extension>
 </addon>
 
@@ -1426,12 +1438,12 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
   </extension>
 </addon>
 
-<addon id="audioencoder.vorbis" version="19.0.0.1" name="Vorbis Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.vorbis" version="19.0.1.1" name="Vorbis Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.19.0.0"/>
+  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1447,6 +1459,7 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
     <summary lang="nl_NL">Vorbis audio-compressie</summary>
     <summary lang="pl_PL">Kompresja dźwięku Vorbis</summary>
     <summary lang="ru_RU">Сжатие аудиофайлов Vorbis</summary>
+    <summary lang="zh_CN">Vorbis 音频压缩</summary>
     <description lang="da_DK">Vorbis er et perceptuelt lydcodec til generel anvendelse beregnet til at tillade maksimal indkoderfleksibilitet, hvilket gør det muligt at skalere konkurrencedygtigt over en usædvanligt bred vifte af bitrates.</description>
     <description lang="de_DE">Vorbis ist ein Allzweck-Audio-Codec, der hohe Encoderflexibilität bringen soll und somit eine wettbewerbsfähige Skalierung über einen außergewöhnlich großen Bereich von Bitraten ermöglicht.</description>
     <description lang="en_GB">Vorbis is a general purpose perceptual audio CODEC intended to allow maximum encoder flexibility, thus allowing it to scale competitively over an exceptionally wide range of bitrates.</description>
@@ -1455,6 +1468,7 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
     <description lang="nl_NL">Vorbis is a algemeen toegepaste audio-codec bedoeld om maximale encodeerflexibiliteit toe te staan, en daardoor dus het competitatief te schalen over een uitzonderlijk wijde gebied van bitrates.</description>
     <description lang="pl_PL">Vorbis to kodek percepcyjny audio ogólnego przeznaczenia, którego celem jest zapewnienie maksymalnej elastyczności kodera, co pozwala na konkurencyjne skalowanie w wyjątkowo szerokim zakresie przepływności.</description>
     <description lang="ru_RU">Vorbis - это аудиокодек общего назначения, предназначенный для обеспечения максимальной гибкости кодера, что позволяет ему быть достаточно эффективным в очень широком диапазоне битрейтов.</description>
+    <description lang="zh_CN">Vorbis 是一种通用感知音频编解码器，旨在实现编码器的最大灵活性，从而使其能够在极宽的比特率范围内进行竞争性扩展。</description>
   </extension>
 </addon>
 
