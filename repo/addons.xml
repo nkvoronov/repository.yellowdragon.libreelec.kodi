@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="vfs.sftp" version="19.0.0.1" name="SFTP support" provider-name="spiff">
+<addon id="vfs.sftp" version="19.0.1.1" name="SFTP support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
     <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.19.0.0"/>
+  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -14,10 +14,24 @@
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="da_DK">Understøttelse af SSH filoverførselses-protokol (SSH File Transfer Protocol)</summary>
     <summary lang="de_DE">Unterstützung für SSH File Transfer Protocol</summary>
     <summary lang="en_GB">SSH File Transfer Protocol support</summary>
+    <summary lang="es_MX">Soporte para FTP mediante SSH</summary>
+    <summary lang="ko_KR">SSH 파일 전송 프로토콜 지원</summary>
+    <summary lang="pl_PL">Obsługa SSH File Transfer Protocol (SFTP)</summary>
+    <summary lang="pt_BR">Suporte para protocolo de transferência de arquivos SSH</summary>
+    <summary lang="ru_RU">Поддержка протокола передачи файлов SSH</summary>
+    <summary lang="zh_CN">SSH 文件传输协议支持</summary>
+    <description lang="da_DK">SSH File Transfer Protocol (SSH filoverførsels-protokol) (også Secure File Transfer Protocol eller SFTP) er en netværksprotokol, der giver filadgang, filoverførsel og filhåndtering over enhver pålidelig datastream.[CR][CR]Dette add-on tillader filadgang til data indeni.</description>
     <description lang="de_DE">Das SSH File Transfer Protocol (auch Secure File Transfer Protocol oder SFTP) ist ein Netzwerkprotokoll, das Dateizugriff, Dateiübertragung und Dateiverwaltung über jeden zuverlässigen Datenstrom ermöglicht.[CR][CR]Dieses Addon ermöglicht den Dateizugriff auf darin enthaltene Daten.</description>
     <description lang="en_GB">The SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.[CR][CR]This addon allows file access to data in it.</description>
+    <description lang="es_MX">El Protocolo de Transferencia de Archivos mediante SSH (también llamado Protocolo de Transferencia de Archivos Seguro, SFTP por sus siglas en inglés) es un protocolo que provee acceso, transferencia y administración de archivos mediante cualquier conexión de red estable.[CR][CR]Este complemento habilita el acceso a datos mediante este protocolo.</description>
+    <description lang="ko_KR">SSH 파일 전송 프로토콜(SFTP)은 신뢰할 수 있는 데이터 스트림을 통해 파일 액세스, 파일 전송 및 파일 관리를 제공하는 네트워크 프로토콜입니다.[CR][CR]이 애드온을 사용하면 데이터에 대한 파일 액세스가 허용됩니다.</description>
+    <description lang="pl_PL">SSH File Transfer Protocol (również Secure File Transfer Protocol lub SFTP) to protokół sieciowy, który zapewnia dostęp do plików, ich transfer i zarządzanie nimi za pośrednictwem dowolnego niezawodnego strumienia danych.[CR][CR]Dodatek ten umożliwia dostęp do plików z danymi w nich zawartymi.</description>
+    <description lang="pt_BR">O SSH File Transfer Protocol (também Secure File Transfer Protocol, ou SFTP) é um protocolo de rede que fornece acesso, transferência e gerenciamento de arquivos, através de qualquer conexão fiável.[CR][CR]Este add-on permite acesso aos arquivos de dados, por meio desse protocolo.</description>
+    <description lang="ru_RU">SSH File Transfer Protocol (также Secure File Transfer Protocol, или SFTP) - это сетевой протокол, который обеспечивает доступ к файлам, передачу файлов и управление файлами через любой надёжный поток данных.</description>
+    <description lang="zh_CN">SSH 文件传输协议（也称为安全文件传输协议，或 SFTP）是一种网络协议，通过任何可靠的数据流提供文件访问、文件传输和文件管理。[CR][CR]此插件允许文件访问其中的数据。</description>
   </extension>
 </addon>
 
@@ -51,7 +65,7 @@
   </extension>
 </addon>
 
-<addon id="vfs.libarchive" version="19.0.0.1" name="Archive support" provider-name="spiff">
+<addon id="vfs.libarchive" version="19.0.1.1" name="Archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -60,7 +74,7 @@
   </requires>
   <!-- Note: .rar is partially supported by this addon, but since the other
              addon vfs.rar also supports it, support is removed here. -->
-  <extension point="kodi.vfs" protocols="archive" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.tgz|.tbz2|.gz|.bz2|.xz|.tar" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.19.0.0"/>
+  <extension point="kodi.vfs" protocols="archive" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.tgz|.tbz2|.gz|.bz2|.xz|.tar" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -75,6 +89,7 @@
     <summary lang="es_MX">Complemento de compresión y archivado en múltiples formatos</summary>
     <summary lang="ko_KR">다중 형식 아카이브 및 압축 애드온</summary>
     <summary lang="pl_PL">Dodatek wieloformatowych archiwów i kompresji</summary>
+    <summary lang="pt_BR">Add-on para arquivos multiformato e compressão</summary>
     <summary lang="ru_RU">Дополнение для архивирования и сжатия в нескольких форматах</summary>
     <summary lang="zh_CN">多格式文档和压缩插件</summary>
     <description lang="ca_ES">Aquest complement utilitza la llibreria libarchive per llegir diversos formats d'arxiu i compressió.[CR][CR]Els formats compatibles són:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
@@ -84,12 +99,13 @@
     <description lang="es_MX">Este complemento utiliza libarchive para leer una variedad de formatos de archivado y compresión. [CR][CR]Los formatos soportados son:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="ko_KR">이 추가 기능은 libarchive 라이브러리를 사용하여 다양한 아카이브 및 압축 형식을 읽습니다.[CR][CR]지원되는 형식은 다음과 같습니다.[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz , tgz, tbz2, xz, zip</description>
     <description lang="pl_PL">Dodatek ten używa biblioteki libarchive do odczytu różnych formatów archiwów i kompresji.[CR][CR]Obsługiwane formaty to:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
+    <description lang="pt_BR">Este add-on usa a biblioteca libarchive para ler uma variedade de arquivos e formatos de compressão.[CR][CR]Os formatos suportados são:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="ru_RU">Это дополнение использует библиотеку libarchive для чтения различных форматов архивов и сжатия.[CR][CR]Поддерживаемые форматы:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="zh_CN">此插件使用 libarchive 库读取各种文档和压缩格式。[CR][CR]支持的格式有：[CR]7z、bz2、gz、tar、tar.bz2、tar.gz、tar.xz、tgz、tbz2、xz、zip</description>
   </extension>
 </addon>
 
-<addon id="pvr.hts" version="19.0.3.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
+<addon id="pvr.hts" version="19.0.4.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -98,7 +114,7 @@
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.pvr" minversion="7.1.0" version="7.1.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.3"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.4"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -258,12 +274,12 @@
   </extension>
 </addon>
 
-<addon id="audioencoder.lame" version="19.1.1.1" name="Lame MP3 Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.lame" version="19.1.2.1" name="Lame MP3 Audio Encoder" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.19.1.1"/>
+  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.19.1.2"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -309,7 +325,7 @@
   </extension>
 </addon>
 
-<addon id="inputstream.adaptive" version="19.0.0.1" name="InputStream Adaptive" provider-name="peak3d">
+<addon id="inputstream.adaptive" version="19.0.1.1" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -318,10 +334,13 @@
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
   </requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_linux="inputstream.adaptive.so.19.0.0"/>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_linux="inputstream.adaptive.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <news>
+v19.0.1 (2021-12-10)
+- Fix compile error by GCC 11
+
 v19.0.0 (2021-09-14)
 - Change test builds to released 'Kodi 19 Matrix'
 - Increase version to 19.0.0
@@ -524,21 +543,63 @@ v2.3.14 (2019-02-10)
     <summary lang="de_DE">InputStream-Client für adaptive Streams</summary>
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
+    <summary lang="es_MX">Cliente InputStream para transmisiones adaptativas</summary>
+    <summary lang="fi_FI">InputStream asiakasohjelma adaptiivisille suoratoistoille</summary>
     <summary lang="he_IL">לקוח InputStream לתזרימים מסתגלים</summary>
+    <summary lang="hr_HR">InputStream klijent za adaptivne tokove</summary>
     <summary lang="hu_HU">InputStream kliens az adaptív streamekhez</summary>
     <summary lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</summary>
     <summary lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</summary>
     <summary lang="ru_RU">InputStream клиент для адаптивных трансляций</summary>
+    <summary lang="zh_CN">用于自适应流的 InputStream 客户端</summary>
     <description lang="ca_ES">Client InputStream per a transmissions adaptatives</description>
     <description lang="da_DK">InputStream-klient til adaptive streams</description>
     <description lang="de_DE">InputStream-Client für adaptive Streams</description>
     <description lang="en_GB">InputStream client for adaptive streams</description>
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
+    <description lang="es_MX">Cliente InputStream para transmisiones adaptativas</description>
+    <description lang="fi_FI">InputStream asiakasohjelma adaptiivisille suoratoistoille</description>
     <description lang="he_IL">לקוח InputStream לתזרימים מסתגלים</description>
+    <description lang="hr_HR">InputStream klijent za adaptivne tokove</description>
     <description lang="hu_HU">InputStream kliens az adaptív streamekhez</description>
     <description lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</description>
     <description lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</description>
     <description lang="ru_RU">InputStream клиент для адаптивных трансляций</description>
+    <description lang="zh_CN">用于自适应流的 InputStream 客户端</description>
+  </extension>
+</addon>
+
+<addon id="vfs.sacd" version="19.0.0.2" name="SACD ISO support" provider-name="spiff">
+  <requires>
+    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
+    <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
+  </requires>
+  <extension point="kodi.vfs" protocols="sacd" extensions=".iso" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.sacd.so.19.0.0"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="de_DE">Super Audio CD ISO-Image</summary>
+    <summary lang="en_GB">Super Audio CD ISO image</summary>
+    <description lang="de_DE">Mit diesem Addon kann Kodi Inhalte von einem Super Audio CD ISO-Image lesen.
+
+Super Audio CD (SACD) ist ein schreibgeschütztes optisches Disc-Format für die Audiospeicherung, das 1999 eingeführt wurde und von Sony und Philips Electronics gemeinsam als Nachfolger der Compact Disc entwickelt wurde.
+
+Das SACD-Format bietet mehr Audiokanäle (z. B. Surround-Sound), eine höhere Bitrate und eine längere Wiedergabezeit als eine herkömmliche CD.</description>
+    <description lang="en_GB">This addon allows Kodi to read content from a Super Audio CD ISO image.
+
+Super Audio CD (SACD) is a read-only optical disc format for audio storage, introduced in 1999, developed jointly by Sony and Philips Electronics to be the successor to the Compact Disc.
+
+The SACD format offers more audio channels (e.g. surround sound), a higher bit rate, and longer playing time than a conventional CD.</description>
+    <disclaimer lang="de_DE">Die Wiedergabesuche ist derzeit nicht möglich.</disclaimer>
+    <disclaimer lang="en_GB">Playback seek is currently not possible.</disclaimer>
+    <platform/>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/xbmc/vfs.sacd</source>
+    <lifecyclestate type="deprecated" lang="en_GB">Replaced by audiodecoder.sacd addon!</lifecyclestate>
+    <lifecyclestate type="deprecated" lang="de_DE">Ersetzt durch das Addon audiodecoder.sacd!</lifecyclestate>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -576,7 +637,7 @@ v2.3.14 (2019-02-10)
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="19.0.2.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
+<addon id="pvr.iptvsimple" version="19.0.3.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -587,16 +648,20 @@ v2.3.14 (2019-02-10)
     <import addon="inputstream.adaptive" minversion="2.6.6"/>
     <import addon="inputstream.rtmp" minversion="3.4.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.19.0.2"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.19.0.3"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
-    <source>https://github.com/kodi-pvr/pvr.hts</source>
+    <source>https://github.com/kodi-pvr/pvr.iptvsimple</source>
     <forum>https://forum.kodi.tv/forumdisplay.php?fid=215</forum>
     <assets>
       <icon>icon.png</icon>
     </assets>
     <news>
+v19.0.3
+- Translations updates from Weblate
+	- da_dk, es_mx, et_ee, hu_hu, lt_lt, nl_nl, pl_pl, zh_cn, zh_tw
+
 v19.0.2
 - Release bump
 
@@ -964,13 +1029,12 @@ v4.0.0
 Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.iptvsimple/changelog.txt
     </news>
     <summary lang="af_ZA">Kodi PVR byvoegsel vir IPTV ondersteuning. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.
-https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.&amp;#10;https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="bg_BG">Добавка за ПВР за поддръжка на IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="ca_ES">Complement PVR de Kodi per al suport d'IPTV https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="cs_CZ">IPTV PVR doplněk pro Kodi. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="cy_GB">Ychwanegyn recordydd Kodi ar gyfer cefnogi IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="da_DK">Kodi PVR addon til IPTV support. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="da_DK">Kodi PVR addon til IPTV support.</summary>
     <summary lang="de_DE">Kodi PVR-Addon für IPTV-Unterstützung.</summary>
     <summary lang="el_GR">Πρόσθετο του Kodi για PVR, με υποστήριξη IPTV. Για λεπτομέρειες επισκεφθείτε το: https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="en_AU">Kodi PVR addon for IPTV support. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
@@ -980,13 +1044,12 @@ https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary
     <summary lang="es_AR">Addon Kodi PVR para soporte IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="es_ES">Kodi PVR addon para soporte IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="es_MX">Complemento Kodi PVR para soporte de IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="et_EE">Kodi PVR'i lisamoodul IPTV toele. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="et_EE">Kodi IPTV lisamoodul.</summary>
     <summary lang="fi_FI">Kodin IPTV-lisäosa. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="fr_CA">Addiciel de numériscope Kodi pour la prise en charge d’IPTV</summary>
     <summary lang="fr_FR">Extension enregistreur vidéo (PVR) pour la gestion IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="gl_ES">Complemento PVR do Kodi de soporte á IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="he_IL">לקוח טלוויזיה חיה עם תמיכה ב־IPTV.
-https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="he_IL">לקוח טלוויזיה חיה עם תמיכה ב־IPTV.&amp;#10;https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="hr_HR">Kodi PVR dodatak za IPTV podršku. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="hu_HU">Kodi PVR kiegészítő az IPTV támogatáshoz. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="id_ID">Pengaya PVR Kodi untuk dukungan IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
@@ -1014,25 +1077,21 @@ https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary
     <summary lang="szl">Klijynt telewizyjny dlŏ telewizyje internetowyj. Wiyncyj informacyji ô przidŏwku: https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="tr_TR">IPTV desteği için Kodi PVR eklentisi. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="uk_UA">PVR надбудова Kodi для підтримки IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="zh_CN">Kodi PVR 插件需要 IPTV 支持。https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="zh_TW">支援IPTV的Kodi PVR附加元件。https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="zh_CN">支持 IPTV 的 Kodi PVR 插件。</summary>
+    <summary lang="zh_TW">支援IPTV的Kodi PVR附加元件。https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home。</summary>
     <description lang="af_ZA">IPTV Simple PVR kliënt ondersteun M3U speellyste, stroom van lewendige TV vir multisaai / unisaai bronne, luister na radio kanale en EPG.</description>
     <description lang="bg_BG">Прост клиент за ПВР за телевизия по Интернет. Поддържа списъци за възпроизвеждане във формат „m3u“, поточно предавана телевизия от източници с излъчване мултикаст и уникаст, слушане на радио канали и електронен програмен справочник.</description>
     <description lang="ca_ES">Client senzill per a IPTV PVR compatible amb les llistes de reproducció m3u, transmissions en línia de TV en directe per als orígens difusió única o múltiple, escolta d'emissores de ràdio i guia electrònica de programació (EPG).</description>
     <description lang="cs_CZ">Jednoduchý klient PVR pro IPTV podporuje seznamy stop m3u, streamování živého vysílání pro zdroje vícesměrového nebo jednosměrového vysílání, poslech rozhlasových stanic a televizní program.</description>
     <description lang="cy_GB">Mae Cleient IPTV Simple PVR yn cynnal rhestrau m3u, ffrydio Teledu Byw o ffynonellau darlledu eang ac unigol, gwrando ar sianeli Radio ac Amserlen Rhaglenni.</description>
-    <description lang="da_DK">IPTV Simpel PVR klient understøttelse M3U-afspilningslister, streaming af direkte tv til multicast/unicast kilder, lytte til radio kanaler og EPG.</description>
+    <description lang="da_DK">IPTV Simple PVR klient understøtter m3u playlister, streaming af direkte tv til multicast/unicast kilder, lytning til radiokanaler og EPG.&amp;#10; &amp;#10;For dokumentation besøg: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
     <description lang="de_DE">IPTV Simple PVR Client unterstützt m3u Wiedergabelisten, Streaming von Live-TV für Multicast/Unicast Quellen, Radiosender und EPG.    </description>
     <description lang="el_GR">Απλός Πελάτης PVR του IPTV, με υποστήριξη λιστών αναπαραγωγής m3u, αναπαραγωγή ροών Live TV για πηγές πολλαπλής/μοναδικής διανομής, ακρόαση ραδιοφωνικών καναλιών και EPG.</description>
     <description lang="en_AU">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
-    <description lang="en_GB">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.
-
-For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md
-    </description>
+    <description lang="en_GB">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.&amp;#10;    &amp;#10;For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
     <description lang="en_NZ">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
     <description lang="en_US">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
-    <description lang="es_AR">Cliente simple PVR IPTV.  Reproduce de TV en Vivo multicast/unicast y listas m3u8
- . reproduce tambien canales de radio y GEP</description>
+    <description lang="es_AR">Cliente simple PVR IPTV.  Reproduce de TV en Vivo multicast/unicast y listas m3u8&amp;#10; . reproduce tambien canales de radio y GEP</description>
     <description lang="es_ES">El cliente PVR IPTV Simple soporta listas M3U, reproducción de TV en Vivo para origenes multicast/unicast, escucha de canales de radio y EPG</description>
     <description lang="es_MX">IPTV Simple PVR Client soporta listas de reproducción m3u, streaming de Live TV para fuentes multicast / unicast, escuchando para canales de radio y EPG.</description>
     <description lang="fi_FI">IPTV-lisäosa tukee m3u-toistolistoja, multicast/unicast-tv-lähetysten toistoa, radiokanavia ja ohjelmaopasta.</description>
@@ -1046,10 +1105,7 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
     <description lang="is_IS">Einfaldur upptökubiðlari fyrir IPTV sem styður m3u spilunarlista, streymingu af beinum útsendingum frá multicast/unicast þjónustum, hlustun á útvarpsrásir og rafræna dagskrárvísa</description>
     <description lang="it_IT">Il client IPTV Simple PVR supporta playlist m3u, streaming della Live TV per sorgenti multicast/unicast e ascoltare canali Radio ed EPG.</description>
     <description lang="ja_JP">IPTV シンプル PVR クライアントは、m3u プレイリスト、マルチキャスト/ユニキャストのライブ TV ストリーミング、ラジオチャンネルや EPG の視聴をサポートしています。</description>
-    <description lang="ko_KR">IPTV Simple PVR 클라이언트는 m3u 재생목록, 스트리밍, 멀티캐스트/유니캐스트 소스의 TV 시청, 라디오 채널과 EPG를 통한 청취를 지원합니다.
-
-For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md
-    </description>
+    <description lang="ko_KR">IPTV Simple PVR 클라이언트는 m3u 재생목록, 스트리밍, 멀티캐스트/유니캐스트 소스의 TV 시청, 라디오 채널과 EPG를 통한 청취를 지원합니다.&amp;#10;    &amp;#10;For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
     <description lang="lt_LT">IPTV Simple PVR klientas palaiko m3u grojaraščius, TV transliacijas iš multicast/unicast šaltinių, radijo stočių transliacijas ir EPG.</description>
     <description lang="lv_LV">IPTV vienkāršais PVR klients atbalsta m3u spēļsarakstus, tiešraides TV straumēšanu multiraides/uniraides avotiem, radio kanālu klausīšanos un EPG.</description>
     <description lang="mk_MK">IPTV Simple PVR Client поддржува m3u листи, гледање на Live TV од multicast/unicast извори, слушање Радио канали и EPG.</description>
@@ -1061,10 +1117,7 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
     <description lang="pt_BR">O cliente de PVR IPTV Simple Client oferece suporte para listas m3u, transmissão de TV ao vivo de fontes multicast/unicast, transmissão de rádios e, ainda, suporte a guia de programação eletrônico - EPG.</description>
     <description lang="pt_PT">Cliente IPTV Simple PVR com suporte a listas de reprodução m3u, transmissão de TV em direto de fontes multidifusão/unidifusão, ouvir estações de rádio e EPG.</description>
     <description lang="ro_RO">PVR Client IPTV suporta liste m3u, redare TV în direct pentru surse de multicast/unicast, ascultare canale radio si EPG.</description>
-    <description lang="ru_RU">IPTV Simple PVR поддерживает просмотр потокового ТВ для юникаст/мультикаст источников, прослушивание радиоканалов и работу с телегидом.
-
-Для документации посетите: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md
-    </description>
+    <description lang="ru_RU">IPTV Simple PVR поддерживает просмотр потокового ТВ для юникаст/мультикаст источников, прослушивание радиоканалов и работу с телегидом.&amp;#10;    &amp;#10;Для документации посетите: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
     <description lang="sk_SK">Jednoduchý IPTV PVR klient podporuje mp3 zoznamy súborov, streamovanie živého televízneho vysielania ako multicast/unicast zdroje, počúvanie rozhlasových kanálov a EPG.</description>
     <description lang="sl_SI">IPTV Simple odjemalec PVR podpira sezname m3u, pretakanja TV v živo za vire multicast/unicast, poslušenje radijskih postaj in EPG.</description>
     <description lang="sr_RS">IPTV Једноставан PVR Клијент подржава m3u листе за репродукцију, стримовање ТВ Уживо за multicast/unicast изворе, слушање Радио канала и EPG.</description>
@@ -1072,14 +1125,14 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
     <description lang="sv_SE">IPTV Simple PVR Client stöder m3u-spellistor, strömmande Live-TV för multicast/unicast-källor, radiolyssning och EPG.</description>
     <description lang="szl">Klijynt telewizyje dlŏ telewizyje internetowyj ôbsuguje wykŏzy ôdtwŏrzaniŏ m3u, szpricowanie kanałōw radyjowych i telewizyjnych ze źrōdeł pōnktowych i skupinowych, a tyż fōnkcyje EPG.</description>
     <description lang="tr_TR">IPTV Basit PVR İstemcisi m3u çalma listeleri, multicast/unicast kaynaklar için Canlı TV akışı, radyo kanallarını dinleme ve EPG destekler.</description>
-    <description lang="zh_CN">IPTV 简单 PVR 前端支持 m3u 播放列表、多播/单播源直播电视、收听电台和电子节目单。</description>
-    <description lang="zh_TW">IPTV Simple PVR 用戶端支援m3u 播放列表，來自multicast/unicast 的即時電視串流，收聽廣播及電子節目表。</description>
+    <description lang="zh_CN">IPTV Simple PVR 客户端支持 m3u 播放列表、多播/单播源直播电视、收听电台和电子节目单。    &amp;#10; 访问 https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md 以获取相关文档&amp;#10;    </description>
+    <description lang="zh_TW">IPTV Simple PVR 用戶端支援m3u 播放列表，來自multicast/unicast 的即時電視串流，收聽廣播及電子節目表。&amp;#10;    &amp;#10;查看說明文件請造訪: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
     <disclaimer lang="af_ZA">Hierdie is onstabiele sagteware! Die outeurs is op geen manier verantwoordelik vir gefaalde spele, inkorrekte EPG tye, vermorsde ure, of enige ander ongewensde effekte.</disclaimer>
     <disclaimer lang="bg_BG">Тази програма е нестабилна! Авторите не носят отговорност за неуспешно възпроизвеждане, некоректни часове в електронния програмен справочник, пропиляното време и други нежелани ефекти.</disclaimer>
     <disclaimer lang="ca_ES">Aquest programari és inestable! Els autors no es fan responsables de reproduccions fallides, horaris incorrectes a la guia electrònica de programació (EPG), hores perdudes o qualsevol altre efecte no desitjat.</disclaimer>
     <disclaimer lang="cs_CZ">Tento software není stabilní! Autoři nejsou žádným způsobem zodpovědní za neúspěšná přehrávání, chybné časy televizního programu, ztracený čas nebo jakékoliv jiné nežádoucí efekty.</disclaimer>
     <disclaimer lang="cy_GB">Mae'r feddalwedd hon yn fregus! Nid yw'r awduron yn gyfrifol mewn unrhyw ffordd am fethu recordio, amseru gwallus, oriau wedi eu gwastraffu nac effeithiau annymunol eraill.</disclaimer>
-    <disclaimer lang="da_DK">Dette er ustabil software! Ophavsmændene er på ingen måde ansvarlig for mislykkede afspilninger, forkerte EPG-tider, spildte timer, eller andre uønskede konsekvenser.</disclaimer>
+    <disclaimer lang="da_DK">Udviklerne er på ingen måde ansvarlig for mislykkede afspilninger, forkerte EPG-tider, spildte timer eller andre uønskede konsekvenser.</disclaimer>
     <disclaimer lang="de_DE">Die Autoren sind in keiner Weise verantwortlich für fehlgeschlagene Wiedergaben, falsche EPG-Zeiten, verschwendete Zeit oder unerwünschte Effekte jeglicher Art.</disclaimer>
     <disclaimer lang="el_GR">Ασταθές πρόγραμμα! Οι δημιουργοί δεν είναι σε καμία περίπτωση υπεύθυνοι για αποτυχημένες εγγραφές, λανθασμένους χρονοδιακόπτες, χαμένες ώρες, ή κάθε είδους ανεπιθύμητα αποτελέσματα.</disclaimer>
     <disclaimer lang="en_AU">This is unstable software! The authors are in no way responsible for failed playings, incorrect EPG times, wasted hours, or any other undesirable effects.</disclaimer>
@@ -1108,7 +1161,7 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
     <disclaimer lang="ms_MY">Perisian ini tidak stabi! Pengarang tidak bertanggungjawab atas kegagalan memainkan, pemasa EPG yang tidak betul, pembaziran masa atau sebarang kesan tidak diingini.</disclaimer>
     <disclaimer lang="mt_MT">Dan il-programm mhuwiex stabbli! L-awturi m'huma bl-ebda mod responsabbli għal daqq li ma jirnexxiex, ħinijiet tal-EPG żbaljati, siegħat moħlija jew kwalunkwe effet ieħor mhux mixtieq.</disclaimer>
     <disclaimer lang="nb_NO">Dette er et ustabilt program! Skaperne er på ingen måte ansvarlig for feil ved avspilling, feil programguidetider, bortkastede timer eller andre uønskede ting.</disclaimer>
-    <disclaimer lang="nl_NL">Deze software is niet 100% stabiel! De auteurs zijn op geen enkele wijze aansprakelijk voor mislukte opnames, incorrecte EPG-tijden, verspilde uren, of enig ander ongewild neveneffect..</disclaimer>
+    <disclaimer lang="nl_NL">De auteurs zijn op geen enkele wijze aansprakelijk voor mislukte opnames, incorrecte EPG-tijden, verspilde uren, of enig ander ongewild neveneffect..</disclaimer>
     <disclaimer lang="pl_PL">Oprogramowanie nadal jest w fazie rozwoju i jest niestabilne! Autorzy w żaden sposób nie są odpowiedzialni za nieudane nagrania, błędy w harmonogramie nagrań, zmarnowany czas ani jakiekolwiek inne niepożądane efekty.</disclaimer>
     <disclaimer lang="pt_BR">Este é um software instável! Os autores não são responsáveis por falhas nas reproduções, horários incorretos no EPG, horas perdidas ou quaisquer outros efeitos indesejáveis.</disclaimer>
     <disclaimer lang="pt_PT">Este software é instável! Os autores não podem ser responsabilizados por gravações falhadas, temporizadores incorretos, horas desperdiçadas ou qualquer outro tipo de efeitos indesejáveis...</disclaimer>
@@ -1121,18 +1174,18 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
     <disclaimer lang="sv_SE">Denna mjukvara är ostabil! Författarna kan inte på något sätt hållas ansvariga för felaktiga uppspelningar, EPG-tider, bortslösade timmar eller andra oönskade effekter.</disclaimer>
     <disclaimer lang="szl">To je niystabilny softwer! Autōry niy sōm ôdpedzialne za niypodarzōne graniy, niynŏleżne godziny EPG, stracōne godziny i inksze niychciane efekty.</disclaimer>
     <disclaimer lang="tr_TR">Bu kararsız bir yazılımdır! Yazanlar oynatma hatası, yanlış EPG zamanları, harcanmış saatler ya da diğer etkilerden sorumlu değildir.</disclaimer>
-    <disclaimer lang="zh_CN">这是不稳定版的软件！作者不对录像失败、错误定时造成时间浪费或其它不良影响负责。</disclaimer>
+    <disclaimer lang="zh_CN">作者不对播放失败、错误的电子节目单时间造成时间浪费或其它不良影响负责。</disclaimer>
     <disclaimer lang="zh_TW">這是測試中的軟體！原創作者無法針對以下情況負責：包括播放失敗，不正確的電子節目表，多餘的時數，或任何不可預期的不良影響。</disclaimer>
   </extension>
 </addon>
 
-<addon id="inputstream.rtmp" version="19.0.0.1" name="RTMP Input" provider-name="spiff">
+<addon id="inputstream.rtmp" version="19.0.1.1" name="RTMP Input" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
   </requires>
-  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_linux="inputstream.rtmp.so.19.0.0"/>
+  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_linux="inputstream.rtmp.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1140,7 +1193,10 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>v19.0.0
+    <news>v19.0.1
+- Translation updates by Weblate
+
+v19.0.0
 - Changed test builds to released 'Kodi 19 Matrix'
 - Prepared for new language translation by Weblate
 - Increased version to 19.0.0
@@ -1183,10 +1239,22 @@ v3.0.4
 v3.0.3
 - Matrix API change to v2.2.0 - Allows upto 256 streams
     </news>
+    <summary lang="da_DK">Klient til RTMP-streams</summary>
     <summary lang="de_DE">Client für RTMP-Streams</summary>
     <summary lang="en_GB">Client for RTMP streams</summary>
+    <summary lang="es_MX">Cliente para flujos RTMP</summary>
+    <summary lang="fi_FI">Asiakasohjelma RTMP-streameille</summary>
+    <summary lang="ko_KR">RTMP 스트림용 클라이언트</summary>
+    <summary lang="pl_PL">Klient strumieni RTMP</summary>
+    <summary lang="zh_CN">RTMP 流的客户端</summary>
+    <description lang="da_DK">Real Time Messaging Protocol (RTMP) er en proprietær netværksprotokol udviklet af Adobe Inc. til at overføre lyd, video og andre data via internettet fra en medieserver til en flashafspiller.[CR][CR]Dette add-on implementerer RTMP-understøttelse af streaming til Kodi og installerede add-ons.</description>
     <description lang="de_DE">Das Real Time Messaging Protocol (RTMP) ist ein proprietäres Netzwerkprotokoll, das von Adobe Inc. entwickelt wurde, um Audio-, Video- und andere Daten über das Internet von einem Medienserver zu einem Flash Player zu übertragen.[CR][CR]Dieses Addon implementiert die RTMP-Streaming-Unterstützung für Kodi und installierte Add-Ons.</description>
     <description lang="en_GB">The Real Time Messaging Protocol (RTMP) is a proprietary network protocol developed by Adobe Inc. to transmit audio, video and other data over the Internet from a media server to a flash player.[CR][CR]This addon implements RTMP streaming support for Kodi and installed add-ons.</description>
+    <description lang="es_MX">El Protocolo de Mensajería en Tiempo Real (RTMP) es un protocolo de red propietario desarrollado por Adobe Inc. para transmitir audio, video y otros datos por internet desde un servidor de medios a un reproductor flash.[CR][CR]Este complemento implementa el soporte de reproducción RTMP para Kodi y para cualquier complemento instalado.</description>
+    <description lang="fi_FI">Real Time Messaging Protocol (RTMP) on Adobe Inc:n kehittämä verkkoprotokolla äänen, videon ja muun tiedon siirtämiseen Internetin kautta mediapalvelimelta flash-soittimeen.[CR][CR]Tämä lisäosa toteuttaa RTMP-suoratoistotuen Kodille ja asennetuille lisäosille.</description>
+    <description lang="ko_KR">실시간 메시징 프로토콜(RTMP)은 인터넷을 통해 미디어 서버에서 플래시 플레이어로 오디오, 비디오 및 기타 데이터를 전송하기 위해 Adobe Inc.에서 개발한 독점 네트워크 프로토콜입니다.[CR][CR]이 애드온은 Kodi와 설치된 애드온을 위한 RTMP 스트리밍 지원을 구현합니다.</description>
+    <description lang="pl_PL">Protokół RTMP (Real Time Messaging Protocol) to własnościowy protokół sieciowy opracowany przez firmę Adobe Inc. do przesyłania dźwięku, obrazu i innych danych przez Internet z serwera multimediów do odtwarzacza Flash.[CR][CR]Ten dodatek implementuje obsługę przesyłania strumieniowego RTMP dla Kodi i zainstalowanych dodatków.</description>
+    <description lang="zh_CN">实时消息协议（RTMP）是 Adobe Inc. 开发的一种专有网络协议，用于通过互联网将音频、视频和其他数据从媒体服务器传输到 flash 播放器。[CR][CR]此插件实现对 Kodi 和已安装插件的 RTMP 流支持。</description>
   </extension>
 </addon>
 
@@ -1216,12 +1284,12 @@ v3.0.3
 	</extension>
 </addon>
 
-<addon id="visualization.projectm" version="19.0.1.1" name="projectM" provider-name="Team Kodi">
+<addon id="visualization.projectm" version="19.0.2.1" name="projectM" provider-name="Team Kodi">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.instance.visualization" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.19.0.1"/>
+  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.19.0.2"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1291,150 +1359,58 @@ v3.0.3
     <summary lang="vi_VN">projectM giúp bạn bay bổng trong âm thanh bạn đang nghe</summary>
     <summary lang="zh_CN">projectM 带你与声波一起飞翔</summary>
     <summary lang="zh_TW">projectM帶著您一起翱翔並飛越聆聽中的音樂浪潮</summary>
-    <description lang="af_ZA">projectM is 'n ontsagwekkende musiek visualiseerder. Daar is niks beter in die wêreld van Unix nie. projectM se grootheid kom van die harde werk van die gemeenskap. Gebruikers soos jy kan voorafinstellings skep wat musiek met ongelooflike visualiserings konnekteer. Probeer dit!
-projectM Visualisering is 'n geLGPL'de herimplementasie van Milkdrop onder OpenGL
-Al wat projectM benodig is 'n video kaart met 3D versnelling en jou gunsteling musiek.</description>
-    <description lang="ar_SA">مشروع M هو مصورللموسقى رائع. لا شي في العالم أفضل من Unix. عظمة مشروع M تأتي من عمل المجتمع الجاد. يستطيع مستخدمون مثلك إنشاء مسبقات تتصل بالموسقى لصور رائعة. جربه
-تصوير مشروع M
-كل ما يتطلبه مشروع M هو كرت شاشة بتسارع 3D و موسيقاك المفضلة.</description>
-    <description lang="be_BY">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
-projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL
-All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="bg_BG">"projectM" е страхотна визуализация, плод на упорит труд от страна на общността. В света на Unix не съществува нищо по-добро. Потребители, като Вас, създават предварително комбинации от настройки, които се ползват като модел за визуализацията и така свързват звука с невероятни визуални ефекти. Пробвайте!
-Визуализацията "projectM" е преработка на Milkdrop под лиценза LGPL, основана на OpenGL.
-"projectM" изисква видео карта с 3D ускорение и любимата Ви музика.</description>
-    <description lang="ca_ES">El projectM és un visualitzador de música impressionant. No hi ha res millor al món Unix. La grandesa de projectM prové del dur treball de la comunitat. Els usuaris com tu poden crear predefinits que connecten la música amb visualitzacions increibles. Prova-ho!
-La Visualització projectM és una re-implementació en LGPL de Milkdrop baix OpenGL
-Tot el que projectM requereix és una tarja amb acceleració 3D i la teva música preferida.</description>
-    <description lang="cs_CZ">projectM je úžasný hudební vizualizér. Ve světě Unixu neexistuje nic lepšího. Velikost projectuM pochází z tvrdé práce komunity. Uživatelé, jako jste vy, mohou vytvářet předvolby, které spojují hudbu s fantastickými vizuálními zážitky. Zkuste jej!
-projectM vizualizace je LGPL reimplementace Milkdropu pod OpenGL.
-Vše co projectM vyžaduje je grafická karta s 3D akcelerací a vaši oblíbenou hudbu.</description>
-    <description lang="cy_GB">Mae delweddwr cerddoriaeth ryfeddol. Does dim byd gwell ym myd Unix. Mae mawredd projectM yn dod o waith caled y gymuned. Mae defnyddwyr fel chi yn gallu creu rhagosodiadau sy'n cysylltu delweddau anhygoel gyda cherddoriaeth. Defnyddiwch e.
-Mae projectM yn ailgyflwyniad LGPL o Milkdrop o dan OpenGL.
-Yr unig beth sydd ei angen ar projectM yw cerdyn video gyda chyflymu 3D a'ch hoff gerddoriaeth.</description>
-    <description lang="da_DK">projectM er en fantastisk musikvisualisering. Der findes intet bedre i Unix-verdenen. projectMs storhed kommer fra brugerbasens hårde arbejde. Brugere, som dig selv, kan skabe forudindstillinger, som forbinder musik med utrolige visualiseringer. Prøv det!
-projectM Visualization er en LGPLed reimplementering af Milkdrop under OpenGL.
-Alt hvad projectM kræver er et grafikkort med 3D-acceleration og din yndlingsmusik.</description>
-    <description lang="de_DE">projectM ist eine unglaubliche Musik-Visualisierung. In der Unix-Welt gibt es nichts Besseres. Die Einzigartigkeit ist Ergebnis der harten Arbeit der Community. Jeder Anwender kann "Presets" schreiben, welche Musik mit unglaublichen visuellen effekten verbinden.
-projectM ist die LGPL Reimplementierung von Milkdrop mit OpenGL
-Alles was projectM benötigt, ist eine Grafikkarte mit 3D-Beschleunigung und coole Musik.</description>
-    <description lang="el_GR">Το projectM είναι ένας φοβερός μουσικός οπτικοποιητής. Δεν υπάρχει τίποτα καλύτερο στον κόσμο του Unix. Το μεγαλείο του projectM πηγάζει από τη σκληρή δουλειά της κοινότητας. Χρήστες όπως εσείς μπορούν να δημιουργήσουν προρυθμίσεις συνδέοντας τη μουσική με απίστευτες απεικονίσεις. Δοκιμάστε το!
-Η Οπτικοποίηση projectM αποτελεί μία νέα LGPL υλοποίηση του Milkdrop υπό το OpenGL
-Το μόνο που απαιτείται από το projectM είναι μία κάρτα γραφικών με τρισδιάστατη (3D) επιτάχυνση, και την αγαπημένη σας μουσική.</description>
-    <description lang="en_AU">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
-projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL
-All projectM requires is a video card with 3D acceleration and your favourite music.</description>
-    <description lang="en_GB">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
-projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL
-All projectM requires is a video card with 3D acceleration and your favourite music.</description>
-    <description lang="en_NZ">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
-projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL
-All projectM requires is a video card with 3D acceleration and your favourite music.</description>
-    <description lang="en_US">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
-projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL
-All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="es_AR">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tu pueden crear ajustes preestablecidos que conecten la música con visualizaciones increíbles. ¡Pruebalo!
-projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.
-Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
-    <description lang="es_ES">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como usted pueden crear ajustes preestablecidos que conecten la música con visualizaciones increibles. ¡Pruébelo!
-projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.
-Todo lo que projectM necesita es una tarjeta de vídeo con aceleración 3D y su música favorita.</description>
-    <description lang="es_MX">projectM es un visualizador de música sorprendente. No hay nada mejor en el mundo de Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tú pueden crear preaujstes que conectan la música con increíbles imágenes. Inténtalo!
-La visualización projectM es una reimplementación en LGPL de Milkdrop bajo OpenGL.
-Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
-    <description lang="et_EE">projectM on äge muusika visuaal. Unixi maailmas pole midagi paremat. projectM'i suurus on saavutatud kogukonna ühise raske töö tulemusena. Kasutajad nagu sina saavad luua eelseadeid, mis ühendavad muusika imeliste visualidega. Proovi seda! projectM visualiseerimine on litsentseeritud (LGPL) uuskasutus Milkdrop'ist OpenGL keskkonnas.
-Ainus mida projectM vajab, on 3D kiirendusega videokaart ja sinu lemmikmuusika.</description>
-    <description lang="fi_FI">projectM on uskomaton musiikkivisualisointi, joka on yhteisön kovan työn tulos. Käyttäjät voivat luoda esiasetuksia, jotka yhdistävät musiikin kuviin.
-projectM -visualisointi on LGPL-lisensoitu Milkdropin uudelleenimplementointi OpenGL:llä.
-projectM tarvitsee vain 3D-kiihdyttävän näytönohjaimen ja lempimusiikkisi.</description>
-    <description lang="fr_CA">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!
-La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.
-Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
-    <description lang="fr_FR">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!
-La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.
-Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
-    <description lang="gl_ES">projectM é unha impresionante Visualización de música. Non hai nada mellor no mundo Unix. A grandeza de projectM ven da dura xeira da comunidade. Usuarios coma vostede poden crear preconfiguracións que conectan a música con incribles visualizacións. Próbeo!
-A Visualización projectM é unha reimplementación de Milkdrop empregando OpenGL e con licencia LGPL.
-Todo o que precisa projectM é unha tarxeta gráfica con aceleración 3D e a súa música favorita.</description>
-    <description lang="he_IL">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
-projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL
-All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="hr_HR">projectM je fenomenalan glazbeni vizualizator. Ne postoji ništa bolje u svijetu Unixa. Veličina projectM-a dolazi zbog predanosti njegove zajednice. Korisnici kao što ste Vi, mogu stvoriti predloške koje povezuju glazbu i nevjerojatne vizualizacije. Isprobajte!
-projectM Vizualizacija je LGPL reimplementacija Milkdropa pod OpenGL-om
-Sve što projectM zahtijeva je video kartica sa 3d ubrzanjem i vašu omiljenu glazbu.</description>
-    <description lang="hu_HU">A projectM egy fantasztikus zenei vizualizáció. Nincs ennél jobb a Unix világban. A projectM különlegessége, hogy egy egész fejlesztői közösség nehéz munkájából jött létre. A felhasználók, mint te egyedi beállításokat hozhatnak létre ami összekapcsolja a zenét a hihetetlen látványelemekkel. Próbáld ki!
-A projectM Vizualizáció a Milkdrop újrakódolása LGPL licenc alatt, OpenGL videókártya támogatást használva.
-Minden projectM látványbeállításhoz 3D gyorsításra képes videókártya és a kedvenc zenéd szükséges.</description>
-    <description lang="id_ID">projectM merupakan visualiser musik yang keren. Tak ada yng lebih baik di dunia Unix. Kebesaran projectM berasa dari kerja keras dari komunitas. Pengguna seperti anda dapat membuat preset yang menghubungkan musik dengan visual yang luarbiasa. Cobalah!!!
-Visualisasi projectM merupakan produk berlisensi LGPL reimplementasi dari Milkdrop dibawah OpenGL
-Semua projectM membutuhkan kartu grafis dengan akselerasi 3D dan musik favorit anda.</description>
-    <description lang="is_IS">projectM er frábær myndskreyting. það er ekkert betra í Unix heiminum. Gæði projectM koma til vegna framlags samfélagsins.Notendur eins og þú geta búið til forstillingar sem tengja tónlist við ótrúlega myndræna upplifun. Prófaðu!
-projectM myndskreyting er LGPL útgáfa af Milkdrop með OpenGL
-Allt sem projectM þarfnast er skjákort með þrívíddar hraðli 3D og uppáhalds tónlistin þín.</description>
-    <description lang="it_IT">projectM è un incredibile visualizzazione musicale. E' il meglio del mondo Unix. La grandezza di projectM proviene dal duro lavoro della comunità. Gli utenti come te possono creare preset che connetto la musica con incredibili grafiche. Provalo!
-projectM è una reimplementazione LGPL di Milkdrop sotto OpenGL
-Tutti i projectM richiedono una scheda video con accelerazione 3D e la tua musica preferita.</description>
-    <description lang="ja_JP">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!
-projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL
-All projectM requires is a video card with 3D acceleration and your favorite music.</description>
+    <description lang="af_ZA">projectM is 'n ontsagwekkende musiek visualiseerder. Daar is niks beter in die wêreld van Unix nie. projectM se grootheid kom van die harde werk van die gemeenskap. Gebruikers soos jy kan voorafinstellings skep wat musiek met ongelooflike visualiserings konnekteer. Probeer dit!&amp;#10;projectM Visualisering is 'n geLGPL'de herimplementasie van Milkdrop onder OpenGL&amp;#10;Al wat projectM benodig is 'n video kaart met 3D versnelling en jou gunsteling musiek.</description>
+    <description lang="ar_SA">مشروع M هو مصورللموسقى رائع. لا شي في العالم أفضل من Unix. عظمة مشروع M تأتي من عمل المجتمع الجاد. يستطيع مستخدمون مثلك إنشاء مسبقات تتصل بالموسقى لصور رائعة. جربه&amp;#10;تصوير مشروع M &amp;#10;كل ما يتطلبه مشروع M هو كرت شاشة بتسارع 3D و موسيقاك المفضلة.</description>
+    <description lang="be_BY">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
+    <description lang="bg_BG">"projectM" е страхотна визуализация, плод на упорит труд от страна на общността. В света на Unix не съществува нищо по-добро. Потребители, като Вас, създават предварително комбинации от настройки, които се ползват като модел за визуализацията и така свързват звука с невероятни визуални ефекти. Пробвайте!&amp;#10;Визуализацията "projectM" е преработка на Milkdrop под лиценза LGPL, основана на OpenGL.&amp;#10;"projectM" изисква видео карта с 3D ускорение и любимата Ви музика.</description>
+    <description lang="ca_ES">El projectM és un visualitzador de música impressionant. No hi ha res millor al món Unix. La grandesa de projectM prové del dur treball de la comunitat. Els usuaris com tu poden crear predefinits que connecten la música amb visualitzacions increibles. Prova-ho!&amp;#10;La Visualització projectM és una re-implementació en LGPL de Milkdrop baix OpenGL&amp;#10;Tot el que projectM requereix és una tarja amb acceleració 3D i la teva música preferida.</description>
+    <description lang="cs_CZ">projectM je úžasný hudební vizualizér. Ve světě Unixu neexistuje nic lepšího. Velikost projectuM pochází z tvrdé práce komunity. Uživatelé, jako jste vy, mohou vytvářet předvolby, které spojují hudbu s fantastickými vizuálními zážitky. Zkuste jej!&amp;#10;projectM vizualizace je LGPL reimplementace Milkdropu pod OpenGL.&amp;#10;Vše co projectM vyžaduje je grafická karta s 3D akcelerací a vaši oblíbenou hudbu.</description>
+    <description lang="cy_GB">Mae delweddwr cerddoriaeth ryfeddol. Does dim byd gwell ym myd Unix. Mae mawredd projectM yn dod o waith caled y gymuned. Mae defnyddwyr fel chi yn gallu creu rhagosodiadau sy'n cysylltu delweddau anhygoel gyda cherddoriaeth. Defnyddiwch e.&amp;#10;Mae projectM yn ailgyflwyniad LGPL o Milkdrop o dan OpenGL.&amp;#10;Yr unig beth sydd ei angen ar projectM yw cerdyn video gyda chyflymu 3D a'ch hoff gerddoriaeth.</description>
+    <description lang="da_DK">projectM er en fantastisk musikvisualisering. Der findes intet bedre i Unix-verdenen. projectMs storhed kommer fra brugerbasens hårde arbejde. Brugere, som dig selv, kan skabe forudindstillinger, som forbinder musik med utrolige visualiseringer. Prøv det!&amp;#10;projectM Visualization er en LGPLed reimplementering af Milkdrop under OpenGL.&amp;#10;Alt hvad projectM kræver er et grafikkort med 3D-acceleration og din yndlingsmusik.</description>
+    <description lang="de_DE">projectM ist eine unglaubliche Musik-Visualisierung. In der Unix-Welt gibt es nichts Besseres. Die Einzigartigkeit ist Ergebnis der harten Arbeit der Community. Jeder Anwender kann "Presets" schreiben, welche Musik mit unglaublichen visuellen effekten verbinden. &amp;#10;projectM ist die LGPL Reimplementierung von Milkdrop mit OpenGL&amp;#10;Alles was projectM benötigt, ist eine Grafikkarte mit 3D-Beschleunigung und coole Musik.</description>
+    <description lang="el_GR">Το projectM είναι ένας φοβερός μουσικός οπτικοποιητής. Δεν υπάρχει τίποτα καλύτερο στον κόσμο του Unix. Το μεγαλείο του projectM πηγάζει από τη σκληρή δουλειά της κοινότητας. Χρήστες όπως εσείς μπορούν να δημιουργήσουν προρυθμίσεις συνδέοντας τη μουσική με απίστευτες απεικονίσεις. Δοκιμάστε το!&amp;#10;Η Οπτικοποίηση projectM αποτελεί μία νέα LGPL υλοποίηση του Milkdrop υπό το OpenGL&amp;#10;Το μόνο που απαιτείται από το projectM είναι μία κάρτα γραφικών με τρισδιάστατη (3D) επιτάχυνση, και την αγαπημένη σας μουσική.</description>
+    <description lang="en_AU">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favourite music.</description>
+    <description lang="en_GB">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favourite music.</description>
+    <description lang="en_NZ">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favourite music.</description>
+    <description lang="en_US">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
+    <description lang="es_AR">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tu pueden crear ajustes preestablecidos que conecten la música con visualizaciones increíbles. ¡Pruebalo!&amp;#10;projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.&amp;#10;Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
+    <description lang="es_ES">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como usted pueden crear ajustes preestablecidos que conecten la música con visualizaciones increibles. ¡Pruébelo!&amp;#10;projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.&amp;#10;Todo lo que projectM necesita es una tarjeta de vídeo con aceleración 3D y su música favorita.</description>
+    <description lang="es_MX">projectM es un visualizador de música sorprendente. No hay nada mejor en el mundo de Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tú pueden crear preaujstes que conectan la música con increíbles imágenes. Inténtalo!&amp;#10;La visualización projectM es una reimplementación en LGPL de Milkdrop bajo OpenGL.&amp;#10;Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
+    <description lang="et_EE">projectM on äge muusika visuaal. Unixi maailmas pole midagi paremat. projectM'i suurus on saavutatud kogukonna ühise raske töö tulemusena. Kasutajad nagu sina saavad luua eelseadeid, mis ühendavad muusika imeliste visualidega. Proovi seda! projectM visualiseerimine on litsentseeritud (LGPL) uuskasutus Milkdrop'ist OpenGL keskkonnas.&amp;#10;Ainus mida projectM vajab, on 3D kiirendusega videokaart ja sinu lemmikmuusika.</description>
+    <description lang="fi_FI">projectM on uskomaton musiikkivisualisointi, joka on yhteisön kovan työn tulos. Käyttäjät voivat luoda esiasetuksia, jotka yhdistävät musiikin kuviin.&amp;#10;projectM -visualisointi on LGPL-lisensoitu Milkdropin uudelleenimplementointi OpenGL:llä.&amp;#10;projectM tarvitsee vain 3D-kiihdyttävän näytönohjaimen ja lempimusiikkisi.</description>
+    <description lang="fr_CA">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!&amp;#10;La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.&amp;#10;Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
+    <description lang="fr_FR">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!&amp;#10;La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.&amp;#10;Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
+    <description lang="gl_ES">projectM é unha impresionante Visualización de música. Non hai nada mellor no mundo Unix. A grandeza de projectM ven da dura xeira da comunidade. Usuarios coma vostede poden crear preconfiguracións que conectan a música con incribles visualizacións. Próbeo!&amp;#10;A Visualización projectM é unha reimplementación de Milkdrop empregando OpenGL e con licencia LGPL.&amp;#10;Todo o que precisa projectM é unha tarxeta gráfica con aceleración 3D e a súa música favorita.</description>
+    <description lang="he_IL">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
+    <description lang="hr_HR">projectM je fenomenalan glazbeni vizualizator. Ne postoji ništa bolje u svijetu Unixa. Veličina projectM-a dolazi zbog predanosti njegove zajednice. Korisnici kao što ste Vi, mogu stvoriti predloške koje povezuju glazbu i nevjerojatne vizualizacije. Isprobajte!&amp;#10;projectM Vizualizacija je LGPL reimplementacija Milkdropa pod OpenGL-om&amp;#10;Sve što projectM zahtijeva je video kartica sa 3d ubrzanjem i vašu omiljenu glazbu.</description>
+    <description lang="hu_HU">A projectM egy fantasztikus zenei vizualizáció. Nincs ennél jobb a Unix világban. A projectM különlegessége, hogy egy egész fejlesztői közösség nehéz munkájából jött létre. A felhasználók, mint te egyedi beállításokat hozhatnak létre ami összekapcsolja a zenét a hihetetlen látványelemekkel. Próbáld ki!&amp;#10;A projectM Vizualizáció a Milkdrop újrakódolása LGPL licenc alatt, OpenGL videókártya támogatást használva.&amp;#10;Minden projectM látványbeállításhoz 3D gyorsításra képes videókártya és a kedvenc zenéd szükséges.</description>
+    <description lang="id_ID">projectM merupakan visualiser musik yang keren. Tak ada yng lebih baik di dunia Unix. Kebesaran projectM berasa dari kerja keras dari komunitas. Pengguna seperti anda dapat membuat preset yang menghubungkan musik dengan visual yang luarbiasa. Cobalah!!!&amp;#10;Visualisasi projectM merupakan produk berlisensi LGPL reimplementasi dari Milkdrop dibawah OpenGL&amp;#10;Semua projectM membutuhkan kartu grafis dengan akselerasi 3D dan musik favorit anda.</description>
+    <description lang="is_IS">projectM er frábær myndskreyting. það er ekkert betra í Unix heiminum. Gæði projectM koma til vegna framlags samfélagsins.Notendur eins og þú geta búið til forstillingar sem tengja tónlist við ótrúlega myndræna upplifun. Prófaðu!&amp;#10;projectM myndskreyting er LGPL útgáfa af Milkdrop með OpenGL&amp;#10;Allt sem projectM þarfnast er skjákort með þrívíddar hraðli 3D og uppáhalds tónlistin þín.</description>
+    <description lang="it_IT">projectM è un incredibile visualizzazione musicale. E' il meglio del mondo Unix. La grandezza di projectM proviene dal duro lavoro della comunità. Gli utenti come te possono creare preset che connetto la musica con incredibili grafiche. Provalo!&amp;#10;projectM è una reimplementazione LGPL di Milkdrop sotto OpenGL&amp;#10;Tutti i projectM richiedono una scheda video con accelerazione 3D e la tua musica preferita.</description>
+    <description lang="ja_JP">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
     <description lang="ko_KR">projectM은 멋진 음악 시각화입니다. Unix에는 이것보다 좋은것은 없습니다. projectM은 많은 사람들에 의해 개발되었습니다. 여러분과 같은 유저들이 음악을 표현하는 프리셋을 만들었습니다. projectM 음악시각화는 OpenGL에서 작동하도록 Milkdrop를 새로 만든것입니다. 모든 projectM은 3D 가속이 되는 비디오카드와 음악이 필요합니다.</description>
-    <description lang="lt_LT">ProjectM yra išskirtinė muzikos vizualizacija. Nėra nieko geriau, Unix pasaulyje. ProjectM spindesys tai sunkus darbas bendruomenėje. Naudotojai, tokie kaip Jūs galite sukurti ir suderinti muziką su puikiais vizualizacijos efektais. Sužinokite!
-ProjectM yra įgyvendinimas iš Milkdrop pagal LGPL licenciją, ir naudoja OpenGL
-Viskas ko reikia projectM tai vaizdo plokštės su 3D akceleracija (greitėjimu) ir geros muzikos.</description>
-    <description lang="lv_LV">projectM ir brīnišķīgs mūzikas vizualizētājs. Nav nekā labāka Unix pasaulē. projectM's izcilība rodas no smagā darba komūnā. Lietotāji, kas ir tādi paši kā Jūs, var radīt sagataves, kas savieno mūziku ar neticami skaistām vizualizācijām. Pamēģiniet!
-projectM Vizualizācija ir Milkdrop LGPL reimplementācija zem OpenGL
-Visi projectM pieprasa video karti ar 3D paātrinājumu un Jūsu mīļākās mūzikas izlasi.</description>
+    <description lang="lt_LT">ProjectM yra išskirtinė muzikos vizualizacija. Nėra nieko geriau, Unix pasaulyje. ProjectM spindesys tai sunkus darbas bendruomenėje. Naudotojai, tokie kaip Jūs galite sukurti ir suderinti muziką su puikiais vizualizacijos efektais. Sužinokite!&amp;#10;ProjectM yra įgyvendinimas iš Milkdrop pagal LGPL licenciją, ir naudoja OpenGL&amp;#10;Viskas ko reikia projectM tai vaizdo plokštės su 3D akceleracija (greitėjimu) ir geros muzikos.</description>
+    <description lang="lv_LV">projectM ir brīnišķīgs mūzikas vizualizētājs. Nav nekā labāka Unix pasaulē. projectM's izcilība rodas no smagā darba komūnā. Lietotāji, kas ir tādi paši kā Jūs, var radīt sagataves, kas savieno mūziku ar neticami skaistām vizualizācijām. Pamēģiniet!&amp;#10;projectM Vizualizācija ir Milkdrop LGPL reimplementācija zem OpenGL&amp;#10;Visi projectM pieprasa video karti ar 3D paātrinājumu un Jūsu mīļākās mūzikas izlasi.</description>
     <description lang="mk_MK">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!⏎ projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL⏎ All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="nb_NO">projectM er en awesome musikk visualisering. Der er ingenting bedre i Unix verden. projectM er så flott takket være et hardt arbeidende felleskap. Brukere som deg kan lage forhåndsinnstillinger som kobler musikk med utrolige visualiseringer. Prøv det!
-projectM visualiseringen er en LGPL reinplimentasjon av Milkdrop under OpenGL
-Alt projectM trenger er et grafikkort med 3D støtte og din favoritt musikk</description>
-    <description lang="nl_NL">ProjectM is een geweldige muziekvisualisatie. Er bestaat niets beters in de UNIX-wereld. Het success van ProjectM is het resultaat van het harde werk van de XBMC-gemeenschap. U kunt hun eigen presets instellen die muziek linken aan verbluffende visualisaties. Probeer het uit!
-ProjectM-visualisatie is beschikbaar onder de LGPL-licentie en is een herimplementatie van Milkdrop (OpenGL). Alles wat projectM vereist is een videokaart met 3D-versnelling en jouw favoriete muziek.</description>
-    <description lang="pl_PL">projectM to rewelacyjna wizualizacją muzyki. Nie ma nic lepszego w świecie Unixa. Wspaniałość projectM wywodzi się ciężkiej pracy społeczności. Użytkownicy tacy jak Ty, mogą tworzyć efekty łączące muzykę z niesamowitymi efektami wizualnymi. Przekonaj się!
-projectM jest reimplementacją Milkdropa na licencji LGPL i używa OpenGL
-Wszystko czego wymaga projectM, to karta graficzna wspierająca akcelerację 3D oraz zasoby Twojej muzyki.</description>
-    <description lang="pt_BR">O projectM é um fantástico visualizador de música. Não existe nenhum melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Utilizadores como você podem criar pré-definições que ligam a música a visualizações incríveis. Experimente!
-O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM necessita é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
-    <description lang="pt_PT">O projectM é uma fantástica visualização de música. Não há melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Qualquer utilizador pode criar pré-selecções que combinam a música com visualizações incríveis. Experimente!
-O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM precisa é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
-    <description lang="ro_RO">projectM este un plugin uimitor. Nu există nimic mai bun în lumea Unix. Măreția projectM vine din munca întregii comunități. Utilizatori ca și tine pot crea presetări care conectează muzica cu vizualizări incredibile. Încearcă și tu!
-Vizualizarea projectM este o reimplementare LGPL a lui Milkdrop sub OpenGL.
-Tot ceea ce necesită projectM este o placă video cu accelerare 3D și muzica ta favorită.</description>
-    <description lang="ru_RU">projectM удивительным образом визуализирует музыку. В мире Unix нет ничего лучше. projectM является результатом напряжённой работы сообщества. Пользователи могут создавать наборы настроек, которые объединяют музыку и невероятные визуальные эффекты. Попробуйте сами!⏎
-Визуализация projectM представляет собой LGPL-реализацию Milkdrop на основе OpenGL⏎
-Всё, что требуется для визуализации — это видеокарта с 3D-ускорением и любимая музыка.</description>
+    <description lang="nb_NO">projectM er en awesome musikk visualisering. Der er ingenting bedre i Unix verden. projectM er så flott takket være et hardt arbeidende felleskap. Brukere som deg kan lage forhåndsinnstillinger som kobler musikk med utrolige visualiseringer. Prøv det!&amp;#10;projectM visualiseringen er en LGPL reinplimentasjon av Milkdrop under OpenGL&amp;#10;Alt projectM trenger er et grafikkort med 3D støtte og din favoritt musikk</description>
+    <description lang="nl_NL">ProjectM is een geweldige muziekvisualisatie. Er bestaat niets beters in de UNIX-wereld. Het success van ProjectM is het resultaat van het harde werk van de XBMC-gemeenschap. U kunt hun eigen presets instellen die muziek linken aan verbluffende visualisaties. Probeer het uit!&amp;#10;ProjectM-visualisatie is beschikbaar onder de LGPL-licentie en is een herimplementatie van Milkdrop (OpenGL). Alles wat projectM vereist is een videokaart met 3D-versnelling en jouw favoriete muziek.</description>
+    <description lang="pl_PL">projectM to rewelacyjna wizualizacją muzyki. Nie ma nic lepszego w świecie Unixa. Wspaniałość projectM wywodzi się ciężkiej pracy społeczności. Użytkownicy tacy jak Ty, mogą tworzyć efekty łączące muzykę z niesamowitymi efektami wizualnymi. Przekonaj się!&amp;#10;projectM jest reimplementacją Milkdropa na licencji LGPL i używa OpenGL&amp;#10;Wszystko czego wymaga projectM, to karta graficzna wspierająca akcelerację 3D oraz zasoby Twojej muzyki.</description>
+    <description lang="pt_BR">O projectM é um fantástico visualizador de música. Não existe nenhum melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Utilizadores como você podem criar pré-definições que ligam a música a visualizações incríveis. Experimente!&amp;#10;O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM necessita é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
+    <description lang="pt_PT">O projectM é uma fantástica visualização de música. Não há melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Qualquer utilizador pode criar pré-selecções que combinam a música com visualizações incríveis. Experimente!&amp;#10;O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM precisa é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
+    <description lang="ro_RO">projectM este un plugin uimitor. Nu există nimic mai bun în lumea Unix. Măreția projectM vine din munca întregii comunități. Utilizatori ca și tine pot crea presetări care conectează muzica cu vizualizări incredibile. Încearcă și tu!&amp;#10;Vizualizarea projectM este o reimplementare LGPL a lui Milkdrop sub OpenGL.&amp;#10;Tot ceea ce necesită projectM este o placă video cu accelerare 3D și muzica ta favorită.</description>
+    <description lang="ru_RU">projectM удивительным образом визуализирует музыку. В мире Unix нет ничего лучше. projectM является результатом напряжённой работы сообщества. Пользователи могут создавать наборы настроек, которые объединяют музыку и невероятные визуальные эффекты. Попробуйте сами!⏎&amp;#10;Визуализация projectM представляет собой LGPL-реализацию Milkdrop на основе OpenGL⏎&amp;#10;Всё, что требуется для визуализации — это видеокарта с 3D-ускорением и любимая музыка.</description>
     <description lang="sk_SK">projektM je úžasný hudobný vizualizér. Vo svete Unixu neexistuje nič lepšie. Veľkosť projectM pramení z tvrdej práce komunity. Užívatelia ako ty vytvárajú Predvoľby, ktoré spájajú hudbu s fantastickými vizualizáciami. Vyskúšaj to![CR] projectM vizualizácie sú LGPL implementáciou vizualizácií Milkdrop s použitím OpenGL.[CR] Jediné čo projectM potrebuje je grafickú kartu s 3D akceleráciou a Vašu obľúbenú hudbu.</description>
-    <description lang="sl_SI">projectM je glasbeni vizualizator. Nič ni boljšega v svetu Unixa. Veličina ProjectM izhaja iz garanja skupnosti. Uporabniki, kot vi, si lahko ustvarite prednastavitve, ki povezujejo glasbo z neverjetno vizualizacijo. Poskusite!
-Vizualizacija projectM je reimplementacija Milkdropa v LGPL v okviru OpenGL-a.
-projectM potrebuje le grafično kartico s 3D pospeševanjem in vašo najljubšo glasbo.</description>
-    <description lang="sq_AL">projectM është nje vizualizim i tmerrshëm. Nuk ekziston asgjë më të mirë në boten e Unix'it. Madhësija e projectM'it vjen nga puna e shkëlqyeshme të bashkimit të saj. Përdoruesit si ti mundin të krijojnë cilësime që lidhin musikën me vizualizime të jashtzakonshëm. Provoje!
-projectM'i është një zbatim i LGPL'uar prej Milkdrop ndër OpenGL.
-Të gjith që projectM kërkon është një kartë grafike me përshpejtim për 3D dhe muzikën tënde të preferuar.</description>
-    <description lang="sv_SE">projectM är en fantastisk musikvisualisering. Det finns inget bättre i Unixvärlden. projectM's storhet kommer från gemenskapens hårda jobb. Användare som du kan skapa förval som förenar musiken med otroliga visualiseringar. Prova det!
-projectM visualisering är en LGPL-implementation av Milkdrop i OpenGL
-Alla projectM kräver ett grafikkort med 3D-acceleration och din favoritmusik.</description>
+    <description lang="sl_SI">projectM je glasbeni vizualizator. Nič ni boljšega v svetu Unixa. Veličina ProjectM izhaja iz garanja skupnosti. Uporabniki, kot vi, si lahko ustvarite prednastavitve, ki povezujejo glasbo z neverjetno vizualizacijo. Poskusite!&amp;#10;Vizualizacija projectM je reimplementacija Milkdropa v LGPL v okviru OpenGL-a.&amp;#10;projectM potrebuje le grafično kartico s 3D pospeševanjem in vašo najljubšo glasbo.</description>
+    <description lang="sq_AL">projectM është nje vizualizim i tmerrshëm. Nuk ekziston asgjë më të mirë në boten e Unix'it. Madhësija e projectM'it vjen nga puna e shkëlqyeshme të bashkimit të saj. Përdoruesit si ti mundin të krijojnë cilësime që lidhin musikën me vizualizime të jashtzakonshëm. Provoje!&amp;#10;projectM'i është një zbatim i LGPL'uar prej Milkdrop ndër OpenGL.&amp;#10;Të gjith që projectM kërkon është një kartë grafike me përshpejtim për 3D dhe muzikën tënde të preferuar.</description>
+    <description lang="sv_SE">projectM är en fantastisk musikvisualisering. Det finns inget bättre i Unixvärlden. projectM's storhet kommer från gemenskapens hårda jobb. Användare som du kan skapa förval som förenar musiken med otroliga visualiseringar. Prova det!&amp;#10;projectM visualisering är en LGPL-implementation av Milkdrop i OpenGL&amp;#10;Alla projectM kräver ett grafikkort med 3D-acceleration och din favoritmusik.</description>
     <description lang="ta_IN">projectM ஒரு அற்புதமான இசை விசுவலைஸர் ஆகும். யூனிக்ஸ் உலகில் இதைவிட சிறந்தது இல்லை. projectM உடைய சிறப்புத்தன்மை கடினமான சமூகத்தின் உழைப்பில் இருந்து வருகிறது. உங்களை போன்ற பயனர்களாலும் நம்பமுடியாத இசை முன்னமைவுகளை உருவாக்க முடியும். முயற்சித்துபாரும்!⏎ projectM காட்சியாக்கம் OpenGL கீழ் Milkdrop உடைய மறு தயாரிப்பாக உள்ளது⏎ projectM க்கு தேவைப்படுவதெல்லாம் ஒரு 3D முடுக்கம் அட்டை மற்றும் உங்களுக்கு பிடித்த இசை.</description>
-    <description lang="tg_TJ">projectM таҷассуми мусиқии аҷоиб мебошад. Чезе беҳтар аз projectM дар ҷаҳони Unix вуҷуд надорад. projectM натиҷаи кори вазнини ҷамъияташ мебошад. Корбарони монанди шумо метавонанд танзимотеро, ки мусиқиро бо таҷассуми аҷоиб пайваст мекунед, эҷод кунанд. Кӯшиш кунед!
-Таҷассуми projectM дар асоси LGPL-и Milkdrop бо OpenGL эҷод карда шуд
-Таҷассуми projectM танҳо корти видеоӣ бо шитобдиҳандаи 3D ва файлҳои мусиқии дӯстдоштаи шуморо талаб мекунад.</description>
-    <description lang="th_TH">projectM คือการแสดงแสงสีประกอบเพลง อันยอดเยี่ยม. ไม่มีอะไรที่ดีกว่านี้แล้ว ในโลกของ Unix. projectM คือความยิ่งใหญ่ ที่มาจากการทำงานอย่างหนักของชุมชน. ผู้ใช้เช่นคุณสามารถสร้าง ชุดรูปแบบ ที่เชื่อมโยงกับเพลงด้วยแสงสีอันน่าทึ่ง. ลองเลย!
-การแสดงแสงสี projectM เป็นการดำเนินการตาม LGPL'ed ของ Milkdrop ภายใต้ OpenGL
-ทั้งหมดที่ต้องใช้สำหรับ projectM มีเพียงการ์ดวิดีโอที่มีการเร่งแสดงผล 3D และเพลงที่คุณชื่นชอบ.</description>
-    <description lang="tr_TR">projectM muhteşem bir müzik görselleştiricidir. Unix dünyasında daha iyisi yoktur. projectM'in ihtişamı geliştirici gurubunun çok çalışmasından gelir. Sizin gibi kullanıcılar müzik ile bağlanan inanılmaz görsel ayarlar hazırlayabilirler. Lütfen siz de deneyin!
-projectM Görseli, Milkdrop'un OpenGL altında yeniden LGPL'li implementasyonudur.
-projectM' in tek ihtiyacı 3D hızlandırıcılı bir görüntü kartı ve sizin favori müziğinizdir.</description>
-    <description lang="uk_UA">projectM - це чудовий візуалізатор відео. Немає нічого кращого в світі Unix. projectM створений тяжкою роботою спільноти. Користувачі, такі як Ви, можуть створювати різні візуалізації. Спробуйте!
-Візуалізація projectM - це LGPLівська імплементація Milkdrop під ліцензією OpenGL
-Все, що потрібно для projectM - це відео карта з 3D прискоренням і Ваша улюблена музика.</description>
-    <description lang="vi_VN">projectM là chương trình trình chiếu nhạc tuyệt vời. Không có gì tuyệt hơn nó trong thế giới Unix. Sự tuyệt vời của projectM đến từ thành quả vất vả của cộng đồng. Những người sử dụng như bạn có thể tạo ra những bộ preset mà kết nối âm nhạc với hiệu ứng hình ảnh tuyệt vời. Hãy thử nó!
-Chương trình này là một phiên bản LGPL được phát triển dựa trên Milkdrop qua OpenGL
-Tất cả bạn cần chỉ là một card đồ họa 3D và bài hát ưa thích của mình.</description>
-    <description lang="zh_CN">projectM 是一个音乐可视化效果。它是 Unix 世界中最好的。它的伟大来自于社区的辛苦工作。使用者可以创建预设参数把音乐和难以置信的可视化效果连接起来。试试吧！
-projectM 可视化效果是用 OpenGL 按照 LGPL 协议对 Milkdrop 的重新实现
-projectM 所要求的仅是一块有 3D 加速功能的显卡和你喜爱的音乐。</description>
-    <description lang="zh_TW">projectM是一個令人驚豔的音樂視覺效果。它是Unix世界中最好的。projectM的偉大成果來自於社群創作者的投入與心血。使用者可以創建把音樂和難以置信的視覺效果連接起來的預設值。快來嘗鮮一下吧！
-projectM視覺效果是用OpenGL按照LGPL協議對Milkdrop的重新實現
-projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛的音樂。</description>
+    <description lang="tg_TJ">projectM таҷассуми мусиқии аҷоиб мебошад. Чезе беҳтар аз projectM дар ҷаҳони Unix вуҷуд надорад. projectM натиҷаи кори вазнини ҷамъияташ мебошад. Корбарони монанди шумо метавонанд танзимотеро, ки мусиқиро бо таҷассуми аҷоиб пайваст мекунед, эҷод кунанд. Кӯшиш кунед!&amp;#10;Таҷассуми projectM дар асоси LGPL-и Milkdrop бо OpenGL эҷод карда шуд&amp;#10;Таҷассуми projectM танҳо корти видеоӣ бо шитобдиҳандаи 3D ва файлҳои мусиқии дӯстдоштаи шуморо талаб мекунад.</description>
+    <description lang="th_TH">projectM คือการแสดงแสงสีประกอบเพลง อันยอดเยี่ยม. ไม่มีอะไรที่ดีกว่านี้แล้ว ในโลกของ Unix. projectM คือความยิ่งใหญ่ ที่มาจากการทำงานอย่างหนักของชุมชน. ผู้ใช้เช่นคุณสามารถสร้าง ชุดรูปแบบ ที่เชื่อมโยงกับเพลงด้วยแสงสีอันน่าทึ่ง. ลองเลย!&amp;#10;การแสดงแสงสี projectM เป็นการดำเนินการตาม LGPL'ed ของ Milkdrop ภายใต้ OpenGL&amp;#10;ทั้งหมดที่ต้องใช้สำหรับ projectM มีเพียงการ์ดวิดีโอที่มีการเร่งแสดงผล 3D และเพลงที่คุณชื่นชอบ.</description>
+    <description lang="tr_TR">projectM muhteşem bir müzik görselleştiricidir. Unix dünyasında daha iyisi yoktur. projectM'in ihtişamı geliştirici gurubunun çok çalışmasından gelir. Sizin gibi kullanıcılar müzik ile bağlanan inanılmaz görsel ayarlar hazırlayabilirler. Lütfen siz de deneyin!&amp;#10;projectM Görseli, Milkdrop'un OpenGL altında yeniden LGPL'li implementasyonudur.&amp;#10;projectM' in tek ihtiyacı 3D hızlandırıcılı bir görüntü kartı ve sizin favori müziğinizdir.</description>
+    <description lang="uk_UA">projectM - це чудовий візуалізатор відео. Немає нічого кращого в світі Unix. projectM створений тяжкою роботою спільноти. Користувачі, такі як Ви, можуть створювати різні візуалізації. Спробуйте!&amp;#10;Візуалізація projectM - це LGPLівська імплементація Milkdrop під ліцензією OpenGL&amp;#10;Все, що потрібно для projectM - це відео карта з 3D прискоренням і Ваша улюблена музика.</description>
+    <description lang="vi_VN">projectM là chương trình trình chiếu nhạc tuyệt vời. Không có gì tuyệt hơn nó trong thế giới Unix. Sự tuyệt vời của projectM đến từ thành quả vất vả của cộng đồng. Những người sử dụng như bạn có thể tạo ra những bộ preset mà kết nối âm nhạc với hiệu ứng hình ảnh tuyệt vời. Hãy thử nó!&amp;#10;Chương trình này là một phiên bản LGPL được phát triển dựa trên Milkdrop qua OpenGL&amp;#10;Tất cả bạn cần chỉ là một card đồ họa 3D và bài hát ưa thích của mình.</description>
+    <description lang="zh_CN">projectM 是一个音乐可视化效果。它是 Unix 世界中最好的。它的伟大来自于社区的辛苦工作。使用者可以创建预设参数把音乐和难以置信的可视化效果连接起来。试试吧！&amp;#10;projectM 可视化效果是用 OpenGL 按照 LGPL 协议对 Milkdrop 的重新实现&amp;#10;projectM 所要求的仅是一块有 3D 加速功能的显卡和你喜爱的音乐。</description>
+    <description lang="zh_TW">projectM是一個令人驚豔的音樂視覺效果。它是Unix世界中最好的。projectM的偉大成果來自於社群創作者的投入與心血。使用者可以創建把音樂和難以置信的視覺效果連接起來的預設值。快來嘗鮮一下吧！&amp;#10;projectM視覺效果是用OpenGL按照LGPL協議對Milkdrop的重新實現&amp;#10;projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛的音樂。</description>
   </extension>
 </addon>
 
@@ -1472,7 +1448,7 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
   </extension>
 </addon>
 
-<addon id="vfs.rar" version="19.0.0.1" name="RAR archive support" provider-name="spiff">
+<addon id="vfs.rar" version="19.0.1.1" name="RAR archive support" provider-name="spiff">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -1480,7 +1456,7 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
     <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
     <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.19.0.0"/>
+  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.19.0.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1492,16 +1468,20 @@ projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛�
     <summary lang="ca_ES">Desarxivador per fitxers .rar</summary>
     <summary lang="de_DE">Entpacker für Rar-Dateien</summary>
     <summary lang="en_GB">Unarchiver for .rar files</summary>
+    <summary lang="es_MX">Descompresor de archivos .rar</summary>
     <summary lang="ko_KR">.rar 파일용 아카이브 추출</summary>
     <summary lang="pl_PL">Ekstraktor plików .rar</summary>
+    <summary lang="pt_BR">Descompactador para arquivos .rar</summary>
     <summary lang="ru_RU">Распаковщик для архивов .rar</summary>
     <summary lang="sv_SE">Uppackare för .rar-filer</summary>
     <summary lang="zh_CN">解压 .rar 文件</summary>
     <description lang="ca_ES">Aquest complement és una utilitat d'extracció per a arxius RAR.[CR][CR]Permet la lectura directa de fitxers RAR sense comprimir, de manera que no és necessari desempaquetar prèviament. Per a la resta de tipus, es desempaqueta temporalment i es passa a Kodi.[CR][CR]Atenció: el tipus d'arxiu "RAR sòlid" requereix descomprimir completament per utilitzar els fitxers. Per tant, els temps d'accés poden ser llargs pels paquets més grans.</description>
     <description lang="de_DE">Dieses Addon dient zum Entpacken von RAR-Archiven.[CR][CR]Es ermöglicht das direkte Lesen nicht komprimierter RAR-Dateien, sodass ein vorheriges Entpacken nicht erforderlich ist. Bei allen anderen Typen wird der Inhalt temporär entpackt und an Kodi übertragen.[CR][CR]Achtung: Der Archivtyp "Solid RAR" erfordert ein vollständiges Entpacken, um die darin enthaltenen Dateien zu verwenden. Daher können die Zugriffszeiten für größere Pakete länger sein.</description>
     <description lang="en_GB">This addon is an extraction utility for RAR archives.[CR][CR]It allows direct reading of uncompressed RAR files, so prior unpacking is not necessary. For all other types, it is temporarily unpacked and passed to Kodi.[CR][CR]Attention: A "Solid RAR" archive type requires complete unpacking to use files within it. Hence access times may be long for larger packages.</description>
+    <description lang="es_MX">Este complemento es una utilidad de extracción para archivos RAR.[CR][CR]Permite lectura directa de archivos RAR sin compresión, así que no es necesario descomprimir previamente. Para todos los demás tipos, se descomprime temporalmente y se pasa esto a Kodi.[CR][CR]Atención: Un archivo del tipo "RAR sólido" requiere descompresión completa para utilizar los archivos dentro de. Debido a esto los tiempos de acceso pueden ser extensos para archivos grandes.</description>
     <description lang="ko_KR">이 애드온은 RAR 아카이브용 추출 유틸리티입니다.[CR][CR]압축되지 않은 RAR 파일을 직접 읽을 수 있으므로 사전 압축 풀기가 필요하지 않습니다. 다른 모든 유형의 경우 일시적으로 압축을 풀고 Kodi로 전달됩니다.[CR][CR]주의: "Solid RAR" 아카이브 유형은 그 안에 있는 파일을 사용하기 위해 완전히 압축을 풀어야 합니다. 따라서 더 큰 패키지의 경우 액세스 시간이 길어질 수 있습니다.</description>
     <description lang="pl_PL">Ten dodatek jest narzędziem do ekstrakcji archiwów RAR.[CR][CR]Pozwala na bezpośredni odczyt nieskompresowanych plików RAR, więc wcześniejsze rozpakowanie nie jest konieczne. W przypadku wszystkich innych typów są one tymczasowo rozpakowywane i przekazywane do Kodi.[CR][CR]Uwaga: typ archiwum „Ciągły RAR” wymaga całkowitego rozpakowania, aby móc korzystać z zawartych w nim plików. Z tego powodu czasy dostępu mogą być długie w przypadku większych pakietów.</description>
+    <description lang="pt_BR">Este add-on é um utilitário de extração para arquivos RAR.[CR][CR]Ele permite a leitura direta de arquivos RAR sem compressão, nos quais a descompactação prévia não é necessária. Para todos os outros tipos, os arquivos são descompactados temporariamente e repassados para o Kodi.[CR][CR]Atenção: Um arquivo do tipo "RAR Sólido" requer uma descompactação completa para acesso aos arquivos contidos. Consequentemente, os tempos de acesso podem ser mais longos em pacotes maiores.</description>
     <description lang="ru_RU">Это дополнение представляет собой утилиту для работы с архивами RAR.[CR][CR]Оно позволяет напрямую читать несжатые файлы RAR, поэтому предварительная распаковка не требуется. Для всех остальных типов архив временно распаковывается и данные передаются в Kodi.[CR][CR]Внимание: Тип архива "Непрерывный" требует полной распаковки для использования файлов из него. Поэтому для больших пакетов время доступа увеличится.</description>
     <description lang="sv_SE">Detta tillägg är ett uppackningsverktyg för RAR-arkiv.[CR][CR]Detta gör det möjligt att spela upp okomprimerade RAR-filer utan att de först packas upp. För alla andra typer, packas den upp tillfälligt och skickas sedan till Kodi.[CR][CR]Observera: Ett "Fast" arkiv kräver en komplett uppackning av arkivet. Därför kan uppstartstiden ta lång tid om det är ett stort arkiv.</description>
     <description lang="zh_CN">此插件是 RAR 压缩文件的解压实用程序。[CR][CR]它允许直接读取 RAR 文件，因此无需事先解压缩。对于所有其他类型，它会临时解包并传递给 Kodi。[CR][CR]注意：“Solid RAR”压缩类型需要完全解包才能使用其中的文件。对于较大的压缩包，访问时间可能较长。</description>
