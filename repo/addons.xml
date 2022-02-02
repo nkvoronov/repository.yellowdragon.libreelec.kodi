@@ -105,7 +105,7 @@
   </extension>
 </addon>
 
-<addon id="pvr.hts" version="19.0.4.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
+<addon id="pvr.hts" version="19.0.6.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -114,7 +114,7 @@
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.pvr" minversion="7.1.0" version="7.1.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.4"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.6"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -637,7 +637,7 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="19.0.3.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
+<addon id="pvr.iptvsimple" version="19.1.0.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -648,7 +648,7 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
     <import addon="inputstream.adaptive" minversion="2.6.6"/>
     <import addon="inputstream.rtmp" minversion="3.4.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.19.0.3"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.19.1.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -658,6 +658,13 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
       <icon>icon.png</icon>
     </assets>
     <news>
+v19.1.0
+- Choose a suitable default stream type for default and append catchup modes
+- Allow catchup tags in M3U header
+- Update flussonic catchup type strings
+- For flussonic catchup add support for generic stream types (where any dir name is used after channel id)
+- Support alternative tag name for channel number
+
 v19.0.3
 - Translations updates from Weblate
 	- da_dk, es_mx, et_ee, hu_hu, lt_lt, nl_nl, pl_pl, zh_cn, zh_tw
