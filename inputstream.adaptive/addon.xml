@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="inputstream.adaptive" version="19.0.3.1" name="InputStream Adaptive" provider-name="peak3d">
+<addon id="inputstream.adaptive" version="19.0.4.1" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
     <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
@@ -8,10 +8,15 @@
     <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
     <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
   </requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_linux="inputstream.adaptive.so.19.0.3"/>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_linux="inputstream.adaptive.so.19.0.4"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <news>
+v19.0.4 (2022-04-24)
+- Translations updates from Weblate -be_by, fi_fi, cs_cz
+- [DRM] Keep same session from pre-init
+- Fix crash related to mp4 webvtt subtitles
+
 v19.0.3 (2022-02-10)
 - Translations updates from Weblate - hr_hr, nl_nl, sk_s
 - [HLS] Fix for large media sequence numbers
@@ -222,12 +227,14 @@ v2.3.14 (2019-02-10)
 - Add WebM container parser
     </news>
     <summary lang="ca_ES">Client InputStream per a transmissions adaptatives</summary>
+    <summary lang="cs_CZ">Klient adaptivních toků protokolu InputStream</summary>
     <summary lang="da_DK">InputStream-klient til adaptive streams</summary>
     <summary lang="de_DE">InputStream-Client für adaptive Streams</summary>
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
     <summary lang="es_MX">Cliente InputStream para transmisiones adaptativas</summary>
-    <summary lang="fi_FI">InputStream asiakasohjelma adaptiivisille suoratoistoille</summary>
+    <summary lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</summary>
+    <summary lang="fr_FR">Client InputStream pour les flux adaptatifs</summary>
     <summary lang="he_IL">לקוח InputStream לתזרימים מסתגלים</summary>
     <summary lang="hr_HR">InputStream klijent za prilagodljiva strujanja</summary>
     <summary lang="hu_HU">InputStream kliens az adaptív streamekhez</summary>
@@ -237,12 +244,14 @@ v2.3.14 (2019-02-10)
     <summary lang="ru_RU">InputStream клиент для адаптивных трансляций</summary>
     <summary lang="zh_CN">用于自适应流的 InputStream 客户端</summary>
     <description lang="ca_ES">Client InputStream per a transmissions adaptatives</description>
+    <description lang="cs_CZ">Klient adaptivních toků protokolu InputStream</description>
     <description lang="da_DK">InputStream-klient til adaptive streams</description>
     <description lang="de_DE">InputStream-Client für adaptive Streams</description>
     <description lang="en_GB">InputStream client for adaptive streams</description>
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
     <description lang="es_MX">Cliente InputStream para transmisiones adaptativas</description>
-    <description lang="fi_FI">InputStream asiakasohjelma adaptiivisille suoratoistoille</description>
+    <description lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</description>
+    <description lang="fr_FR">Client InputStream pour les flux adaptatifs</description>
     <description lang="he_IL">לקוח InputStream לתזרימים מסתגלים</description>
     <description lang="hr_HR">InputStream klijent za prilagodljiva strujanja</description>
     <description lang="hu_HU">InputStream kliens az adaptív streamekhez</description>
