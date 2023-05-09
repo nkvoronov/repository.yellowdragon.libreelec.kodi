@@ -1,35 +1,67 @@
-v19.2.2
+v20.8.1
+- Set default settings correctly and update settings migration
+
+v20.8.0
+- Add support for multiple instances each supporting their own M3U/XMLTV and settings
+
+v20.7.0
+- Add setting to make matching channel IDs and tvg-id's case sensitive
+
+v20.6.1
+- Ensure groups are delimited by semi-colon's when suoplied by an EXTGRP tag
+- Don't break if multiple TVG URLs are supplied, just use the first one
+- Fix warning from using sprintf by switching to snprintf
+
+v20.6.0
+- Kodi inputstream API update to version 3.2.0
+- Kodi PVR API update to version 8.0.2
+
+v20.5.2
 - Fixed: Some icons using url arguments not displaying
 
-v19.2.1
+v20.5.1
 - Support url arguments when encoding file portion of icon URL
 
-v19.2.0
-- URL encode last part of tvg logo URL as they can be based on channel names
+v20.5.0
+- URL encode last part of tvg logo URL as they can be based on channel names and they can contain spaces and non standard characters not allowed in paths
 
-v19.1.1
+v20.4.0
+- Support ${duration} format specifier
+- Fix azure image to use Windows 2019 and VS 2019
+
+v20.3.1
 - Fix ch-number tag being ignored
 
-v19.1.0
+v20.3.0
 - Choose a suitable default stream type for default and append catchup modes
 - Allow catchup tags in M3U header
 - Update flussonic catchup type strings
 - For flussonic catchup add support for generic stream types (where any dir name is used after channel id)
 - Support alternative tag name for channel number
+- Fix incorrect provider mappings file path
 
-v19.0.3
-- Translations updates from Weblate
-	- da_dk, es_mx, et_ee, hu_hu, lt_lt, nl_nl, pl_pl, zh_cn, zh_tw
+v20.2.1
+- Remove redundant PVR from addon name
 
-v19.0.2
-- Release bump
+v20.2.0
+- Translation updates by Weblate
+- Kodi main API update to version 2.0.0
 
-v19.0.1
+v20.1.2
 - Set default player as VideoPlayer for ffmpegdirect so Timeshift works for PVR Radio
 
-v19.0.0
-- Changed: Test builds to 'Kodi 19 Matrix'
-- Increased version to 19.0.0
+v20.1.1
+- Allow VOD or media tags to be used to specify view as PVR Recordings
+- Remove news as Kodi 20 will load changelog.txt as a fallback anyway
+
+v20.1.0
+- Fixed: Change reported backend name
+- Added: Support pvr providers in Kodi 20
+- Added: Support VOD Media as recordings
+
+v20.0.0
+- Changed: Test builds to 'Kodi 20 Nexus'
+- Increased version to 20.0.0
   - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
     This done to know easier to which Kodi the addon works.
 
@@ -51,15 +83,15 @@ v7.6.10
 
 v7.6.9
 - Translations updates from Weblate
-	- pl_pl
+  - pl_pl
 
 v7.6.8
 - Translations updates from Weblate
-	- zh_cn
+  - zh_cn
 
 v7.6.7
-Translations updates from Weblate
-	- id_id, lt_lt
+- Translations updates from Weblate
+  - id_id, lt_lt
 
 v7.6.6
 - Language update from Weblate

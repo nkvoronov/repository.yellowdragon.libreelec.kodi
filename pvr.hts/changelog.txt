@@ -1,30 +1,47 @@
-v19.0.6
-- Fix deleted recordings not disappearing in Kodi until restart (regression introduced with v19.0.5)
-
-v19.0.5
+v20.6.1
 - Translations updates from Weblate
-  - pl_pl
+	- ast_es, be_by, cs_cz, da_dk, de_de, es_es, fi_fi, fr_fr, hr_hr, it_it, pl_pl, vi_vn
+
+v20.6.0
+- Drop support for Tvheadend < 4.2.0
+
+v20.5.0
+- Kodi inputstream API update to version 3.2.0
+- Kodi PVR API update to version 8.0.2
+
+v20.4.0
+- Add support for multiple backends.
+- Request addon-restart only on settings changes which require a reconnect to the backend.
+
+v20.3.0
+- Inputstream API bump.
+
+v20.2.2
+- Fix deleted recordings not disappearing in Kodi until restart (regression introduced with v20.2.1)
+
+v20.2.1
 - Ignore recordings without a file (e.g. removed recordings).
 - When parsing recording add/update messages, always set the correct error string.
 - Reduce debug log spam. Do not log recording descriptions.
 
-v19.0.4
-- Translations updates from Weblate
-	- es_mx
+v20.2.0
+- Update translations
+- Adapt to recent API changes
 
-v19.0.3
+v20.1.2
 - Fix Unable to change existing timer rule to use any time
-- Translations updates from Weblate
 
-v19.0.2
-- Translations updates from Weblate
-
-v19.0.1
+v20.1.1
 - Fix AAC RDS parser
 
-v19.0.0
+v20.1.0
+- Kodi API to 8.0.0
+  - Add supports recordings delete capability
+  - Enforce EDL limits
+
+v20.0.0
 - Translations updates from Weblate
-- Version numbering scheme change.
+- Version numbering scheme change
 
 v8.4.0
 - Add support for RDS data contained in AAC streams.

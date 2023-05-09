@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="vfs.sftp" version="19.0.1.1" name="SFTP support" provider-name="spiff">
+<addon id="vfs.sftp" version="20.2.0.3" name="SFTP support" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
-    <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
+    <import addon="kodi.binary.instance.vfs" minversion="3.0.1" version="3.0.1"/>
   </requires>
-  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.19.0.1"/>
+  <extension point="kodi.vfs" protocols="sftp|ssh" files="true" directories="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="false" supportWrite="true" defaultPort="22" type="sftp" label="20260" zeroconf="_sftp-ssh._tcp" library_linux="vfs.sftp.so.20.2.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -35,18 +35,18 @@
   </extension>
 </addon>
 
-<addon id="pvr.iptvsimple" version="19.2.2.1" name="PVR IPTV Simple Client" provider-name="nightik and Ross Nicholson">
+<addon id="pvr.iptvsimple" version="20.8.1.2" name="IPTV Simple Client" provider-name="nightik and Ross Nicholson">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
-    <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.7" version="1.1.8"/>
     <import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4"/>
-    <import addon="kodi.binary.instance.pvr" minversion="7.1.0" version="7.1.0"/>
+    <import addon="kodi.binary.instance.pvr" minversion="8.2.0" version="8.2.0"/>
     <import addon="inputstream.ffmpegdirect" minversion="1.19.0"/>
     <import addon="inputstream.adaptive" minversion="2.6.6"/>
     <import addon="inputstream.rtmp" minversion="3.4.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.19.2.2"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.iptvsimple.so.20.8.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -55,401 +55,12 @@
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>
-v19.2.2
-- Fixed: Some icons using url arguments not displaying
-
-v19.2.1
-- Support url arguments when encoding file portion of icon URL
-
-v19.2.0
-- URL encode last part of tvg logo URL as they can be based on channel names
-
-v19.1.1
-- Fix ch-number tag being ignored
-
-v19.1.0
-- Choose a suitable default stream type for default and append catchup modes
-- Allow catchup tags in M3U header
-- Update flussonic catchup type strings
-- For flussonic catchup add support for generic stream types (where any dir name is used after channel id)
-- Support alternative tag name for channel number
-
-v19.0.3
-- Translations updates from Weblate
-	- da_dk, es_mx, et_ee, hu_hu, lt_lt, nl_nl, pl_pl, zh_cn, zh_tw
-
-v19.0.2
-- Release bump
-
-v19.0.1
-- Set default player as VideoPlayer for ffmpegdirect so Timeshift works for PVR Radio
-
-v19.0.0
-- Changed: Test builds to 'Kodi 19 Matrix'
-- Increased version to 19.0.0
-  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
-    This done to know easier to which Kodi the addon works.
-
-v7.6.13
-- Fixed: Apply timezone for first aired date if after 1970
-
-v7.6.12
-- Fixed: Always compare to the raw start date and not the localised time to detect NEW programmes
-- Fixed: Do not set year if this programme is a TV show
-
-v7.6.11
-- Fixed: EPG date entry only parsing year
-
-v7.6.10
-- Fixed: Fix episode number when there is no season
-- Fixed: Return server error if channels or groups could not be loaded due to missing file so they are not cleared in Kodi
-- Translations updates from Weblate
-	- id_id, ko_kr, pl_pl
-
-v7.6.9
-- Translations updates from Weblate
-	- pl_pl
-
-v7.6.8
-- Translations updates from Weblate
-	- zh_cn
-
-v7.6.7
-- Translations updates from Weblate
-	- id_id, lt_lt
-
-v7.6.6
-- Language update from Weblate
-
-v7.6.5
-- Fixed: Allow embedded commas in channel name in M3U
-
-v7.6.4
-- Fixed: Only use Local logo location if file is relative
-- Fixed: Add string initialisation from macros as some linux fail to compile without it
-
-v7.6.3
-- Skipped
-
-v7.6.2
-- Fixed: Allow catchup correction (timezone shift) when live URLs have catchup placeholders
-- Fixed: Always load EPG data if we prefer XMLTV logos or catchup is enabled
-
-v7.6.1
-- Fixed: Allow ignoring M3U logos when using local logo path
-
-v7.6.0
-- Added: Support url-tvg in M3U header in addition to x-tvg-url
-- Added: Add support for XZ compression of XMLTV data
-- Fixed: Allow flusonnic channel ids containing forward slashes
-- Fixed: Disable other catchup settings if catched is not enabled
-- Added: Add setting for catchup correction
-- Added: Support xeev XC catchup prefixes
-
-v7.5.1
-- Fixed: Treat 'tvg-rec' catchup tag like the siptv 'timeshift' tag
-- Fixed: Ensure channel's catchup window is used instead of value from settings
-
-v7.5.0
-- Added: Support sub channel numbers
-- Added: Allow setting scope for channels using catchup mode setting to enable overriding
-
-v7.4.3
-- Fixed: Add support for format specifiers use for detecting terminating catchup and granularity
-- Update: Make inputstream add-ons a required dependency
-
-v7.4.2
-- Fixed: Add missing initialisation of display name with underscores after fixing slow epg
-
-v7.4.1
-- Update: Readme - update description for Kodi 19 and add table of contents
-
-v7.4.0
-- Fixed: An xmltv channel cannot have an empty id field
-- Fixed: Fix slow epg load due to display name checks when finding a channel
-- Fixed: Only force load EPG data on startup if catchup is enabled
-- Added: Support custom channel group filters
-- Added: Reload settings before reloading playlist and EPG data
-
-v7.3.0
-- Update: PVR API 7.1.0
-- Added: support past and future max epg days and always load EPG data on start
-
-v7.2.0
-- Added: Safe localtime and format strings for timestamps in catchup
-- Added: Allow now/current time format specifiers in live stream URLs
-- Added: Redact catchup source and url format string
-- Added: Some providers use 'tvg-rec' instead of 'catchup-days'
-
-v7.1.0
-- Added: Set minimum inputstream ffmpegdirect, rtmp and adaptive versions to API stable version for Matrix
-- Added: Redact URLs when logged
-- Update: Replace square brackets with bold text in addon settings help text
-
-v7.0.0
-- Update: PVR API 7.0.2
-
-v6.4.1
-- Update: Remove p8 from debian control file
-
-v6.4.0
-- Added: Add options to support both UDP and all stream types when using timeshift feature
-- Fixed: README spelling corrections
-- Update: Use add-on supplied StringUtils and remove local version
-
-v6.3.2
-- Update: Remove p8-platforms and add local StringUtils for cpp17
-
-v6.3.1
-- Fixed: Append TV/Radio to group name if the same group name is used for both channel types
-
-v6.3.0
-- Update: Allow max catchup of 15 days
-- Added: Support premiere and new tag from XMLTV
-
-v6.2.4
-- Fixed: Only allow timeshift on streams that are live
-
-v6.2.3
-- Fixed: Don't allow timeshift mode on catchup VOD stream
-
-v6.2.2
-- Fixed: Correctly pass realtime stream information to inputstream.ffmpegdirect addon
-
-v6.2.1
-- Fixed: Fix timeshift not working for catchup streams without timestamp
-
-v6.2.0
-- Added: Add advanced option to always enabled timeshift for supported streams using custom M3U properties
-
-v6.1.0
-- Added: Check inputstream is installed or enabled if a custom inputstream is provided in M3U
-
-v6.0.1
-- Update PVR API 7.0.1
-
-v6.0.0
-- Update PVR API 7.0.0
-- Rework addon to support new API interface
-
-v5.2.0
-- Added: Enable timeshift feature from inputstream.ffmpegdirect
-- Added: Support VOD catchup streams including those via plugin URLs
-- Added: Access to ffmpegdirect settings and inputstream checks (C++ API)
-- Fixed: Fix flussonic ts detected as wrong type
-- Fixed: Use kodis built in inputstreams for plugin urls
-- Fixed: Fix incorrect catchup granularity for flussonic stream
-
-v5.1.0
-- Added: Support catchup-type M3U property
-- Added: Set MIME type and manifest on stream types if required
-- Added: Support multiple occurrences of year, month and day in catchup format specifiers
-- Update: Change docs to use inputstream instead of inputstreamclass
-
-v5.0.0
-- Update PVR API 6.5.1
-- Update Global API 1.2.0
-
-v4.14.2
-- Check to make sure catchup streams support timeshifting before letting them do so
-- Fix catchup streams for fs, xc and shift being passed URL with possible protocol options
-
-v4.14.1
-- Fixed: Send manifest type property to ffmpegdirect so it can recognise Smooth Streaming
-
-v4.14.0
-- Added: Stream Manager for runtime caching of stream/mime types for speeding up channel switches
-- Added: Deprecate use of inputstream.ffmpegdirect.mime_type and use mimetype property instead
-- Added: Support advanced setting to set a default inputstream and/or MIME type for channels without them
-- Fixed: Fix full timeshift calc not being applied to catchup streams
-- Added: Suppport catchup-correction value in M3U file for catchup streams geo mismatched to wrong time
-
-v4.13.2
-- Fixed: Install all inputstream dependencies by default.
-- Fixed: Debian control files for run-time dependencies.
-
-v4.13.1
-- Fixed: Install ffmpegdirect dependency by default.
-
-v4.13.0
-- Added: Add support for catchup stream granularity property for ffmpegdirect
-- Fixed: Terminating catchup stream check missing use case
-
-v4.12.0
-- Added: Add support for terminating catchup streams property for ffmpegdirect
-- Update: Convert kodiprop names inputstreamaddon and inputstreamclass to inputstream on load
-
-v4.11.7
-- Fixed: stream media headers not set when inputstream.adaptive is used for HLS streams
-
-v4.11.6
-- Fixed: Fix incorrect live URL selection and inputstream for standard (no timeshift) catchup streams
-- Fixed: Correctly cache mime_type for streams
-
-v4.11.5
-- Fixed: Typo in date regex, caused failure to load EPG on some platforms
-
-v4.11.4
-- Fixed: EPG performance
-- Update: PVR API 6.3.0
-- Added: GPLv2+ badge on README
-- Update: SPDX in copyright header for for GPLv2 or later
-
-v4.11.3
-- Add: GPL2 license file and show GPL2 on README.md
-- Update: Add source url, forum url and license name to addon.xml
-- Update: Copyright year to 2020 and use Kodi / kodi.tv
-- Update: Debian build code
-- Update: Some minor cleanups
-
-v4.11.2
-- Update: PVR API 6.2.0
-
-v4.11.1
-- Fixed: Also check for ffmpegdirect mime type when checking stream type
-- Fixed: Pass mime type to ffmpegdirect if available
-- Fixed: Inspecting stream type for catchup mode shift should default to TS
-
-v4.11.0
-- Added: Support new catchup providers, shift, xc and fs including TS stream support
-- Added: Support for timestamp catchup format specifier
-- Added: Optional catchup-id per programme from XMLTV
-- Added: Add catchup M3U8 examples to README
-- Fixed: Live catchup streams that don't support timeshift
-- Fixed: Don't build test catchup url for non catchup streams
-- Added: Support for offset catchup format specifier
-- Update: Add p8-platform to addon depends instead of from kodi
-
-v4.10.0
-- Added: User-Agent support from advanced addon setting
-
-v4.9.0
-- Added: Catchup support (a.k.a Archive)
-- Added: Missing check for HLS stream type
-- Update: Readme
-- Fixed: strings.po comments
-
-v4.8.5
-- Update: Transifix language files
-
-v4.8.4
-- Fixed: Disable caching when using refresh M3U/XMLTV modes
-- Fixed: Also check channel mime type property when determinig stream type
-- Fixed: Correct settings levels
-
-v4.8.3
-- Fixed: Channel and epg refresh infinite loop
-
-v4.8.2
-- Fixed: Initialise properties size and check max
-- Fixed: Playing a channel will crash if file/URL does not exist
-- Fixed: Support both input stream class and addon properties
-- Fixed: Allow override of ffmpeg reconnect option
-- Fixed: Fix header property spelling
-- Update: Readme
-
-v4.8.1
-- Fixed: Local channels logo with .jpg extension not working
-
-v4.8.0
-- Added: Allow use of inputstream ffmpeg for m3u8 files missing correct extension
-- Added: Support for x-tvg-url in playlist header for XMLTV data
-- Added: Add EXTVLCOPT properties for headers
-- Fixed: Fix RTP multicast stream prefix
-- Added: Add support for Dash and Smooth streaming via inputstream.adaptive
-- Added: Add option to use inputsream.adaptive for m3u8/hls streams
-- Added: Support FFmpeg reconnect for http streams using inputstream ffmpeg
-- Fixed: Limit allowed EXTVLCOPT properties to known set
-- Fixed: Add extra stream properties as lower case only
-- Fixed: Support inputstreamaddon for overriding inputstream
-- Update: Readme
-
-v4.7.1
-- Update: Switch from rapixml to pugixml
-- Fixed: tvg-id does not match a channel if no display-names in xmltv
-- Fixed: Combine multiple XMLTV channels sharing same id
-
-v4.7.0
-- Fixed: Add channel logo extension for relative paths only
-- Fixed: Logger fix ported from pvr.hts
-- Update: update readme
-- Added: Transform UDP/RTP multicast stream URLs to local udpxy URLs
-
-v4.6.1
-- Fixed: Fix channel logos getting default extension
-
-v4.6.0
-- Added: M3U auto refresh
-- Update: update github links for Matrix
-- Update: Remove dependency on p8-platform util, thread and mutex
-- Added: Switch EPGTimeshift setting to hours instead of minutes
-
-v4.5.2
-- Speed up EPG loading
-
-v4.5.1
-- Fix compiler warnings
-
-v4.5.0
-- Fixed: Support full timeshift range of -12 to +14 hours
-- Fixed: Some providers incorrectly use tvg-ID instead of tvg-id
-- Fixed: Support multiple display-names and case insensitive tvg-id is always first, next tvg-name and then channel name find order
-- Added: support episode-num for both xmltv_ns and onscreen systems in epg entry
-- Added: Update readme for supported M3U and XMLTV formats and genres
-- Added: support star rating in epg entry
-- Added: support firstAired and year in epg entry
-- Added: Update OSX build script
-- Added: support multiple actor/director/writers elements in epg entry
-- Added: URLEncode and append .png ext for remote logos built from channel name
-- Added: Support for mapping by genre hex ID and added example files and settings
-- Added: Timing for Playlist and EPG Load
-- Added: Option to number channels by M3U order only
-- Update: Debug logging
-- Added: Channel group member order set to M3U order
-- Fixed: Fix segfault for compressed EPG files
-- Added: Add ordering for groups as per PVR API 6.1.0
-
-v4.4.0
-- Update: Recompile for 6.1.0 PVR Addon API compatibility
-
-v4.3.0
-- Added: Auto reload channels, groups and EPG on settings change
-- Added: Support for #EXTGRP tag in M3U file
-- Fixed: Channel with no groups inherit previous channels groups
-- Added: update new file kodi headers to start with kodi/
-
-v4.2.2
-- Update build system version
-- Change header include way
-- Add AppVeyor for Windows related build tests
-
-v4.2.1
-- Fix nullptr initialisation
-
-v4.2.0
-- Add support for sub-title/actor/director/writer in XML
-
-v4.1.0
-- Support EXTVCOPT in m3u8
-- Build helper script for OSX
-
-v4.0.2
-- Fix wrong EPG times due to DST on Windows
-
-v4.0.1
-- Remove channels loaded notification
-
-v4.0.0
-- Update to PVR addon API v6.0.0
-
-Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.iptvsimple/changelog.txt
-    </news>
     <summary lang="af_ZA">Kodi PVR byvoegsel vir IPTV ondersteuning. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.&amp;#10;https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="az_AZ">IPTV dəstəyi üçün Kodi PVR əlavəsini yükləyin.[CR]https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="be_BY">PVR-дапаўненне для Kodi для падтрымкі IPTV.</summary>
     <summary lang="bg_BG">Добавка за ПВР за поддръжка на IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="ca_ES">Complement PVR de Kodi per al suport d'IPTV https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="cs_CZ">IPTV PVR doplněk pro Kodi. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="ca_ES">Complement PVR de Kodi per al suport d'IPTV.</summary>
+    <summary lang="cs_CZ">Doplněk Kodi podpory IPTV PVR.</summary>
     <summary lang="cy_GB">Ychwanegyn recordydd Kodi ar gyfer cefnogi IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="da_DK">Kodi PVR addon til IPTV support.</summary>
     <summary lang="de_DE">Kodi PVR-Addon für IPTV-Unterstützung.</summary>
@@ -459,19 +70,19 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <summary lang="en_NZ">Kodi PVR addon for IPTV support. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="en_US">Kodi PVR addon for IPTV support. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="es_AR">Addon Kodi PVR para soporte IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="es_ES">Kodi PVR addon para soporte IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="es_ES">Complemento PVR de Kodi para soporte IPTV.</summary>
     <summary lang="es_MX">Complemento Kodi PVR para soporte de IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="et_EE">Kodi IPTV lisamoodul.</summary>
-    <summary lang="fi_FI">Kodin IPTV-lisäosa. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="fi_FI">Kodin tallenninlisäosa IPTV-tuelle. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="fr_CA">Addiciel de numériscope Kodi pour la prise en charge d’IPTV</summary>
-    <summary lang="fr_FR">Extension enregistreur vidéo (PVR) pour la gestion IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="fr_FR">Extension enregistreur vidéo (PVR) pour la gestion IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home.</summary>
     <summary lang="gl_ES">Complemento PVR do Kodi de soporte á IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="he_IL">לקוח טלוויזיה חיה עם תמיכה ב־IPTV.&amp;#10;https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="hr_HR">Kodi PVR dodatak za IPTV podršku. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="he_IL">לקוח טלוויזיה חיה עם תמיכה ב־IPTV.[CR]https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="hr_HR">Kodi PVR dodatak za IPTV podršku.</summary>
     <summary lang="hu_HU">Kodi PVR kiegészítő az IPTV támogatáshoz. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="id_ID">Pengaya PVR Kodi untuk dukungan IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="is_IS">Kodi upptökuviðbót fyrir stuðning við IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="it_IT">Addon PVR Kodi per il supporto IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="it_IT">Add-on Kodi PVR per il supporto IPTV.</summary>
     <summary lang="ja_JP">IPTV をサポートする Kodi PVR アドオンです。 https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="ko_KR">IPTV 지원을 위한 Kodi PVR 애드온.</summary>
     <summary lang="lt_LT">Kodi PVR priedas IPTV palaikymui. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
@@ -492,37 +103,38 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <summary lang="sr_RS@latin">Kodi PVR dodatni program za IPTV podršku. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="sv_SE">PVR-tillägg med IPTV-support för Kodi. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="szl">Klijynt telewizyjny dlŏ telewizyje internetowyj. Wiyncyj informacyji ô przidŏwku: https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
-    <summary lang="tr_TR">IPTV desteği için Kodi PVR eklentisi. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
+    <summary lang="tr_TR">IPTV desteği için Kodi PVR eklentisi.</summary>
     <summary lang="uk_UA">PVR надбудова Kodi для підтримки IPTV. https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary>
     <summary lang="zh_CN">支持 IPTV 的 Kodi PVR 插件。</summary>
     <summary lang="zh_TW">支援IPTV的Kodi PVR附加元件。https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home。</summary>
     <description lang="af_ZA">IPTV Simple PVR kliënt ondersteun M3U speellyste, stroom van lewendige TV vir multisaai / unisaai bronne, luister na radio kanale en EPG.</description>
+    <description lang="be_BY">IPTV Simple PVR Client падтрымлівае спісы прайгравання m3u, струменевае вяшчанне з аднаканальных і шматканальных крыніц, радыё і тэлегід.[CR]    [CR]Для прагляду дакументацыі наведайце: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="bg_BG">Прост клиент за ПВР за телевизия по Интернет. Поддържа списъци за възпроизвеждане във формат „m3u“, поточно предавана телевизия от източници с излъчване мултикаст и уникаст, слушане на радио канали и електронен програмен справочник.</description>
-    <description lang="ca_ES">Client senzill per a IPTV PVR compatible amb les llistes de reproducció m3u, transmissions en línia de TV en directe per als orígens difusió única o múltiple, escolta d'emissores de ràdio i guia electrònica de programació (EPG).</description>
-    <description lang="cs_CZ">Jednoduchý klient PVR pro IPTV podporuje seznamy stop m3u, streamování živého vysílání pro zdroje vícesměrového nebo jednosměrového vysílání, poslech rozhlasových stanic a televizní program.</description>
+    <description lang="ca_ES">Client senzill per a IPTV PVR compatible amb les llistes de reproducció m3u, transmissions en línia de TV en directe per als orígens difusió única o múltiple, escolta d'emissores de ràdio i guia electrònica de programació (EPG);    </description>
+    <description lang="cs_CZ">Jednoduchý klient PVR pro IPTV podporuje seznamy stop m3u, streamování živého vysílání pro zdroje vícesměrového nebo jednosměrového vysílání, poslech rozhlasových stanic a televizní program.[CR]    [CR]Pro dokumentaci navštivte https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="cy_GB">Mae Cleient IPTV Simple PVR yn cynnal rhestrau m3u, ffrydio Teledu Byw o ffynonellau darlledu eang ac unigol, gwrando ar sianeli Radio ac Amserlen Rhaglenni.</description>
-    <description lang="da_DK">IPTV Simple PVR klient understøtter m3u playlister, streaming af direkte tv til multicast/unicast kilder, lytning til radiokanaler og EPG.&amp;#10; &amp;#10;For dokumentation besøg: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
-    <description lang="de_DE">IPTV Simple PVR Client unterstützt m3u Wiedergabelisten, Streaming von Live-TV für Multicast/Unicast Quellen, Radiosender und EPG.    </description>
+    <description lang="da_DK">IPTV Simple PVR klient understøtter m3u playlister, streaming af direkte tv til multicast-/unicast-kilder, lytning til radiokanaler og EPG.[CR][CR]For dokumentation besøg: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md    </description>
+    <description lang="de_DE">IPTV Simple PVR Client unterstützt M3U-Wiedergabelisten, Streaming von Live-TV für Multicast-/Unicastquellen, Radiosender und EPG.    </description>
     <description lang="el_GR">Απλός Πελάτης PVR του IPTV, με υποστήριξη λιστών αναπαραγωγής m3u, αναπαραγωγή ροών Live TV για πηγές πολλαπλής/μοναδικής διανομής, ακρόαση ραδιοφωνικών καναλιών και EPG.</description>
     <description lang="en_AU">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
-    <description lang="en_GB">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.&amp;#10;    &amp;#10;For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
+    <description lang="en_GB">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.[CR]    [CR]For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="en_NZ">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
     <description lang="en_US">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
-    <description lang="es_AR">Cliente simple PVR IPTV.  Reproduce de TV en Vivo multicast/unicast y listas m3u8&amp;#10; . reproduce tambien canales de radio y GEP</description>
-    <description lang="es_ES">El cliente PVR IPTV Simple soporta listas M3U, reproducción de TV en Vivo para origenes multicast/unicast, escucha de canales de radio y EPG</description>
+    <description lang="es_AR">Cliente simple PVR IPTV.  Reproduce de TV en Vivo multicast/unicast y listas m3u8[CR] . reproduce tambien canales de radio y GEP</description>
+    <description lang="es_ES">IPTV Simple PVR Client soporta listas de reproducción m3u, transmisión de TV en directo para fuentes multidifusión/unidifusión, escucha de canales de Radio y EPG.[CR] [CR]Para documentación visite: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="es_MX">IPTV Simple PVR Client soporta listas de reproducción m3u, streaming de Live TV para fuentes multicast / unicast, escuchando para canales de radio y EPG.</description>
-    <description lang="fi_FI">IPTV-lisäosa tukee m3u-toistolistoja, multicast/unicast-tv-lähetysten toistoa, radiokanavia ja ohjelmaopasta.</description>
+    <description lang="fi_FI">IPTV Simple tallenninpääte tukee m3u-toistolistoja, televisiolähetysten multicast-/unicast-suoratoistoa, radiokanavien kuuntelua sekä ohjelmaopasta.[CR]    [CR]Ohjeita löydät täältä: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="fr_CA">Client de numériscope simple pour IPTV, prenant en charge les listes de lecture m3u, la diffusion en continu des télés en direct pour les sources de multidiffusion et de monodiffusion, l’écoute de chaînes radio, et le GÉP.</description>
-    <description lang="fr_FR">Le client enregistreur vidéo (PVR) IPTV Simple gère les listes de lecture M3U, la diffusion en continu de la TV en direct en mono ou multidiffusion, l'écoute des chaînes radio et le guide électronique des programmes TV.</description>
+    <description lang="fr_FR">Le client IPTV Simple PVR prend en charge les listes de lecture m3u, le streaming de la télévision en direct pour les sources multidiffusion/unicast, l'écoute des chaînes de radio et de l'EPG.[CR] [CR]Pour la documentation, visitez : https://github.com/kodi-pvr/pvr.iptvsimple /blob/Matrix/README.md[CR]    </description>
     <description lang="gl_ES">O cliente PVR simple de IPTV soporta listaxes m3u, transmisión de TV en directo para fontes multicast/unicast, escoita de canles de Radio e Guía.</description>
     <description lang="he_IL">לקוח טלוויזיה חיה IPTV Simple תומך ברשימות m3u, הזרמת שידורים חיים ממקור מרובב/ סטרים בודד, האזנה לתחנות רדיו והצגת לוח שידורים.</description>
-    <description lang="hr_HR">IPTV Simple PVR klijent podržava m3u popise izvođenja, streamanje TV programa s više ili jednog izvora, slušanje radio programa i elektronski programski vodič (EPG).</description>
+    <description lang="hr_HR">IPTV Simple PVR klijent podržava m3u popise izvođenja, strujanje TV programa s multicast/unicast izvora, slušanje radio programa i elektroničke programske vodiče (EPG).    [CR]Za dokumentaciju posjetite: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="hu_HU">Az IPTV PVR kiegészítő támogatja m3u listák lejátszását, élő TV adások hálózati streamelését, rádióadók hallgatását EPG adatok kezelésével.</description>
     <description lang="id_ID">IPTV, klien PTV sederhana yang mendukung playlist m3u, pengaliran siaran TV langsung untuk sumber multicast/unicast, mendengarkan radio dan EPG.</description>
     <description lang="is_IS">Einfaldur upptökubiðlari fyrir IPTV sem styður m3u spilunarlista, streymingu af beinum útsendingum frá multicast/unicast þjónustum, hlustun á útvarpsrásir og rafræna dagskrárvísa</description>
-    <description lang="it_IT">Il client IPTV Simple PVR supporta playlist m3u, streaming della Live TV per sorgenti multicast/unicast e ascoltare canali Radio ed EPG.</description>
+    <description lang="it_IT">IPTV Simple PVR Client supporta playlist m3u, supporta lo stream per sorgenti multicast/unicast, ascolto di canali radio ed EPG.[CR]    [CR]Per la documentazione visita: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="ja_JP">IPTV シンプル PVR クライアントは、m3u プレイリスト、マルチキャスト/ユニキャストのライブ TV ストリーミング、ラジオチャンネルや EPG の視聴をサポートしています。</description>
-    <description lang="ko_KR">IPTV Simple PVR 클라이언트는 m3u 재생목록, 스트리밍, 멀티캐스트/유니캐스트 소스의 TV 시청, 라디오 채널과 EPG를 통한 청취를 지원합니다.&amp;#10;    &amp;#10;For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
+    <description lang="ko_KR">IPTV Simple PVR 클라이언트는 m3u 재생목록, 스트리밍, 멀티캐스트/유니캐스트 소스의 TV 시청, 라디오 채널과 EPG를 통한 청취를 지원합니다.[CR]    [CR]For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="lt_LT">IPTV Simple PVR klientas palaiko m3u grojaraščius, TV transliacijas iš multicast/unicast šaltinių, radijo stočių transliacijas ir EPG.</description>
     <description lang="lv_LV">IPTV vienkāršais PVR klients atbalsta m3u spēļsarakstus, tiešraides TV straumēšanu multiraides/uniraides avotiem, radio kanālu klausīšanos un EPG.</description>
     <description lang="mk_MK">IPTV Simple PVR Client поддржува m3u листи, гледање на Live TV од multicast/unicast извори, слушање Радио канали и EPG.</description>
@@ -534,17 +146,18 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <description lang="pt_BR">O cliente de PVR IPTV Simple Client oferece suporte para listas m3u, transmissão de TV ao vivo de fontes multicast/unicast, transmissão de rádios e, ainda, suporte a guia de programação eletrônico - EPG.</description>
     <description lang="pt_PT">Cliente IPTV Simple PVR com suporte a listas de reprodução m3u, transmissão de TV em direto de fontes multidifusão/unidifusão, ouvir estações de rádio e EPG.</description>
     <description lang="ro_RO">PVR Client IPTV suporta liste m3u, redare TV în direct pentru surse de multicast/unicast, ascultare canale radio si EPG.</description>
-    <description lang="ru_RU">IPTV Simple PVR поддерживает просмотр потокового ТВ для юникаст/мультикаст источников, прослушивание радиоканалов и работу с телегидом.&amp;#10;    &amp;#10;Для документации посетите: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
-    <description lang="sk_SK">Jednoduchý IPTV PVR klient podporuje mp3 zoznamy súborov, streamovanie živého televízneho vysielania ako multicast/unicast zdroje, počúvanie rozhlasových kanálov a EPG.</description>
+    <description lang="ru_RU">IPTV Simple PVR поддерживает просмотр потокового ТВ для юникаст/мультикаст источников, прослушивание радиоканалов и работу с телегидом.[CR]    [CR]Для документации посетите: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
+    <description lang="sk_SK">Jednoduchý PVR klient IPTV podporuje mp3 zoznamy súborov, streamovanie živého televízneho vysielania ako multicast/unicast zdroje, počúvanie rozhlasových kanálov a EPG.[CR]    [CR]Pre dokumentáciu navštívte: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <description lang="sl_SI">IPTV Simple odjemalec PVR podpira sezname m3u, pretakanja TV v živo za vire multicast/unicast, poslušenje radijskih postaj in EPG.</description>
     <description lang="sr_RS">IPTV Једноставан PVR Клијент подржава m3u листе за репродукцију, стримовање ТВ Уживо за multicast/unicast изворе, слушање Радио канала и EPG.</description>
     <description lang="sr_RS@latin">IPTV Jednostavan PVR Klijent podržava m3u liste za reprodukciju, strimovanje TV Uživo za multicast/unicast izvore, slušanje Radio kanala i EPG.</description>
     <description lang="sv_SE">IPTV Simple PVR Client stöder m3u-spellistor, strömmande Live-TV för multicast/unicast-källor, radiolyssning och EPG.</description>
     <description lang="szl">Klijynt telewizyje dlŏ telewizyje internetowyj ôbsuguje wykŏzy ôdtwŏrzaniŏ m3u, szpricowanie kanałōw radyjowych i telewizyjnych ze źrōdeł pōnktowych i skupinowych, a tyż fōnkcyje EPG.</description>
-    <description lang="tr_TR">IPTV Basit PVR İstemcisi m3u çalma listeleri, multicast/unicast kaynaklar için Canlı TV akışı, radyo kanallarını dinleme ve EPG destekler.</description>
-    <description lang="zh_CN">IPTV Simple PVR 客户端支持 m3u 播放列表、多播/单播源直播电视、收听电台和电子节目单。    &amp;#10; 访问 https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md 以获取相关文档&amp;#10;    </description>
-    <description lang="zh_TW">IPTV Simple PVR 用戶端支援m3u 播放列表，來自multicast/unicast 的即時電視串流，收聽廣播及電子節目表。&amp;#10;    &amp;#10;查看說明文件請造訪: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md&amp;#10;    </description>
+    <description lang="tr_TR">IPTV Basit PVR İstemcisi m3u çalma listeleri, multicast/unicast kaynaklar için Canlı TV akışı, radyo kanallarını dinleme ve EPG destekler.[CR]    [CR]Kullanım belgesi için ziyaret edin: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
+    <description lang="zh_CN">IPTV Simple PVR 客户端支持 m3u 播放列表、多播/单播源直播电视、收听电台和电子节目单。    [CR] 访问 https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md 以获取相关文档[CR]    </description>
+    <description lang="zh_TW">IPTV Simple PVR 用戶端支援m3u 播放列表，來自multicast/unicast 的即時電視串流，收聽廣播及電子節目表。[CR]    [CR]查看說明文件請造訪: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/README.md[CR]    </description>
     <disclaimer lang="af_ZA">Hierdie is onstabiele sagteware! Die outeurs is op geen manier verantwoordelik vir gefaalde spele, inkorrekte EPG tye, vermorsde ure, of enige ander ongewensde effekte.</disclaimer>
+    <disclaimer lang="be_BY">Аўтары не нясуць адказнасці за памылкі прайгравання, няправільны час у тэлегідзе, змарнаваны час і іншыя адмоўныя эфекты.</disclaimer>
     <disclaimer lang="bg_BG">Тази програма е нестабилна! Авторите не носят отговорност за неуспешно възпроизвеждане, некоректни часове в електронния програмен справочник, пропиляното време и други нежелани ефекти.</disclaimer>
     <disclaimer lang="ca_ES">Aquest programari és inestable! Els autors no es fan responsables de reproduccions fallides, horaris incorrectes a la guia electrònica de programació (EPG), hores perdudes o qualsevol altre efecte no desitjat.</disclaimer>
     <disclaimer lang="cs_CZ">Tento software není stabilní! Autoři nejsou žádným způsobem zodpovědní za neúspěšná přehrávání, chybné časy televizního programu, ztracený čas nebo jakékoliv jiné nežádoucí efekty.</disclaimer>
@@ -565,11 +178,11 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <disclaimer lang="fr_FR">Logiciel en cours d'élaboration ! Les auteurs ne sont en aucun cas responsables de l'échec des enregistrements, programmations défectueuses, temps perdu ou autres effets indésirables.</disclaimer>
     <disclaimer lang="gl_ES">Este software non é estábel! Os autores non se fan responsábeis dos erros na reproducción, horarios incorrectos na Guía, horas vencidas, e otros efectos non desexados.</disclaimer>
     <disclaimer lang="he_IL">זוהי איננה הרחבה יציבה! המפתחים אינם אחראים על כשלון בניגון, זמנים שגויים במדריך השידורים, שעות מבוזבזות או כל תופעה לא רצויה אחרת.</disclaimer>
-    <disclaimer lang="hr_HR">Ovo je nestabilan softver! Autori nisu ni na koji način odgovorani za neuspjelo snimanje, netočna zakazana snimanja, izgubjene sate, ili bilo koje druge neželjene učinke...</disclaimer>
+    <disclaimer lang="hr_HR">Ovo je nestabilan softver! Autori nisu ni na koji način odgovorni za neuspjelo snimanje, netočna zakazana snimanja, izgubljene sate, ili bilo koje druge neželjene učinke.</disclaimer>
     <disclaimer lang="hu_HU">Ez nem stabil szoftver! A készítők nem vállalnak felelősséget, a hibás felvételért, rossz időzítésért, elvesztegetett időért...</disclaimer>
     <disclaimer lang="id_ID">Perangkat lunak ini belum stabil. Penulis tidak akan bertanggung-jawa untuk kegagalan penyetelan, waktu EPG yang tidak tepat, Waktu yang terbuang dan efek yang tidak diinginkan lainnya.</disclaimer>
     <disclaimer lang="is_IS">Þetta er óstöðugur hugbúnaður! Höfundarnir eru á engan hátt ábyrgir fyrir misheppnuðum spilunum, röngum upptökutímum, klukkustundum sem að fóru í súginn eða nokkrum öðrum óæskilegum áhrifum.</disclaimer>
-    <disclaimer lang="it_IT">Questo software è instabile! Gli autori non sono in alcun modo responsabili per registrazioni fallite, timers incorretti, ore perse, o qualsiasi altro effetto indesiderato.</disclaimer>
+    <disclaimer lang="it_IT">Gli autori non sono in alcun modo responsabili per riproduzioni fallite, tempi EPG errati, ore sprecate o qualsiasi altro effetto indesiderato.</disclaimer>
     <disclaimer lang="ja_JP">これは不安定なソフトウェアです！本プログラムの作者は、再生の失敗、EPG 時刻のずれ、無駄にした時間、その他あらゆる好ましくない結果について責任を負わないものとします。</disclaimer>
     <disclaimer lang="ko_KR">이 소프트웨어는 불안정합니다! 재생 실패, 정확하지 않은 EPG 시각, 시간 낭비, 의도하지 않은 현상에 대해 제작자는 어떤 책임도 지지 않습니다.</disclaimer>
     <disclaimer lang="lt_LT">Tai yra nestabili programinė įranga! Autoriai nėra atsakingi dėl nepavykusio atkūrimo, klaidingo EPG laiko, prarastų valandų ar kito nepageidaujamo poveikio.</disclaimer>
@@ -590,22 +203,22 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <disclaimer lang="sr_RS@latin">Ovaj softver je nestabilan! Autori ni na koji način nisu odgovorni za neuspela snimanja, neispravne tajmere, izgubljene sate, ili bilo koje druge neželjene efekte.</disclaimer>
     <disclaimer lang="sv_SE">Denna mjukvara är ostabil! Författarna kan inte på något sätt hållas ansvariga för felaktiga uppspelningar, EPG-tider, bortslösade timmar eller andra oönskade effekter.</disclaimer>
     <disclaimer lang="szl">To je niystabilny softwer! Autōry niy sōm ôdpedzialne za niypodarzōne graniy, niynŏleżne godziny EPG, stracōne godziny i inksze niychciane efekty.</disclaimer>
-    <disclaimer lang="tr_TR">Bu kararsız bir yazılımdır! Yazanlar oynatma hatası, yanlış EPG zamanları, harcanmış saatler ya da diğer etkilerden sorumlu değildir.</disclaimer>
+    <disclaimer lang="tr_TR">Yazanlar oynatma hatası, yanlış EPG zamanları, harcanmış saatler ya da diğer etkilerden sorumlu değildir.</disclaimer>
     <disclaimer lang="zh_CN">作者不对播放失败、错误的电子节目单时间造成时间浪费或其它不良影响负责。</disclaimer>
     <disclaimer lang="zh_TW">這是測試中的軟體！原創作者無法針對以下情況負責：包括播放失敗，不正確的電子節目表，多餘的時數，或任何不可預期的不良影響。</disclaimer>
   </extension>
 </addon>
 
-<addon id="vfs.libarchive" version="19.2.0.1" name="Archive support" provider-name="spiff">
+<addon id="vfs.libarchive" version="20.3.0.3" name="Archive support" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
-    <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
-    <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.7" version="1.1.8"/>
+    <import addon="kodi.binary.instance.vfs" minversion="3.0.1" version="3.0.1"/>
   </requires>
   <!-- Note: .rar is partially supported by this addon, but since the other
              addon vfs.rar also supports it, support is removed here. -->
-  <extension point="kodi.vfs" protocols="archive" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.tgz|.tbz2|.gz|.bz2|.xz|.tar" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.19.2.0"/>
+  <extension point="kodi.vfs" protocols="archive" extensions=".7z|.tar.gz|.tar.bz2|.tar.xz|.zip|.tgz|.tbz2|.gz|.bz2|.xz|.tar" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.libarchive.so.20.3.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -617,10 +230,8 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <summary lang="da_DK">Multiformat arkiverings- og komprimerings-add-on</summary>
     <summary lang="de_DE">Addon zur Verarbeitung mehrerer Archivformate</summary>
     <summary lang="en_GB">Multi-format archive and compression addon</summary>
-    <summary lang="es_ES">Addon de archivos multiformato y compresión</summary>
     <summary lang="es_MX">Complemento de compresión y archivado en múltiples formatos</summary>
     <summary lang="ko_KR">다중 형식 아카이브 및 압축 애드온</summary>
-    <summary lang="nb_NO">Multiformat arkiverings- og komprimeringsutvidelse</summary>
     <summary lang="pl_PL">Dodatek wieloformatowych archiwów i kompresji</summary>
     <summary lang="pt_BR">Add-on para arquivos multiformato e compressão</summary>
     <summary lang="ru_RU">Дополнение для архивирования и сжатия в нескольких форматах</summary>
@@ -629,10 +240,8 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <description lang="da_DK">Dette add-on anvender libarchive-biblioteket til at læse en række arkiv- og komprimeringsformater.[CR][CR]Understøttede formater er:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz , tgz, tbz2, xz, zip</description>
     <description lang="de_DE">Dieses Addon verwendet die Bibliothek libarchive, um verschiedene Archiv- und Komprimierungsformate zu verarbeiten.[CR][CR]Unterstützte Formate sind:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="en_GB">This add-on uses the libarchive library to read a variety of archive and compression formats.[CR][CR]Supported formats are:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
-    <description lang="es_ES">Este addon usa la libreria libarchive para leer varios formatos de compresión y archivado.[CR][CR]Los formatos soportados son:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="es_MX">Este complemento utiliza libarchive para leer una variedad de formatos de archivado y compresión. [CR][CR]Los formatos soportados son:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="ko_KR">이 추가 기능은 libarchive 라이브러리를 사용하여 다양한 아카이브 및 압축 형식을 읽습니다.[CR][CR]지원되는 형식은 다음과 같습니다.[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz , tgz, tbz2, xz, zip</description>
-    <description lang="nb_NO">Denne utvidelsen benytter libarchive-biblioteket til å lese en rekke arkiv- og komprimeringsformater.[CR][CR]Støttede formater er:[CR]7z, bz2, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="pl_PL">Dodatek ten używa biblioteki libarchive do odczytu różnych formatów archiwów i kompresji.[CR][CR]Obsługiwane formaty to:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="pt_BR">Este add-on usa a biblioteca libarchive para ler uma variedade de arquivos e formatos de compressão.[CR][CR]Os formatos suportados são:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
     <description lang="ru_RU">Это дополнение использует библиотеку libarchive для чтения различных форматов архивов и сжатия.[CR][CR]Поддерживаемые форматы:[CR]7z, bz2, gz, tar, tar.bz2, tar.gz, tar.xz, tgz, tbz2, xz, zip</description>
@@ -640,142 +249,24 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
   </extension>
 </addon>
 
-<addon id="visualization.projectm" version="19.0.2.1" name="projectM" provider-name="Team Kodi">
+<addon id="imagedecoder.heif" version="20.1.0.5" name="HEIF image decoder" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.visualization" minversion="3.0.0" version="3.0.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.7" version="1.1.8"/>
+    <import addon="kodi.binary.instance.imagedecoder" minversion="3.0.0" version="3.0.1"/>
   </requires>
-  <extension point="xbmc.player.musicviz" library_linux="visualization.projectm.so.19.0.2"/>
-  <extension point="xbmc.addon.metadata">
-    <platform/>
-    <license>GPL-2.0-or-later</license>
-    <source>https://github.com/xbmc/visualization.projectm</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
-      <screenshot>resources/screenshot-01.jpg</screenshot>
-      <screenshot>resources/screenshot-02.png</screenshot>
-      <screenshot>resources/screenshot-03.jpg</screenshot>
-      <screenshot>resources/screenshot-04.jpg</screenshot>
-      <screenshot>resources/screenshot-05.jpg</screenshot>
-      <screenshot>resources/screenshot-06.jpg</screenshot>
-      <screenshot>resources/screenshot-07.jpg</screenshot>
-      <screenshot>resources/screenshot-08.jpg</screenshot>
-      <screenshot>resources/screenshot-09.jpg</screenshot>
-      <screenshot>resources/screenshot-10.jpg</screenshot>
-    </assets>
-    <summary lang="af_ZA">projectM vat jou op 'n vlug deur die klankgolwe wat jy hoor</summary>
-    <summary lang="ar_SA">مشروع M يجعلك تطير بين موحات الصوت التي تسمعها</summary>
-    <summary lang="bg_BG">"projectM" ще Ви отведе на пътешествие между звуковите вълни, които чувате</summary>
-    <summary lang="ca_ES">projectM et fa volar a través de les ones de so que escoltes</summary>
-    <summary lang="cs_CZ">projectM s Vámi proletí zvukovými vlnamy, které posloucháte</summary>
-    <summary lang="cy_GB">Mae projectM yn eich hedeg drwy'r tonnau sain</summary>
-    <summary lang="da_DK">projectM tager dig på en flyvetur gennem lydbølgerne, du lytter til</summary>
-    <summary lang="de_DE">projectM lässt Dich durch den Sound fliegen, den Du gerade hörst</summary>
-    <summary lang="el_GR">Το projectM σας ταξιδεύει μέσα στα ηχητικά κύματα που ακούτε</summary>
-    <summary lang="en_AU">projectM takes you flying through the soundwaves you're hearing</summary>
-    <summary lang="en_GB">projectM takes you flying through the soundwaves you're hearing</summary>
-    <summary lang="en_NZ">projectM takes you flying through the soundwaves you're hearing</summary>
-    <summary lang="en_US">projectM takes you flying through the soundwaves you're hearing</summary>
-    <summary lang="es_AR">projectM te lleva volando a través de las ondas que estás escuchando</summary>
-    <summary lang="es_ES">projectM te lleva volando a través de las ondas que estás escuchando</summary>
-    <summary lang="es_MX">projectM te lleva volando a través de las ondas de sonido que estás escuchando</summary>
-    <summary lang="et_EE">projectM viib sind lennates läbi helilainete mida kuulad</summary>
-    <summary lang="fi_FI">projectM lennättää sinut ääniaaltojen läpi</summary>
-    <summary lang="fr_CA">projectM vous entraine à travers les ondes sonores que vous écoutez</summary>
-    <summary lang="fr_FR">projectM vous entraine à travers les ondes sonores que vous écoutez</summary>
-    <summary lang="gl_ES">projectM lévao voando a través das ondas de son que está a ouvir</summary>
-    <summary lang="he_IL">projectM לוקח אותך לתעופה דרך גלי הסאונד שאתה שומע</summary>
-    <summary lang="hr_HR">projectM vam omogućuje let kroz zvuk koji čujete</summary>
-    <summary lang="hu_HU">A projectM végigrepít a zene hullámain</summary>
-    <summary lang="id_ID">ProjectM membawa anda terbang melalui gelombang suara yang anda dengar</summary>
-    <summary lang="is_IS">Með projectM flýgurðu í gegnum hljóðbylgjurnar sem þú heyrir</summary>
-    <summary lang="it_IT">projectM ti fa volare tra le onde sonore di ciò che stai ascoltando</summary>
-    <summary lang="ja_JP">projectM - 音楽の波の上を飛ぶ</summary>
-    <summary lang="ko_KR">projectM 은 사운드웨이브 속으로 날아가는듯한 효과를 보여줍니다</summary>
-    <summary lang="lt_LT">projectM nukelia Jus į nuostabų skrydį virš debesų, ištiesų fantastiškų garsų gausą</summary>
-    <summary lang="lv_LV">projectM paņem Jūs līdzi lidojumā cauri skaņu viļņiem, kurus dzirdat</summary>
-    <summary lang="mk_MK">projectM ве води на летање низ звучните бранови на музиката што ја слушате</summary>
-    <summary lang="nb_NO">projectM tar deg på en reise flygende gjenom lydbølgene du hører</summary>
-    <summary lang="nl_NL">projectM-visualisatie</summary>
-    <summary lang="pl_PL">projectM zabiera Cię w niesamowity lot w chmurach aktualnie słuchanych dźwięków</summary>
-    <summary lang="pt_BR">O projectM leva-o a voar nas ondas sonoras que está a ouvir</summary>
-    <summary lang="pt_PT">O projectM leva-o num voo através das ondas sonoras que está a ouvir</summary>
-    <summary lang="ro_RO">projectM îți oferă o senzație auditivă unică astfel încât simți că zbori printre undele sonore pe care le asculți</summary>
-    <summary lang="ru_RU">projectM отправит вас в полёт через звуковые волны, которые вы слышите</summary>
-    <summary lang="sk_SK">projektM s Vami poletí zvukovými vlnami, ktoré počúvate</summary>
-    <summary lang="sl_SI">projectM vas popelje čez valovanje zvoka, ki ga poslušate</summary>
-    <summary lang="sq_AL">projectM të bën të fluturosh nëpër valet e tingullit që i dëgjon</summary>
-    <summary lang="sv_SE">projectM tar med dig på en flygtur genom ljudvågorna du hör</summary>
-    <summary lang="ta_IN">projectM நீங்கள் கேட்கும் ஒலி அலைகளின் வடிவங்களின் மூலம் பறக்க செய்யும்</summary>
-    <summary lang="tg_TJ">projectM бо мавҷҳои садояш фораму роҳатбахш аст</summary>
-    <summary lang="th_TH">projectM นำคุณโบยบิน ผ่านคลื่นเสียงที่คุณกำลังรับฟัง</summary>
-    <summary lang="tr_TR">projectM sizi duyduğunuz ses dalgaları üzerinde bir uçuşa çıkartır</summary>
-    <summary lang="uk_UA">projectM забирає вас в політ крізь хвилі музики яку ви слухаєте</summary>
-    <summary lang="vi_VN">projectM giúp bạn bay bổng trong âm thanh bạn đang nghe</summary>
-    <summary lang="zh_CN">projectM 带你与声波一起飞翔</summary>
-    <summary lang="zh_TW">projectM帶著您一起翱翔並飛越聆聽中的音樂浪潮</summary>
-    <description lang="af_ZA">projectM is 'n ontsagwekkende musiek visualiseerder. Daar is niks beter in die wêreld van Unix nie. projectM se grootheid kom van die harde werk van die gemeenskap. Gebruikers soos jy kan voorafinstellings skep wat musiek met ongelooflike visualiserings konnekteer. Probeer dit!&amp;#10;projectM Visualisering is 'n geLGPL'de herimplementasie van Milkdrop onder OpenGL&amp;#10;Al wat projectM benodig is 'n video kaart met 3D versnelling en jou gunsteling musiek.</description>
-    <description lang="ar_SA">مشروع M هو مصورللموسقى رائع. لا شي في العالم أفضل من Unix. عظمة مشروع M تأتي من عمل المجتمع الجاد. يستطيع مستخدمون مثلك إنشاء مسبقات تتصل بالموسقى لصور رائعة. جربه&amp;#10;تصوير مشروع M &amp;#10;كل ما يتطلبه مشروع M هو كرت شاشة بتسارع 3D و موسيقاك المفضلة.</description>
-    <description lang="be_BY">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="bg_BG">"projectM" е страхотна визуализация, плод на упорит труд от страна на общността. В света на Unix не съществува нищо по-добро. Потребители, като Вас, създават предварително комбинации от настройки, които се ползват като модел за визуализацията и така свързват звука с невероятни визуални ефекти. Пробвайте!&amp;#10;Визуализацията "projectM" е преработка на Milkdrop под лиценза LGPL, основана на OpenGL.&amp;#10;"projectM" изисква видео карта с 3D ускорение и любимата Ви музика.</description>
-    <description lang="ca_ES">El projectM és un visualitzador de música impressionant. No hi ha res millor al món Unix. La grandesa de projectM prové del dur treball de la comunitat. Els usuaris com tu poden crear predefinits que connecten la música amb visualitzacions increibles. Prova-ho!&amp;#10;La Visualització projectM és una re-implementació en LGPL de Milkdrop baix OpenGL&amp;#10;Tot el que projectM requereix és una tarja amb acceleració 3D i la teva música preferida.</description>
-    <description lang="cs_CZ">projectM je úžasný hudební vizualizér. Ve světě Unixu neexistuje nic lepšího. Velikost projectuM pochází z tvrdé práce komunity. Uživatelé, jako jste vy, mohou vytvářet předvolby, které spojují hudbu s fantastickými vizuálními zážitky. Zkuste jej!&amp;#10;projectM vizualizace je LGPL reimplementace Milkdropu pod OpenGL.&amp;#10;Vše co projectM vyžaduje je grafická karta s 3D akcelerací a vaši oblíbenou hudbu.</description>
-    <description lang="cy_GB">Mae delweddwr cerddoriaeth ryfeddol. Does dim byd gwell ym myd Unix. Mae mawredd projectM yn dod o waith caled y gymuned. Mae defnyddwyr fel chi yn gallu creu rhagosodiadau sy'n cysylltu delweddau anhygoel gyda cherddoriaeth. Defnyddiwch e.&amp;#10;Mae projectM yn ailgyflwyniad LGPL o Milkdrop o dan OpenGL.&amp;#10;Yr unig beth sydd ei angen ar projectM yw cerdyn video gyda chyflymu 3D a'ch hoff gerddoriaeth.</description>
-    <description lang="da_DK">projectM er en fantastisk musikvisualisering. Der findes intet bedre i Unix-verdenen. projectMs storhed kommer fra brugerbasens hårde arbejde. Brugere, som dig selv, kan skabe forudindstillinger, som forbinder musik med utrolige visualiseringer. Prøv det!&amp;#10;projectM Visualization er en LGPLed reimplementering af Milkdrop under OpenGL.&amp;#10;Alt hvad projectM kræver er et grafikkort med 3D-acceleration og din yndlingsmusik.</description>
-    <description lang="de_DE">projectM ist eine unglaubliche Musik-Visualisierung. In der Unix-Welt gibt es nichts Besseres. Die Einzigartigkeit ist Ergebnis der harten Arbeit der Community. Jeder Anwender kann "Presets" schreiben, welche Musik mit unglaublichen visuellen effekten verbinden. &amp;#10;projectM ist die LGPL Reimplementierung von Milkdrop mit OpenGL&amp;#10;Alles was projectM benötigt, ist eine Grafikkarte mit 3D-Beschleunigung und coole Musik.</description>
-    <description lang="el_GR">Το projectM είναι ένας φοβερός μουσικός οπτικοποιητής. Δεν υπάρχει τίποτα καλύτερο στον κόσμο του Unix. Το μεγαλείο του projectM πηγάζει από τη σκληρή δουλειά της κοινότητας. Χρήστες όπως εσείς μπορούν να δημιουργήσουν προρυθμίσεις συνδέοντας τη μουσική με απίστευτες απεικονίσεις. Δοκιμάστε το!&amp;#10;Η Οπτικοποίηση projectM αποτελεί μία νέα LGPL υλοποίηση του Milkdrop υπό το OpenGL&amp;#10;Το μόνο που απαιτείται από το projectM είναι μία κάρτα γραφικών με τρισδιάστατη (3D) επιτάχυνση, και την αγαπημένη σας μουσική.</description>
-    <description lang="en_AU">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favourite music.</description>
-    <description lang="en_GB">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favourite music.</description>
-    <description lang="en_NZ">projectM is an awesome music visualiser. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualisation is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favourite music.</description>
-    <description lang="en_US">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="es_AR">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tu pueden crear ajustes preestablecidos que conecten la música con visualizaciones increíbles. ¡Pruebalo!&amp;#10;projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.&amp;#10;Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
-    <description lang="es_ES">projectM es un fantástico visualizador de música. No hay nada mejor en el universo Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como usted pueden crear ajustes preestablecidos que conecten la música con visualizaciones increibles. ¡Pruébelo!&amp;#10;projectM Visualization es una reimplantación de Milkdrop bajo licencia LGPL y renderizado en OpenGL.&amp;#10;Todo lo que projectM necesita es una tarjeta de vídeo con aceleración 3D y su música favorita.</description>
-    <description lang="es_MX">projectM es un visualizador de música sorprendente. No hay nada mejor en el mundo de Unix. La grandeza de projectM proviene del duro trabajo de la comunidad. Usuarios como tú pueden crear preaujstes que conectan la música con increíbles imágenes. Inténtalo!&amp;#10;La visualización projectM es una reimplementación en LGPL de Milkdrop bajo OpenGL.&amp;#10;Todo lo que projectM necesita es una tarjeta de video con aceleración 3D y tu música favorita.</description>
-    <description lang="et_EE">projectM on äge muusika visuaal. Unixi maailmas pole midagi paremat. projectM'i suurus on saavutatud kogukonna ühise raske töö tulemusena. Kasutajad nagu sina saavad luua eelseadeid, mis ühendavad muusika imeliste visualidega. Proovi seda! projectM visualiseerimine on litsentseeritud (LGPL) uuskasutus Milkdrop'ist OpenGL keskkonnas.&amp;#10;Ainus mida projectM vajab, on 3D kiirendusega videokaart ja sinu lemmikmuusika.</description>
-    <description lang="fi_FI">projectM on uskomaton musiikkivisualisointi, joka on yhteisön kovan työn tulos. Käyttäjät voivat luoda esiasetuksia, jotka yhdistävät musiikin kuviin.&amp;#10;projectM -visualisointi on LGPL-lisensoitu Milkdropin uudelleenimplementointi OpenGL:llä.&amp;#10;projectM tarvitsee vain 3D-kiihdyttävän näytönohjaimen ja lempimusiikkisi.</description>
-    <description lang="fr_CA">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!&amp;#10;La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.&amp;#10;Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
-    <description lang="fr_FR">projectM est un fantastique visualiseur musical. Il n'y a rien de mieux dans l'univers Unix. L'ampleur de projectM vient du travail énorme de la communauté. Des utilisateurs comme vous peuvent créer des préréglages qui connecteront la musique avec des visuels incroyables. Essayez-le!&amp;#10;La visualisation projectM est une réalisation sous LGPL de Milkdrop en OpenGL.&amp;#10;Le seul pré-requis pour projectM est une carte graphique avec accélération 3D et votre musique favorite.</description>
-    <description lang="gl_ES">projectM é unha impresionante Visualización de música. Non hai nada mellor no mundo Unix. A grandeza de projectM ven da dura xeira da comunidade. Usuarios coma vostede poden crear preconfiguracións que conectan a música con incribles visualizacións. Próbeo!&amp;#10;A Visualización projectM é unha reimplementación de Milkdrop empregando OpenGL e con licencia LGPL.&amp;#10;Todo o que precisa projectM é unha tarxeta gráfica con aceleración 3D e a súa música favorita.</description>
-    <description lang="he_IL">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="hr_HR">projectM je fenomenalan glazbeni vizualizator. Ne postoji ništa bolje u svijetu Unixa. Veličina projectM-a dolazi zbog predanosti njegove zajednice. Korisnici kao što ste Vi, mogu stvoriti predloške koje povezuju glazbu i nevjerojatne vizualizacije. Isprobajte!&amp;#10;projectM Vizualizacija je LGPL reimplementacija Milkdropa pod OpenGL-om&amp;#10;Sve što projectM zahtijeva je video kartica sa 3d ubrzanjem i vašu omiljenu glazbu.</description>
-    <description lang="hu_HU">A projectM egy fantasztikus zenei vizualizáció. Nincs ennél jobb a Unix világban. A projectM különlegessége, hogy egy egész fejlesztői közösség nehéz munkájából jött létre. A felhasználók, mint te egyedi beállításokat hozhatnak létre ami összekapcsolja a zenét a hihetetlen látványelemekkel. Próbáld ki!&amp;#10;A projectM Vizualizáció a Milkdrop újrakódolása LGPL licenc alatt, OpenGL videókártya támogatást használva.&amp;#10;Minden projectM látványbeállításhoz 3D gyorsításra képes videókártya és a kedvenc zenéd szükséges.</description>
-    <description lang="id_ID">projectM merupakan visualiser musik yang keren. Tak ada yng lebih baik di dunia Unix. Kebesaran projectM berasa dari kerja keras dari komunitas. Pengguna seperti anda dapat membuat preset yang menghubungkan musik dengan visual yang luarbiasa. Cobalah!!!&amp;#10;Visualisasi projectM merupakan produk berlisensi LGPL reimplementasi dari Milkdrop dibawah OpenGL&amp;#10;Semua projectM membutuhkan kartu grafis dengan akselerasi 3D dan musik favorit anda.</description>
-    <description lang="is_IS">projectM er frábær myndskreyting. það er ekkert betra í Unix heiminum. Gæði projectM koma til vegna framlags samfélagsins.Notendur eins og þú geta búið til forstillingar sem tengja tónlist við ótrúlega myndræna upplifun. Prófaðu!&amp;#10;projectM myndskreyting er LGPL útgáfa af Milkdrop með OpenGL&amp;#10;Allt sem projectM þarfnast er skjákort með þrívíddar hraðli 3D og uppáhalds tónlistin þín.</description>
-    <description lang="it_IT">projectM è un incredibile visualizzazione musicale. E' il meglio del mondo Unix. La grandezza di projectM proviene dal duro lavoro della comunità. Gli utenti come te possono creare preset che connetto la musica con incredibili grafiche. Provalo!&amp;#10;projectM è una reimplementazione LGPL di Milkdrop sotto OpenGL&amp;#10;Tutti i projectM richiedono una scheda video con accelerazione 3D e la tua musica preferita.</description>
-    <description lang="ja_JP">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!&amp;#10;projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL&amp;#10;All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="ko_KR">projectM은 멋진 음악 시각화입니다. Unix에는 이것보다 좋은것은 없습니다. projectM은 많은 사람들에 의해 개발되었습니다. 여러분과 같은 유저들이 음악을 표현하는 프리셋을 만들었습니다. projectM 음악시각화는 OpenGL에서 작동하도록 Milkdrop를 새로 만든것입니다. 모든 projectM은 3D 가속이 되는 비디오카드와 음악이 필요합니다.</description>
-    <description lang="lt_LT">ProjectM yra išskirtinė muzikos vizualizacija. Nėra nieko geriau, Unix pasaulyje. ProjectM spindesys tai sunkus darbas bendruomenėje. Naudotojai, tokie kaip Jūs galite sukurti ir suderinti muziką su puikiais vizualizacijos efektais. Sužinokite!&amp;#10;ProjectM yra įgyvendinimas iš Milkdrop pagal LGPL licenciją, ir naudoja OpenGL&amp;#10;Viskas ko reikia projectM tai vaizdo plokštės su 3D akceleracija (greitėjimu) ir geros muzikos.</description>
-    <description lang="lv_LV">projectM ir brīnišķīgs mūzikas vizualizētājs. Nav nekā labāka Unix pasaulē. projectM's izcilība rodas no smagā darba komūnā. Lietotāji, kas ir tādi paši kā Jūs, var radīt sagataves, kas savieno mūziku ar neticami skaistām vizualizācijām. Pamēģiniet!&amp;#10;projectM Vizualizācija ir Milkdrop LGPL reimplementācija zem OpenGL&amp;#10;Visi projectM pieprasa video karti ar 3D paātrinājumu un Jūsu mīļākās mūzikas izlasi.</description>
-    <description lang="mk_MK">projectM is an awesome music visualizer. There is nothing better in the world of Unix. projectM's greatness comes from the hard work of the community. Users like you can create presets that connect music with incredible visuals. Try it!⏎ projectM Visualization is an LGPL'ed reimplementation of Milkdrop under OpenGL⏎ All projectM requires is a video card with 3D acceleration and your favorite music.</description>
-    <description lang="nb_NO">projectM er en awesome musikk visualisering. Der er ingenting bedre i Unix verden. projectM er så flott takket være et hardt arbeidende felleskap. Brukere som deg kan lage forhåndsinnstillinger som kobler musikk med utrolige visualiseringer. Prøv det!&amp;#10;projectM visualiseringen er en LGPL reinplimentasjon av Milkdrop under OpenGL&amp;#10;Alt projectM trenger er et grafikkort med 3D støtte og din favoritt musikk</description>
-    <description lang="nl_NL">ProjectM is een geweldige muziekvisualisatie. Er bestaat niets beters in de UNIX-wereld. Het success van ProjectM is het resultaat van het harde werk van de XBMC-gemeenschap. U kunt hun eigen presets instellen die muziek linken aan verbluffende visualisaties. Probeer het uit!&amp;#10;ProjectM-visualisatie is beschikbaar onder de LGPL-licentie en is een herimplementatie van Milkdrop (OpenGL). Alles wat projectM vereist is een videokaart met 3D-versnelling en jouw favoriete muziek.</description>
-    <description lang="pl_PL">projectM to rewelacyjna wizualizacją muzyki. Nie ma nic lepszego w świecie Unixa. Wspaniałość projectM wywodzi się ciężkiej pracy społeczności. Użytkownicy tacy jak Ty, mogą tworzyć efekty łączące muzykę z niesamowitymi efektami wizualnymi. Przekonaj się!&amp;#10;projectM jest reimplementacją Milkdropa na licencji LGPL i używa OpenGL&amp;#10;Wszystko czego wymaga projectM, to karta graficzna wspierająca akcelerację 3D oraz zasoby Twojej muzyki.</description>
-    <description lang="pt_BR">O projectM é um fantástico visualizador de música. Não existe nenhum melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Utilizadores como você podem criar pré-definições que ligam a música a visualizações incríveis. Experimente!&amp;#10;O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM necessita é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
-    <description lang="pt_PT">O projectM é uma fantástica visualização de música. Não há melhor no mundo Unix. A grandeza do projectM advém do trabalho árduo da comunidade. Qualquer utilizador pode criar pré-selecções que combinam a música com visualizações incríveis. Experimente!&amp;#10;O visualizador projectM é uma reimplementação do Milkdrop OpenGL sob uma licença LGPL. Tudo o que o projectM precisa é de uma placa gráfica com aceleração 3D e a sua música favorita.</description>
-    <description lang="ro_RO">projectM este un plugin uimitor. Nu există nimic mai bun în lumea Unix. Măreția projectM vine din munca întregii comunități. Utilizatori ca și tine pot crea presetări care conectează muzica cu vizualizări incredibile. Încearcă și tu!&amp;#10;Vizualizarea projectM este o reimplementare LGPL a lui Milkdrop sub OpenGL.&amp;#10;Tot ceea ce necesită projectM este o placă video cu accelerare 3D și muzica ta favorită.</description>
-    <description lang="ru_RU">projectM удивительным образом визуализирует музыку. В мире Unix нет ничего лучше. projectM является результатом напряжённой работы сообщества. Пользователи могут создавать наборы настроек, которые объединяют музыку и невероятные визуальные эффекты. Попробуйте сами!⏎&amp;#10;Визуализация projectM представляет собой LGPL-реализацию Milkdrop на основе OpenGL⏎&amp;#10;Всё, что требуется для визуализации — это видеокарта с 3D-ускорением и любимая музыка.</description>
-    <description lang="sk_SK">projektM je úžasný hudobný vizualizér. Vo svete Unixu neexistuje nič lepšie. Veľkosť projectM pramení z tvrdej práce komunity. Užívatelia ako ty vytvárajú Predvoľby, ktoré spájajú hudbu s fantastickými vizualizáciami. Vyskúšaj to![CR] projectM vizualizácie sú LGPL implementáciou vizualizácií Milkdrop s použitím OpenGL.[CR] Jediné čo projectM potrebuje je grafickú kartu s 3D akceleráciou a Vašu obľúbenú hudbu.</description>
-    <description lang="sl_SI">projectM je glasbeni vizualizator. Nič ni boljšega v svetu Unixa. Veličina ProjectM izhaja iz garanja skupnosti. Uporabniki, kot vi, si lahko ustvarite prednastavitve, ki povezujejo glasbo z neverjetno vizualizacijo. Poskusite!&amp;#10;Vizualizacija projectM je reimplementacija Milkdropa v LGPL v okviru OpenGL-a.&amp;#10;projectM potrebuje le grafično kartico s 3D pospeševanjem in vašo najljubšo glasbo.</description>
-    <description lang="sq_AL">projectM është nje vizualizim i tmerrshëm. Nuk ekziston asgjë më të mirë në boten e Unix'it. Madhësija e projectM'it vjen nga puna e shkëlqyeshme të bashkimit të saj. Përdoruesit si ti mundin të krijojnë cilësime që lidhin musikën me vizualizime të jashtzakonshëm. Provoje!&amp;#10;projectM'i është një zbatim i LGPL'uar prej Milkdrop ndër OpenGL.&amp;#10;Të gjith që projectM kërkon është një kartë grafike me përshpejtim për 3D dhe muzikën tënde të preferuar.</description>
-    <description lang="sv_SE">projectM är en fantastisk musikvisualisering. Det finns inget bättre i Unixvärlden. projectM's storhet kommer från gemenskapens hårda jobb. Användare som du kan skapa förval som förenar musiken med otroliga visualiseringar. Prova det!&amp;#10;projectM visualisering är en LGPL-implementation av Milkdrop i OpenGL&amp;#10;Alla projectM kräver ett grafikkort med 3D-acceleration och din favoritmusik.</description>
-    <description lang="ta_IN">projectM ஒரு அற்புதமான இசை விசுவலைஸர் ஆகும். யூனிக்ஸ் உலகில் இதைவிட சிறந்தது இல்லை. projectM உடைய சிறப்புத்தன்மை கடினமான சமூகத்தின் உழைப்பில் இருந்து வருகிறது. உங்களை போன்ற பயனர்களாலும் நம்பமுடியாத இசை முன்னமைவுகளை உருவாக்க முடியும். முயற்சித்துபாரும்!⏎ projectM காட்சியாக்கம் OpenGL கீழ் Milkdrop உடைய மறு தயாரிப்பாக உள்ளது⏎ projectM க்கு தேவைப்படுவதெல்லாம் ஒரு 3D முடுக்கம் அட்டை மற்றும் உங்களுக்கு பிடித்த இசை.</description>
-    <description lang="tg_TJ">projectM таҷассуми мусиқии аҷоиб мебошад. Чезе беҳтар аз projectM дар ҷаҳони Unix вуҷуд надорад. projectM натиҷаи кори вазнини ҷамъияташ мебошад. Корбарони монанди шумо метавонанд танзимотеро, ки мусиқиро бо таҷассуми аҷоиб пайваст мекунед, эҷод кунанд. Кӯшиш кунед!&amp;#10;Таҷассуми projectM дар асоси LGPL-и Milkdrop бо OpenGL эҷод карда шуд&amp;#10;Таҷассуми projectM танҳо корти видеоӣ бо шитобдиҳандаи 3D ва файлҳои мусиқии дӯстдоштаи шуморо талаб мекунад.</description>
-    <description lang="th_TH">projectM คือการแสดงแสงสีประกอบเพลง อันยอดเยี่ยม. ไม่มีอะไรที่ดีกว่านี้แล้ว ในโลกของ Unix. projectM คือความยิ่งใหญ่ ที่มาจากการทำงานอย่างหนักของชุมชน. ผู้ใช้เช่นคุณสามารถสร้าง ชุดรูปแบบ ที่เชื่อมโยงกับเพลงด้วยแสงสีอันน่าทึ่ง. ลองเลย!&amp;#10;การแสดงแสงสี projectM เป็นการดำเนินการตาม LGPL'ed ของ Milkdrop ภายใต้ OpenGL&amp;#10;ทั้งหมดที่ต้องใช้สำหรับ projectM มีเพียงการ์ดวิดีโอที่มีการเร่งแสดงผล 3D และเพลงที่คุณชื่นชอบ.</description>
-    <description lang="tr_TR">projectM muhteşem bir müzik görselleştiricidir. Unix dünyasında daha iyisi yoktur. projectM'in ihtişamı geliştirici gurubunun çok çalışmasından gelir. Sizin gibi kullanıcılar müzik ile bağlanan inanılmaz görsel ayarlar hazırlayabilirler. Lütfen siz de deneyin!&amp;#10;projectM Görseli, Milkdrop'un OpenGL altında yeniden LGPL'li implementasyonudur.&amp;#10;projectM' in tek ihtiyacı 3D hızlandırıcılı bir görüntü kartı ve sizin favori müziğinizdir.</description>
-    <description lang="uk_UA">projectM - це чудовий візуалізатор відео. Немає нічого кращого в світі Unix. projectM створений тяжкою роботою спільноти. Користувачі, такі як Ви, можуть створювати різні візуалізації. Спробуйте!&amp;#10;Візуалізація projectM - це LGPLівська імплементація Milkdrop під ліцензією OpenGL&amp;#10;Все, що потрібно для projectM - це відео карта з 3D прискоренням і Ваша улюблена музика.</description>
-    <description lang="vi_VN">projectM là chương trình trình chiếu nhạc tuyệt vời. Không có gì tuyệt hơn nó trong thế giới Unix. Sự tuyệt vời của projectM đến từ thành quả vất vả của cộng đồng. Những người sử dụng như bạn có thể tạo ra những bộ preset mà kết nối âm nhạc với hiệu ứng hình ảnh tuyệt vời. Hãy thử nó!&amp;#10;Chương trình này là một phiên bản LGPL được phát triển dựa trên Milkdrop qua OpenGL&amp;#10;Tất cả bạn cần chỉ là một card đồ họa 3D và bài hát ưa thích của mình.</description>
-    <description lang="zh_CN">projectM 是一个音乐可视化效果。它是 Unix 世界中最好的。它的伟大来自于社区的辛苦工作。使用者可以创建预设参数把音乐和难以置信的可视化效果连接起来。试试吧！&amp;#10;projectM 可视化效果是用 OpenGL 按照 LGPL 协议对 Milkdrop 的重新实现&amp;#10;projectM 所要求的仅是一块有 3D 加速功能的显卡和你喜爱的音乐。</description>
-    <description lang="zh_TW">projectM是一個令人驚豔的音樂視覺效果。它是Unix世界中最好的。projectM的偉大成果來自於社群創作者的投入與心血。使用者可以創建把音樂和難以置信的視覺效果連接起來的預設值。快來嘗鮮一下吧！&amp;#10;projectM視覺效果是用OpenGL按照LGPL協議對Milkdrop的重新實現&amp;#10;projectM所要求的僅是一張有3D加速功能的影像顯示卡和您喜愛的音樂。</description>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.heif.so.20.1.0">
+    <support>
+      <mimetype name="image/heif">
+        <extension>.heif</extension>
+        <description>30100</description>
+      </mimetype>
+      <mimetype name="image/heic">
+        <extension>.heic</extension>
+        <description>30101</description>
+      </mimetype>
+    </support>
   </extension>
-</addon>
-
-<addon id="imagedecoder.heif" version="19.0.0.1" name="HEIF image decoder" provider-name="spiff">
-  <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
-  </requires>
-  <extension point="kodi.imagedecoder" library_linux="imagedecoder.heif.so.19.0.0" extension=".heif|.heic" mimetype="image/heif|image/heic"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -783,17 +274,33 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="da_DK">Afkoder til HEIF filformat</summary>
+    <summary lang="de_DE">Decoder für das HEIF-Dateiformat</summary>
     <summary lang="en_GB">HEIF file format decoder</summary>
+    <summary lang="es_MX">Decodificador de formato de archivo HEIF</summary>
+    <summary lang="ko_KR">HEIF 파일 형식 디코더</summary>
+    <summary lang="pl_PL">Dekoder formatu pliku HEIF</summary>
+    <summary lang="ru_RU">Декодер формата файлов HEIF</summary>
+    <summary lang="tr_TR">HEIF dosya biçimi kod çözücü</summary>
+    <summary lang="zh_CN">HEIF 文件格式解码器</summary>
+    <description lang="da_DK">High Efficiency Image File Format (HEIF) er et filformat, der anvender HEVC (h.265) billedkodning til de bedst mulige komprimeringsforhold i øjeblikket.[CR][CR]Understøttelse af dette er leveret af ISO/IEC 23008-12: 2017-kompatibel libheif.</description>
+    <description lang="de_DE">High Efficiency Image File Format (HEIF) ist ein Dateiformat, das HEVC (h.265) Bildkodierung für die besten aktuell möglichen Kompressionsergebnisse nutzt. [CR][CR]Die Unterstützung dafür wird von der ISO/IEC 23008-12:2017-konformen Bibliothek libheif erbracht.</description>
     <description lang="en_GB">High Efficiency Image File Format (HEIF) is a file format employing HEVC (h.265) image coding for the best compression ratios currently possible.[CR][CR]Support for this is provided by ISO/IEC 23008-12:2017 compliant libheif.</description>
+    <description lang="es_MX">High Efficiency Image File Format (HEIF) es un formato de archivo que utiliza la codificación de imagen HEVC (h.265) para los mejores radios de compresión actualmente posibles. [CR][CR]El soporte es proveído conforme al estándar ISO/IEC 23008-12:2017 por la librería libheif.</description>
+    <description lang="ko_KR">고효율 이미지 파일 형식(HEIF)는 현재 가능한 최상의 압축률을 위해 HEVC(h.265) 이미지 코딩을 사용하는 파일 형식입니다.[CR][CR]ISO/IEC 23008-12:2017를 따르는 libheif로 지원됩니다.</description>
+    <description lang="pl_PL">High Efficiency Image File Format (HEIF) to format pliku wykorzystujący kodowanie obrazu HEVC (h.265) w celu uzyskania najlepszych obecnie możliwych współczynników kompresji.[CR][CR]Obsługę tego zapewnia zgodny z normą ISO/IEC 23008-12:2017 libheif.</description>
+    <description lang="ru_RU">High Efficiency Image File Format (HEIF) - это формат файлов, использующий кодирование изображений HEVC (h.265) для достижения наилучших коэффициентов сжатия, возможных в настоящее время.[CR][CR]Поддержка этого формата обеспечивается совместимой с ISO/IEC 23008-12:2017 программой libheif.</description>
+    <description lang="tr_TR">Yüksek Verimli Görüntü Dosyası Formatı (HEIF), şu anda mümkün olan en iyi sıkıştırma oranları için HEVC (h.265) görüntü kodlamasını kullanan bir dosya formatıdır.[CR][CR]Bunun için destek, ISO/IEC 23008-12:2017 uyumlu libheif tarafından sağlanmaktadır.</description>
+    <description lang="zh_CN">高效图像文件格式（HEIF）是一种采用 HEVC（h.265）图像编码的文件格式，可获得当前可能的最佳压缩比。[CR][CR]此支持由符合 ISO/IEC 23008-12:2017 标准的 libheif 提供。</description>
   </extension>
 </addon>
 
-<addon id="audioencoder.wav" version="19.0.1.1" name="Wav Audio Encoder" provider-name="jmarshall">
+<addon id="audioencoder.wav" version="20.2.0.5" name="Wav Audio Encoder" provider-name="jmarshall">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
+    <import addon="kodi.binary.instance.audioencoder" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.19.0.1"/>
+  <extension point="kodi.audioencoder" extension=".wav" library_linux="audioencoder.wav.so.20.2.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -818,49 +325,15 @@ Full changelog here: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Matrix/pvr.
   </extension>
 </addon>
 
-<addon id="vfs.sacd" version="19.0.0.2" name="SACD ISO support" provider-name="spiff">
+<addon id="vfs.rar" version="20.1.0.5" name="RAR archive support" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
-    <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
-    <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
-  </requires>
-  <extension point="kodi.vfs" protocols="sacd" extensions=".iso" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.sacd.so.19.0.0"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Super Audio CD ISO-Image</summary>
-    <summary lang="en_GB">Super Audio CD ISO image</summary>
-    <description lang="de_DE">Mit diesem Addon kann Kodi Inhalte von einem Super Audio CD ISO-Image lesen.
-
-Super Audio CD (SACD) ist ein schreibgeschütztes optisches Disc-Format für die Audiospeicherung, das 1999 eingeführt wurde und von Sony und Philips Electronics gemeinsam als Nachfolger der Compact Disc entwickelt wurde.
-
-Das SACD-Format bietet mehr Audiokanäle (z. B. Surround-Sound), eine höhere Bitrate und eine längere Wiedergabezeit als eine herkömmliche CD.</description>
-    <description lang="en_GB">This addon allows Kodi to read content from a Super Audio CD ISO image.
-
-Super Audio CD (SACD) is a read-only optical disc format for audio storage, introduced in 1999, developed jointly by Sony and Philips Electronics to be the successor to the Compact Disc.
-
-The SACD format offers more audio channels (e.g. surround sound), a higher bit rate, and longer playing time than a conventional CD.</description>
-    <disclaimer lang="de_DE">Die Wiedergabesuche ist derzeit nicht möglich.</disclaimer>
-    <disclaimer lang="en_GB">Playback seek is currently not possible.</disclaimer>
-    <platform/>
-    <license>GPL-2.0-or-later</license>
-    <source>https://github.com/xbmc/vfs.sacd</source>
-    <lifecyclestate type="deprecated" lang="en_GB">Replaced by audiodecoder.sacd addon!</lifecyclestate>
-    <lifecyclestate type="deprecated" lang="de_DE">Ersetzt durch das Addon audiodecoder.sacd!</lifecyclestate>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="vfs.rar" version="19.0.1.1" name="RAR archive support" provider-name="spiff">
-  <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
     <import addon="kodi.binary.global.gui" minversion="5.15.0" version="5.15.0"/>
-    <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
-    <import addon="kodi.binary.instance.vfs" minversion="3.0.0" version="3.0.0"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.7" version="1.1.8"/>
+    <import addon="kodi.binary.instance.vfs" minversion="3.0.1" version="3.0.1"/>
   </requires>
-  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.19.0.1"/>
+  <extension point="kodi.vfs" protocols="rar" extensions=".rar|.001|.cbr" files="true" directories="true" filedirectories="true" encodedhostname="true" library_linux="vfs.rar.so.20.1.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -892,12 +365,104 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
   </extension>
 </addon>
 
-<addon id="imagedecoder.raw" version="19.0.0.1" name="libraw image decoder" provider-name="spiff">
+<addon id="imagedecoder.raw" version="20.1.0.6" name="libraw image decoder" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.7" version="1.1.8"/>
+    <import addon="kodi.binary.instance.imagedecoder" minversion="3.0.0" version="3.0.1"/>
   </requires>
-  <extension point="kodi.imagedecoder" library_linux="imagedecoder.raw.so.19.0.0" extension=".3fr|.arw|.cr2|.crw|.dcr|.dng|.erf|.kdc|.mdc|.mef|.mos|.mrw|.nef|.nrw|.orf|.pef|.ppm|.raf|.raw|.rw2|.srw|.x3f" mimetype="image/3fr|image/arw|image/cr2|image/crw|image/dcr|image/dng|image/erf|image/kdc|image/mdc|image/mef|image/mos|image/mrw|image/nef|image/nrw|image/orf|image/pef|image/x-portable-pixmap|image/raf|image/raw|image/rw2|image/srw|image/x3f"/>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.raw.so.20.1.0">
+    <support>
+      <mimetype name="image/3fr">
+        <extension>.3fr</extension>
+        <description>30100</description>
+      </mimetype>
+      <mimetype name="image/arw">
+        <extension>.arw</extension>
+        <description>30101</description>
+      </mimetype>
+      <mimetype name="image/cr2">
+        <extension>.cr2</extension>
+        <description>30102</description>
+      </mimetype>
+      <mimetype name="image/crw">
+        <extension>.crw</extension>
+        <description>30103</description>
+      </mimetype>
+      <mimetype name="image/dcr">
+        <extension>.dcr</extension>
+        <description>30104</description>
+      </mimetype>
+      <mimetype name="image/dng">
+        <extension>.dng</extension>
+        <description>30105</description>
+      </mimetype>
+      <mimetype name="image/erf">
+        <extension>.erf</extension>
+        <description>30106</description>
+      </mimetype>
+      <mimetype name="image/kdc">
+        <extension>.kdc</extension>
+        <description>30107</description>
+      </mimetype>
+      <mimetype name="image/mdc">
+        <extension>.mdc</extension>
+        <description>30108</description>
+      </mimetype>
+      <mimetype name="image/mef">
+        <extension>.mef</extension>
+        <description>30109</description>
+      </mimetype>
+      <mimetype name="image/mos">
+        <extension>.mos</extension>
+        <description>30110</description>
+      </mimetype>
+      <mimetype name="image/mrw">
+        <extension>.mrw</extension>
+        <description>30111</description>
+      </mimetype>
+      <mimetype name="image/nef">
+        <extension>.nef</extension>
+        <description>30112</description>
+      </mimetype>
+      <mimetype name="image/nrw">
+        <extension>.nrw</extension>
+        <description>30113</description>
+      </mimetype>
+      <mimetype name="image/orf">
+        <extension>.orf</extension>
+        <description>30114</description>
+      </mimetype>
+      <mimetype name="image/pef">
+        <extension>.pef</extension>
+        <description>30115</description>
+      </mimetype>
+      <mimetype name="image/x-portable-pixmap">
+        <extension>.ppm</extension>
+        <description>30116</description>
+      </mimetype>
+      <mimetype name="image/raf">
+        <extension>.raf</extension>
+        <description>30117</description>
+      </mimetype>
+      <mimetype name="image/raw">
+        <extension>.raw</extension>
+        <description>30118</description>
+      </mimetype>
+      <mimetype name="image/rw2">
+        <extension>.rw2</extension>
+        <description>30119</description>
+      </mimetype>
+      <mimetype name="image/srw">
+        <extension>.srw</extension>
+        <description>30120</description>
+      </mimetype>
+      <mimetype name="image/x3f">
+        <extension>.x3f</extension>
+        <description>30121</description>
+      </mimetype>
+    </support>
+  </extension>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -905,20 +470,34 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <summary lang="de_DE">Lesen von RAW-Digicam Bildern</summary>
+    <summary lang="da_DK">Læsning af RAW digicam-billeder</summary>
+    <summary lang="de_DE">Lesen von RAW-Bildern von Digitalkameras</summary>
     <summary lang="en_GB">Reading of RAW digicam images</summary>
-    <description lang="de_DE">Addon basierend auf LibRaw zum Lesen von Dateien im Rohdatenformat der digitalen Fotokameras (CRW / CR2, NEF, RAF, DNG, MOS, KDC, DCR und andere; praktisch alle RAW-Formate werden unterstützt).</description>
+    <summary lang="es_MX">Lectura de imágenes digicam RAW</summary>
+    <summary lang="ko_KR">RAW 디지털 카메라 이미지 읽기</summary>
+    <summary lang="pl_PL">Odczytywanie obrazów cyfrowych RAW</summary>
+    <summary lang="ru_RU">Чтение цифровых изображений в формате RAW</summary>
+    <summary lang="tr_TR">RAW dijital kamera resimlerinin okunması</summary>
+    <summary lang="zh_CN">读取 RAW 数字图像</summary>
+    <description lang="da_DK">Addon baseret på LibRaw til læsning af RAW-filer hentet fra digitale kameraer (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR og andre; stort set alle RAW-formater understøttes).</description>
+    <description lang="de_DE">Addon zum Lesen von Dateien im Rohdatenformat digitaler Fotokameras, basierend auf LibRaw (CRW / CR2, NEF, RAF, DNG, MOS, KDC, DCR und andere. Praktisch alle RAW-Formate werden unterstützt).</description>
     <description lang="en_GB">Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported).</description>
+    <description lang="es_MX">Complemento basado en LibRaw para leer archivos RAW obtenidos de cámaras de fotografía digitales (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR y otros; virtualmente todos los formatos RAW están soportados).</description>
+    <description lang="ko_KR">디지털 사진 카메라에서 얻은 RAW 파일을 읽기 위한 LibRaw 기반 애드온 (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR 등, 거의 모든 RAW 형식이 지원됨).</description>
+    <description lang="pl_PL">Dodatek oparty na LibRaw do odczytu plików RAW uzyskanych z cyfrowych aparatów fotograficznych (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR i innych; obsługiwane są praktycznie wszystkie formaty RAW).</description>
+    <description lang="ru_RU">Дополнение на основе LibRaw для чтения RAW-файлов, полученных с цифровых фотокамер (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR и другие; поддерживаются практически все RAW-форматы).</description>
+    <description lang="tr_TR">Dijital fotoğraf kameralarından (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR ve diğerleri; neredeyse tüm RAW formatları desteklenir) elde edilen RAW dosyalarını okumak için LibRaw tabanlı eklenti.</description>
+    <description lang="zh_CN">基于 LibRaw 的插件，用于读取从数码相机获取的 RAW 文件（CRW/CR2、NEF、RAF、DNG、MOS、KDC、DCR等；几乎支持所有 RAW 格式）。</description>
   </extension>
 </addon>
 
-<addon id="inputstream.rtmp" version="19.0.1.1" name="RTMP Input" provider-name="spiff">
+<addon id="inputstream.rtmp" version="20.3.0.5" name="RTMP Input" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
-    <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
+    <import addon="kodi.binary.instance.inputstream" minversion="3.2.0" version="3.2.0"/>
   </requires>
-  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_linux="inputstream.rtmp.so.19.0.1"/>
+  <extension point="kodi.inputstream" name="rtmp" protocols="rtmp|rtmpt|rtmpe|rtmpte|rtmps" listitemprops="SWFPlayer|swfurl|PageURL|PlayPath|TcUrl|IsLive|swfvfy" library_linux="inputstream.rtmp.so.20.3.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -926,77 +505,43 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <news>v19.0.1
-- Translation updates by Weblate
-
-v19.0.0
-- Changed test builds to released 'Kodi 19 Matrix'
-- Prepared for new language translation by Weblate
-- Increased version to 19.0.0
-  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
-    This done to know easier to which Kodi the addon works.
-
-v3.4.0
-- Update: inputstream API 3.0.1
-  - Fix wrong flags bit shift
-
-v3.3.0
-- Update inputstream API 3.0.0
-- Fix and allow use of stream values:
-  - SWFPlayer
-  - swfurl (same as SWFPlayer)
-  - PageURL
-  - PlayPath
-  - TcUrl
-  - IsLive
-  - swfvfy
-
-v3.2.0
-- Matrix API change inputstream API 2.3.4
-- Add german translation
-- Improve debian package build and add test to Travis CI
-
-v3.1.1
-- Bump verion for PPA build Global API 1.2.0 and inputstream API 2.3.1
-
-v3.1.0
-- Matrix API change inputstream API 2.3.1
-- Matrix APi change Global API 1.2.0
-
-v3.0.5
-- Matrix API change to v2.3.0 - Re-release API change
-
-v3.0.4
-- Matrix API change to v2.3.0 - Pass mime type to inputstreams if available
-
-v3.0.3
-- Matrix API change to v2.2.0 - Allows upto 256 streams
-    </news>
+    <summary lang="ca_ES">Client per a transmissió RTMP</summary>
+    <summary lang="cs_CZ">Klient přenosů RTMP</summary>
     <summary lang="da_DK">Klient til RTMP-streams</summary>
     <summary lang="de_DE">Client für RTMP-Streams</summary>
     <summary lang="en_GB">Client for RTMP streams</summary>
+    <summary lang="es_ES">Cliente para flujos RTMP</summary>
     <summary lang="es_MX">Cliente para flujos RTMP</summary>
-    <summary lang="fi_FI">Asiakasohjelma RTMP-streameille</summary>
+    <summary lang="fi_FI">Asiakaspääte RTMP-mediavirroille</summary>
+    <summary lang="hr_HR">Klijent za RTMP strujanja</summary>
+    <summary lang="it_IT">Client per flussi RTMP</summary>
     <summary lang="ko_KR">RTMP 스트림용 클라이언트</summary>
     <summary lang="pl_PL">Klient strumieni RTMP</summary>
+    <summary lang="ru_RU">Клиент для трансляции потоков RTMP</summary>
     <summary lang="zh_CN">RTMP 流的客户端</summary>
+    <description lang="ca_ES">El protocol de missatgeria en temps real (RTMP) és un protocol de xarxa propietari desenvolupat per Adobe Inc. per transmetre àudio, vídeo i altres dades a través d'Internet des d'un servidor multimèdia a un reproductor flash.[CR][CR]Aquest complement implementa el suport de transmissió RTMP per a Kodi i per als complements instal·lats.</description>
+    <description lang="cs_CZ">Real Time Messaging Protocol (RTMP) je patentovaný síťový protokol vyvinutý společností Adobe Inc. pro přenos zvuku, videa a dalších dat přes internet z multimediálního serveru do přehrávače.[CR][CR]Tento doplněk implementuje podporu proudů RTMP pro Kodi a instalované doplňky.</description>
     <description lang="da_DK">Real Time Messaging Protocol (RTMP) er en proprietær netværksprotokol udviklet af Adobe Inc. til at overføre lyd, video og andre data via internettet fra en medieserver til en flashafspiller.[CR][CR]Dette add-on implementerer RTMP-understøttelse af streaming til Kodi og installerede add-ons.</description>
     <description lang="de_DE">Das Real Time Messaging Protocol (RTMP) ist ein proprietäres Netzwerkprotokoll, das von Adobe Inc. entwickelt wurde, um Audio-, Video- und andere Daten über das Internet von einem Medienserver zu einem Flash Player zu übertragen.[CR][CR]Dieses Addon implementiert die RTMP-Streaming-Unterstützung für Kodi und installierte Add-Ons.</description>
     <description lang="en_GB">The Real Time Messaging Protocol (RTMP) is a proprietary network protocol developed by Adobe Inc. to transmit audio, video and other data over the Internet from a media server to a flash player.[CR][CR]This addon implements RTMP streaming support for Kodi and installed add-ons.</description>
+    <description lang="es_ES">El Protocolo de Mensajería en Tiempo Real (RTMP) es un protocolo de red propietario desarrollado por Adobe Inc. para transmitir audio, vídeo y otros datos por Internet desde un servidor de contenido a un reproductor flash.[CR][CR]Este addon implementa el soporte para RTMP en Kodi y para el resto de addons instalados.</description>
     <description lang="es_MX">El Protocolo de Mensajería en Tiempo Real (RTMP) es un protocolo de red propietario desarrollado por Adobe Inc. para transmitir audio, video y otros datos por internet desde un servidor de medios a un reproductor flash.[CR][CR]Este complemento implementa el soporte de reproducción RTMP para Kodi y para cualquier complemento instalado.</description>
-    <description lang="fi_FI">Real Time Messaging Protocol (RTMP) on Adobe Inc:n kehittämä verkkoprotokolla äänen, videon ja muun tiedon siirtämiseen Internetin kautta mediapalvelimelta flash-soittimeen.[CR][CR]Tämä lisäosa toteuttaa RTMP-suoratoistotuen Kodille ja asennetuille lisäosille.</description>
+    <description lang="fi_FI">Real Time Messaging Protocol (RTMP) on Adoben kehittämä verkkoprotokolla äänen, videon ja muun tiedon siirtoon madiapalvelimen ja Flash-soittimen välillä Internetin välityksellä.[CR][CR]Tämä lisäosa mahdollistaa RTMP-suoratoiston Kodille ja asennetuille lisäosille.</description>
+    <description lang="hr_HR">Protokol slanja poruka u stvarnom vremenu (RTMP) je vlasnički mrežni protokol razvijen od strane Adobe Inc. za odašiljanje zvuka, videa i drugih podataka putem interneta s medijskog poslužitelja prema Flash reproduktoru.[CR][CR]Ovaj dodatak implementira podršku RTMP strujanja za Kodi i instalirane dodatke.</description>
+    <description lang="it_IT">Il Real Time Messaging Protocol (RTMP) è un protocollo di rete proprietario sviluppato da Adobe Inc. per trasmettere audio, video e altri dati su Internet da un server multimediale a un lettore flash.[CR][CR]Questo componente aggiuntivo implementa il supporto dello streaming RTMP per Kodi e per gli add-on.</description>
     <description lang="ko_KR">실시간 메시징 프로토콜(RTMP)은 인터넷을 통해 미디어 서버에서 플래시 플레이어로 오디오, 비디오 및 기타 데이터를 전송하기 위해 Adobe Inc.에서 개발한 독점 네트워크 프로토콜입니다.[CR][CR]이 애드온은 Kodi와 설치된 애드온을 위한 RTMP 스트리밍 지원을 구현합니다.</description>
     <description lang="pl_PL">Protokół RTMP (Real Time Messaging Protocol) to własnościowy protokół sieciowy opracowany przez firmę Adobe Inc. do przesyłania dźwięku, obrazu i innych danych przez Internet z serwera multimediów do odtwarzacza Flash.[CR][CR]Ten dodatek implementuje obsługę przesyłania strumieniowego RTMP dla Kodi i zainstalowanych dodatków.</description>
+    <description lang="ru_RU">Протокол обмена сообщениями в реальном времени (The Real Time Messaging Protocol - RTMP) - это запатентованный сетевой протокол, разработанный компанией Adobe Inc. для передачи аудио, видео и других данных через Интернет с медиа-сервера на флеш-плеер.[CR][CR]Это приложение реализует поддержку потоковой передачи RTMP для Kodi и установленных дополнений.</description>
     <description lang="zh_CN">实时消息协议（RTMP）是 Adobe Inc. 开发的一种专有网络协议，用于通过互联网将音频、视频和其他数据从媒体服务器传输到 flash 播放器。[CR][CR]此插件实现对 Kodi 和已安装插件的 RTMP 流支持。</description>
   </extension>
 </addon>
 
-<addon id="audioencoder.vorbis" version="19.0.1.1" name="Vorbis Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.vorbis" version="20.2.0.5" name="Vorbis Audio Encoder" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
+    <import addon="kodi.binary.instance.audioencoder" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.19.0.1"/>
+  <extension point="kodi.audioencoder" extension=".ogg" library_linux="audioencoder.vorbis.so.20.2.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1025,12 +570,12 @@ v3.0.3
   </extension>
 </addon>
 
-<addon id="audioencoder.lame" version="19.1.2.1" name="Lame MP3 Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.lame" version="20.3.0.5" name="Lame MP3 Audio Encoder" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
+    <import addon="kodi.binary.instance.audioencoder" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.19.1.2"/>
+  <extension point="kodi.audioencoder" extension=".mp3" library_linux="audioencoder.lame.so.20.3.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1058,14 +603,14 @@ v3.0.3
   </extension>
 </addon>
 
-<addon id="repository.yellowdragon.libreelec.kodi" name="LibreELEC Kodi Yellow Dragon Repository" version="10.0.0" provider-name="YLLOW_DRAGON">
+<addon id="repository.yellowdragon.libreelec.kodi" name="LibreELEC Kodi Yellow Dragon Repository" version="11.0.0" provider-name="YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
 	<extension point="xbmc.addon.repository" name="LibreELEC Kodi Yellow Dragon Repository">
-		<info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/10.0.0/repo/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/10.0.0/repo/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/10.0.0/repo/</datadir>
+		<info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/11.0.0/repo/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/11.0.0/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.kodi/11.0.0/repo/</datadir>
 		<hashes>false</hashes>
 	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -1084,16 +629,16 @@ v3.0.3
 	</extension>
 </addon>
 
-<addon id="pvr.hts" version="19.0.6.1" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
+<addon id="pvr.hts" version="20.6.1.2" name="Tvheadend HTSP Client" provider-name="Adam Sutton, Sam Stenvall, Lars Op den Kamp, Kai Sommerfeld">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
     <import addon="kodi.binary.global.network" minversion="1.0.0" version="1.0.4"/>
     <import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4"/>
-    <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
-    <import addon="kodi.binary.instance.pvr" minversion="7.1.0" version="7.1.0"/>
+    <import addon="kodi.binary.instance.inputstream" minversion="3.2.0" version="3.2.0"/>
+    <import addon="kodi.binary.instance.pvr" minversion="8.2.0" version="8.2.0"/>
   </requires>
-  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.19.0.6"/>
+  <extension point="kodi.pvrclient" library_linux="pvr.hts.so.20.6.1"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1118,16 +663,16 @@ v3.0.3
     <summary lang="es_ES">Interfaz Kodi para Tvheadend</summary>
     <summary lang="es_MX">El frontend de Kodi para Tvheadend</summary>
     <summary lang="et_EE">Kodi liides Tvheadend'ile</summary>
-    <summary lang="fi_FI">Kodin Tvheadend-asiakasohjelma</summary>
+    <summary lang="fi_FI">Tvheadend-käyttöliittymä Kodille</summary>
     <summary lang="fr_CA">Frontale Kodi pour Tvheadend</summary>
     <summary lang="fr_FR">Interface logicielle pour Tvheadend</summary>
     <summary lang="gl_ES">Interface do Kodi para Tvheadend</summary>
     <summary lang="he_IL">לקוח טלוויזיה חיה עבור Tvheadend</summary>
-    <summary lang="hr_HR">Kodi sučelje za Tvheadend</summary>
+    <summary lang="hr_HR">Kodi pozadinski softver za Tvheadend</summary>
     <summary lang="hu_HU">Kodi előtét a TVHeadend-hez</summary>
     <summary lang="id_ID">Frontend Kodi untuk Tvheadend</summary>
     <summary lang="is_IS">Kodi framendi fyrir Tvheadend</summary>
-    <summary lang="it_IT">Frontend di Kodi per Tvheadend</summary>
+    <summary lang="it_IT">Frontend Kodi per Tvheadend</summary>
     <summary lang="ja_JP">TVheadend 用 Kodi フロントエンド</summary>
     <summary lang="ko_KR">Tvheadend 을 위한 Kodi 프론트엔드</summary>
     <summary lang="lt_LT">Kodi naudotojo sąsaja skirta Tvheadend</summary>
@@ -1159,9 +704,9 @@ v3.0.3
     <description lang="af_ZA">Tvheadend voorprogram; ondersteun stroom van Lewendige TV &amp; Opnames, EPG, Tydhouers</description>
     <description lang="bg_BG">Клиент за „Tvheadend“. Поддържа телевизия на живо, записване, електронен програмен справочник и броячи.</description>
     <description lang="ca_ES">Frontal de Tvheadend; compatible amb la transmissió de TV en directe i enregistraments, guia electrònica de programació (EPG), temporitzadors</description>
-    <description lang="cs_CZ">Rozhraní Tvheadend; podporuje streamování živého vysílání a nahrávání, televizní program, časovače.</description>
+    <description lang="cs_CZ">Rozhraní Tvheadend; podporuje streamování živého vysílání a nahrávání, televizní program, časovače</description>
     <description lang="cy_GB">Blaen Tvheadend: cefnogi ffrydio Teledu Byw a Recordio, Amserlenni, Amseryddion</description>
-    <description lang="da_DK">Tvheadend-brugerflade; understøtter streaming af direkte tv og optagelser, EPG og timere</description>
+    <description lang="da_DK">Tvheadend-brugerflade; understøtter streaming af direkte tv og optagelser, EPG og timeroptagelser</description>
     <description lang="de_DE">PVR-Client für Tvheadend. Unterstützt TV, Aufnahmen, Programm-Guide (EPG) und Timer</description>
     <description lang="el_GR">Frontend για το Tvheadend. Υποστηρίζει ροές Live TV &amp; Εγγραφές, EPG, Χρονοδιακόπτες</description>
     <description lang="en_AU">Tvheadend frontend; supporting streaming of Live TV &amp; Recordings, EPG, Timers</description>
@@ -1169,19 +714,19 @@ v3.0.3
     <description lang="en_NZ">Tvheadend frontend; supporting streaming of Live TV &amp; Recordings, EPG, Timers</description>
     <description lang="en_US">Tvheadend frontend; supporting streaming of Live TV &amp; Recordings, EPG, Timers</description>
     <description lang="es_AR">Interfaz Tvheadend; soporta la reproducción de TV en vivo, grabación, guía de programación, temporizadores</description>
-    <description lang="es_ES">Interfaz Tvheadend; soporta la reproducción de TV en vivo, grabación, guía de programación, temporizadores</description>
+    <description lang="es_ES">Interfaz Tvheadend; transmisión de TV en directo y grabaciones, EPG, temporizadores</description>
     <description lang="es_MX">Frontend de Tvheadend; Compatible con la transmisión de TV en directo y Grabaciones, EPG, Temporizadores</description>
     <description lang="et_EE">Tvheadend'i liides. Toetab telekanalite striimimist ja salvestamist ning elektroonilist saatekava.</description>
-    <description lang="fi_FI">Tvheadend-asiakasohjelma. Tukee suorien tv-lähetysten ja tallennusten katsomista, ohjelmaopasta ja ohjelmien ajastamista.</description>
+    <description lang="fi_FI">Tvheadend-käyttöliittymä, joka tukee televisiolähetysten ja tallenteiden suoratoistoa, ohjelmaopasta ja ajastuksia.</description>
     <description lang="fr_CA">Frontale pour Tvheadend, prenant en charge la diffusion en continu des télés en direct et les enregistrements, le GÉP et les minuteries</description>
-    <description lang="fr_FR">Interface logicielle pour Tvheadend gérant la lecture en continu de la TV en direct et des enregistrements, le guide électronique des programmes TV et les programmations.</description>
+    <description lang="fr_FR">Interface logicielle pour Tvheadend gérant la lecture en continu de la TV en direct et les enregistrements, le guide électronique des programmes TV et les programmations.</description>
     <description lang="gl_ES">Interface Tvheadend; soporta a transmisión de TV en directo e Gravacións, Guía, temporizadores</description>
     <description lang="he_IL">לקוח טלוויזיה חיה של Tvheadend. תומך בהזרמת שידורים חיים והקלטות, האזנה לרדיו, הצגת לוח שידורים ותזמון הקלטות.</description>
-    <description lang="hr_HR">Tvheadend pozadinski softver podržava gledanje i snimanje TV programa, elektronski programski vodič (EPG) i zakazano snimanje.</description>
+    <description lang="hr_HR">Tvheadend sučelje podržava gledanje i snimanje TV programa, elektronski programski vodič (EPG) i zakazano snimanje</description>
     <description lang="hu_HU">TVHeadend előtét. Élő adások és felvételek támogatása EPG-vel és időzítéssel</description>
     <description lang="id_ID">Frontend Tvheadend; mendukung menangkap siaran TV Live &amp; Rekaman, EPG, Timer</description>
     <description lang="is_IS">Tvheadend framendi; styður streymingu á beinum útsendingum og upptökum, rafrænum sjónvarpsvísum (EGP), tímatökur</description>
-    <description lang="it_IT">Frontend di Tvheadend; supporta lo streaming di Live TV &amp; Registrazione, EPG, Timers</description>
+    <description lang="it_IT">Frontend Tvheadend; supporta lo stream e la registrazione di Live TV, EPG, timer</description>
     <description lang="ja_JP">TVheadend フロントエンドです。ライブTVストリーミング、録画、EPG、タイマーをサポートしています。</description>
     <description lang="ko_KR">Tvheadend 프론트엔드; TV 시청 &amp; 녹화, EPG, 타이머 지원</description>
     <description lang="lt_LT">Tvheadend naudotojo sąsaja; palaiko televizijos transliacijas ir įrašus, EPG, laikmačius</description>
@@ -1213,12 +758,20 @@ v3.0.3
   </extension>
 </addon>
 
-<addon id="imagedecoder.mpo" version="19.0.0.1" name="MPO image decoder" provider-name="spiff">
+<addon id="imagedecoder.mpo" version="20.1.0.5" name="MPO image decoder" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.imagedecoder" minversion="2.1.0" version="2.1.1"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.7" version="1.1.8"/>
+    <import addon="kodi.binary.instance.imagedecoder" minversion="3.0.0" version="3.0.1"/>
   </requires>
-  <extension point="kodi.imagedecoder" library_linux="imagedecoder.mpo.so.19.0.0" extension=".mpo" mimetype="image/mpo"/>
+  <extension point="kodi.imagedecoder" library_linux="imagedecoder.mpo.so.20.1.0">
+    <support>
+      <mimetype name="image/mpo">
+        <extension>.mpo</extension>
+        <description>30100</description>
+      </mimetype>
+    </support>
+  </extension>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1226,19 +779,29 @@ v3.0.3
     <assets>
       <icon>icon.png</icon>
     </assets>
+    <summary lang="da_DK">Multi Picture Object (MPO) billedafkoder</summary>
     <summary lang="de_DE">Multi Picture Object (MPO) Bilddekodierer</summary>
     <summary lang="en_GB">Multi Picture Object (MPO) image decoder</summary>
+    <summary lang="ko_KR">Multi Picture Object (MPO) 이미지 디코더</summary>
+    <summary lang="pl_PL">Dekoder obrazu Multi Picture Object (MPO)</summary>
+    <summary lang="ru_RU">Декодер изображений Multi Picture Object (MPO)</summary>
+    <summary lang="zh_CN">多图片对象（MPO）图像解码器</summary>
+    <description lang="da_DK">Et add-on til at afkode MPO (multiple picture object) filer. Disse bruges hovedsageligt til 3D-kameraer og Nintendo 3DS.</description>
     <description lang="de_DE">Ein Addon zum Dekodieren von MPO-Dateien (Multiple Picture Object). Diese werden hauptsächlich für 3D-Kameras und den Nintendo 3DS verwendet.</description>
     <description lang="en_GB">An addon to decode MPO (multiple picture object) files. These are used mainly for 3D cameras and the Nintendo 3DS.</description>
+    <description lang="ko_KR">MPO(multiple picture object) 파일을 디코딩하는 애드온입니다. 주로 3D 카메라와 Nintendo 3DS에 사용됩니다.</description>
+    <description lang="pl_PL">Dodatek do dekodowania plików MPO (Multi Picture Object). Są one używane głównie w aparatach 3D i Nintendo 3DS.</description>
+    <description lang="ru_RU">Дополнение для декодирования файлов MPO (multiple picture object). Они используются в основном для 3D-камер и Nintendo 3DS.</description>
+    <description lang="zh_CN">用于解码 MPO（Multi Picture Object 多图片对象）文件的插件。主要用于3D相机和任天堂3DS。</description>
   </extension>
 </addon>
 
-<addon id="audioencoder.flac" version="19.0.1.1" name="Flac Audio Encoder" provider-name="spiff">
+<addon id="audioencoder.flac" version="20.2.0.5" name="Flac Audio Encoder" provider-name="spiff">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
-    <import addon="kodi.binary.instance.audioencoder" minversion="2.1.0" version="2.1.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
+    <import addon="kodi.binary.instance.audioencoder" minversion="3.0.0" version="3.0.0"/>
   </requires>
-  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.19.0.1"/>
+  <extension point="kodi.audioencoder" extension=".flac" library_linux="audioencoder.flac.so.20.2.0"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
     <license>GPL-2.0-or-later</license>
@@ -1267,244 +830,25 @@ v3.0.3
   </extension>
 </addon>
 
-<addon id="inputstream.adaptive" version="19.0.7.1" name="InputStream Adaptive" provider-name="peak3d">
+<addon id="inputstream.adaptive" version="20.3.5.1" name="InputStream Adaptive" provider-name="peak3d">
   <requires>
-    <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+    <import addon="kodi.binary.global.main" minversion="2.0.0" version="2.0.2"/>
     <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
-    <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
+    <import addon="kodi.binary.global.gui" minversion="5.15.0" version="5.15.0"/>
+    <import addon="kodi.binary.global.filesystem" minversion="1.1.7" version="1.1.8"/>
     <import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4"/>
-    <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
-    <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
+    <import addon="kodi.binary.instance.inputstream" minversion="3.2.0" version="3.2.0"/>
+    <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.3"/>
   </requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_linux="inputstream.adaptive.so.19.0.7"/>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|manifest_update_parameter|manifest_params|manifest_headers|stream_params|stream_headers|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data|stream_selection_type|chooser_bandwidth_max|chooser_resolution_max|chooser_resolution_secure_max" library_linux="inputstream.adaptive.so.20.3.5"/>
   <extension point="xbmc.addon.metadata">
     <platform/>
-    <news>
-v19.0.7 (2022-06-23)
-- [HLS] fix regression with chunk transferred AES-128 streams
-
-v19.0.6 (2022-06-16)
-[HLS] support PKCS7 padding for AES-128 streams (fixes for AES-128 fmp4 streams)
-
-v19.0.5 (2022-05-18)
-- Fix estimate segment count
-- Update codecs in decrypter interface
-- [HLS] set byteranged init segments explicity (fixes crashing on certain playlists)
-
-v19.0.4 (2022-04-24)
-- Translations updates from Weblate -be_by, fi_fi, cs_cz
-- [DRM] Keep same session from pre-init
-- Fix crash related to mp4 webvtt subtitles
-
-v19.0.3 (2022-02-10)
-- Translations updates from Weblate - hr_hr, nl_nl, sk_s
-- [HLS] Fix for large media sequence numbers
-- [DASH] Allow for multiple representation/bandwidth placeholders
-
-v19.0.2 (2022-01-11)
-- update nl translations
-- [webvtt] only read payl boxes for text
-
-v19.0.1 (2021-12-10)
-- Fix compile error by GCC 11
-
-v19.0.0 (2021-09-14)
-- Change test builds to released 'Kodi 19 Matrix'
-- Increase version to 19.0.0
-  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
-    This done to know easier to which Kodi the addon works.
-
-v2.6.23 (2021-08-06)
-- Translations from weblate - de_de, ja_jp, ko_kr
- - [Android] use multiple drm sessions (solves stuttering)
- - [DASH] allow for misaligned segs in SegmentTimeline
-
-v2.6.22 (2021-07-18)
-- Automation test release
-
-v2.6.21 (2021-07-18)
-- Automation test release
-
-v2.6.20 (2021-07-17)
-Translations updates from Weblate
-	- de_de, el_gr, es_es, fr_fr, he_il, hi_in, hr_hr, hu_hu, it_it, ja_jp, ko_kr, nl_nl, pl_pl, ro_ro, ru_ru, sk_sk, sv_se
-
-v2.6.19 (2021-07-17)
-- Translations updates from Weblate
-	- af_za, am_et, ar_sa, ast_es, az_az, be_by, bg_bg, bs_ba, ca_es, cs_cz, cy_gb, da_dk, de_de, el_gr, en_au, en_gb, en_nz, en_us, eo, es_ar, es_es, es_mx, et_ee, eu_es, fa_af, fa_ir, fi_fi, fo_fo, fr_ca, fr_fr, gl_es, he_il, hi_in, hr_hr, hu_hu, hy_am, id_id, is_is, it_it, ja_jp, kn_in, ko_kr, lt_lt, lv_lv, ml_in, mn_mn, mt_mt, my_mm, nb_no, nl_nl, os_os, pl_pl, pt_br, pt_pt, ro_md, ro_ro, ru_ru, scn, si_lk, sk_sk, sq_al, sr_rs, sr_rs@latin, sv_se, szl, ta_in, tg_tj, th_th, tr_tr, uk_ua, uz_uz, vi_vn, zh_cn, zh_tw
-
-v2.6.18 (2021-07-13)
-- Add support to pre-initialise DRM
-- Fix intermittent crash when stopping Widevine videos
-
-v2.6.17 (2021-06-20)
-- Fix decrypt errors on non-Android platforms
-- [DASH] fix representation base urls
-- Don't use filecache for subtitle downloads
-
-v2.6.16 (2021-05-21)
-- Allow download retries for VOD
-- [DASH] fix for minimumUpdatePeriod=0
-- [DASH] remove media_renewal_url and media_renewal_time
-- License renewal for widevine
-- [HLS] Fix SSD being deleted with multiple encrypted streams
-- Overhaul manifest redirect logic
-- fix seeking into separate chapters/resume time
-- fix HEVC extra data crash
-- improve settings
-
-v2.6.15 (2021-05-18)
-- [HLS] support webvtt subtitle extensions
-- [DASH] fix segmentTemplate calculation
-- [HEVC] use constant frame rate if average is 0
-- [HLS] don't reset pts on new periods
-- Don't remove secure decoder cap if not requested in manifest_type
-- [Android] fallback to widevine L3 if L1 provisioning fails
-
-v2.6.14 (2021-04-22)
-- Don't overwrite manifest headers with stream headers
-- Stream headers default to manifest headers
-- ac3 is recognised separately to eac3
-- [DASH] time and number placeholders can be used simultaneously
-- [DASH] manifest_update_parameter property defaults to 'full' for SegmentTimeline
-- [DASH] pssh attribute in ContentProtection tag allowed without cenc namespace
-- [DASH] support ttml subs where codec isn't specified
-
-v2.6.13 (2021-04-10)
-- Fix Debian packaging
-
-v2.6.12 (2021-04-09)
-- Remove Android specific decrypter search paths
-- Move Android addon to binary addons repo
-
-v2.6.11 (2021-04-08)
-- Fix ampersand in changelog causing issues from v2.6.9 and v2.6.10
-
-v2.6.10 (2021-04-08)
-- Fix release build
-
-v2.6.9 (2021-04-08)
-- Fix MPD Timing (remove publishTime and presentationTimeOffset)
-- [Dash] Correctly set timeshift_buffer (live)
-- [Dash] Support fpsScale in AdaptationSets
-- [Dash] Fix missing audio languages
-- [DASH] Support ec-3 channel count (urn:mpeg:mpegB:cicp:ChannelConfiguration)
-
-v2.6.8 (2021-03-26)
-- [Dash] Append / to baseurl if required
-- Fix Base Domain (fixes uri=/path/)
-
-v2.6.7 (2021-02-10)
-- Fix build for ios/tvos
-- Use the full BaseUrl if it's a real url inside an AdaptationSet
-
-v2.6.6 (2020-11-21)
-- Matrix VideoCodec API change to v2.0.2 - Fix crypto session id handling
-
-v2.6.5 (2020-11-09)
-- Matrix API change to v3.0.1 - Fix wrong flags bit shift
-
-v2.6.4 (2020-10-31)
-- Fix protocol search in manifest URL
-
-v2.6.3 (2020-10-31)
-- New C-api changes
-- Fix URL's without domain (files)
-- [MPD] Fix SegmentTimeline without given startTime
-
-v2.6.2 (2020-10-30)
-- revert / rework effective url issues
-- api related changes (buildsystem)
-
-v2.6.1 (2020-10-25)
-- Fix effective url if paths beginning with / provided
-- Several translations added / fixed
-- Fix webvtt subtitles for time formats without leading hour 00:
-- Fix segfault when playing PlayReady content (Android)
-- Adapt to kodi c api changes
-
-v2.6.0 (2020-05-16)
-- Update inputstream API 2.3.1
-- Update Global API 1.2.0
-
-v2.5.6 (2020-04-25)
-- Matrix API change to v2.3.0 - Pass mime type to inputstreams if available
-- Matrix API change to v2.2.0 - Allows upto 256 streams, useful for netflix etc.
-
-v2.5.5 (2020-04-06)
-- Matrix API change - Remove CanPauseSteram() and CanSeekStream()
-- Update .gitignore
-
-v2.5.4 (2020-01-19)
-- [HLS] url based initialization segment
-- [DASH] Use effective URL for manifest update
-- Implement Media Renewal Time
-- Fixed WebVTT rlm and lrm
-- Fixed and improved subtitle properties)
-- Add multiple languages
-- [DASH] Fix zero devision segfault
-
-v2.5.3 (2019-11-21)
-- Fix retrieving SIDX from indexRange streams (youtube)
-- Rework seek (use lead stream)
-
-v2.5.2 (2019-11-18)
-- More languages added
-- DolbyVision codec (dvhe) support, kodi changes required to get it work
-- Add property to start LiveStreams from beginning (play_timeshift_buffer)
-- Pass media_headers when downloading pssh-search segment
-- Minor DASH full update / timing / url generation fixes
-
-v2.5.1 (2019-10-07)
-- Language spain added
-- multi period support
-- mp4 webtt binary representation added
-- minor fixes
-
-v2.5.0 (2019-09-02)
-- New major versions for Matrix
-
-v2.4.0 (2019-08-16)
-- Update Kodi VFS API 1.0.3
-- Build script cleanups
-- Implement VP9 static HDR metadata
-- MPD: location attibute added
-- MPD: livestream bugfixes (uninitialized startPTS)
-
-v2.3.22 (2019-06-14)
-- Bento4: sample duration workaround (24/1)
-- WVDecrypter: remove sleep between decrypt calls
-
-v2.3.21 (2019-06-07)
-- [DASH] initialize segment::range_begin_ for URL segments (youtube)
-
-v2.3.20 (2019-06-07)
-- Fix parsing PR ContentProtection KID
-
-v2.3.19 (2019-06-02)
-- [widevine] remove API 8 / Add API 11
-- [TS] Signal configuration change if extra-data has changed
-- [DASH] Use PlayReady WRMHEADER to retrieve DefaultKID
-- [DASH] Allow URL_SEGMENTS + Range-Bytes
-
-v2.3.18 (2019-05-11)
-- align settings with internal resolution check
-- [HLS] support single playlists
-
-v2.3.17 (2019-04-16)
-- Fix KID's with 0 char inside
-
-v2.3.16 (2019-03-25)
-- TTML parser fix
-- [HLS] Add HEVC streams / Fix extra_data_size in ts parser
-- [HLS] effective URL for license
-
-v2.3.15 (2019-02-11)
-- Fix windows build
-
-v2.3.14 (2019-02-10)
-- Add WebM container parser
-    </news>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/xbmc/inputstream.adaptive</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
     <summary lang="ca_ES">Client InputStream per a transmissions adaptatives</summary>
     <summary lang="cs_CZ">Klient adaptivních toků protokolu InputStream</summary>
     <summary lang="da_DK">InputStream-klient til adaptive streams</summary>
@@ -1512,12 +856,14 @@ v2.3.14 (2019-02-10)
     <summary lang="en_GB">InputStream client for adaptive streams</summary>
     <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
     <summary lang="es_MX">Cliente InputStream para transmisiones adaptativas</summary>
-    <summary lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</summary>
+    <summary lang="fi_FI">InputStream-asiakas mukautuville mediavirroille</summary>
     <summary lang="fr_FR">Client InputStream pour les flux adaptatifs</summary>
     <summary lang="he_IL">לקוח InputStream לתזרימים מסתגלים</summary>
     <summary lang="hr_HR">InputStream klijent za prilagodljiva strujanja</summary>
     <summary lang="hu_HU">InputStream kliens az adaptív streamekhez</summary>
+    <summary lang="it_IT">Client InputStream per stream adattivi</summary>
     <summary lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</summary>
+    <summary lang="lv_LV">InputStream klients adaptīvām straumēm</summary>
     <summary lang="nl_NL">InputStream client voor adaptive streams</summary>
     <summary lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</summary>
     <summary lang="ru_RU">InputStream клиент для адаптивных трансляций</summary>
@@ -1525,16 +871,18 @@ v2.3.14 (2019-02-10)
     <description lang="ca_ES">Client InputStream per a transmissions adaptatives</description>
     <description lang="cs_CZ">Klient adaptivních toků protokolu InputStream</description>
     <description lang="da_DK">InputStream-klient til adaptive streams</description>
-    <description lang="de_DE">InputStream-Client für adaptive Streams</description>
-    <description lang="en_GB">InputStream client for adaptive streams</description>
+    <description lang="de_DE">InputStream-Client für adaptive Streams. Unterstützt werden Streamingprotokolle wie MPEG-DASH, HLS und Microsoft Smooth Streaming.[CR][CR] Das Addon unterstützt ebenfalls DRM-geschützte Streams, wie Google Widevine, Microsoft Playready und andere.[CR][CR]Für Dokumentation https://github.com/xbmc/inputstream.adaptive besuchen</description>
+    <description lang="en_GB">InputStream client for adaptive streams. Common streaming protocols such as MPEG-DASH, HLS and Microsoft Smooth Streaming are supported.[CR][CR]The add-on also has support for DRM protected streams, such as Google Widevine, Microsoft PlayReady and others.[CR][CR]For documentation visit: https://github.com/xbmc/inputstream.adaptive</description>
     <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
     <description lang="es_MX">Cliente InputStream para transmisiones adaptativas</description>
-    <description lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</description>
-    <description lang="fr_FR">Client InputStream pour les flux adaptatifs</description>
+    <description lang="fi_FI">InputStream-asiakas mukautuville mediavirroille</description>
+    <description lang="fr_FR">Client InputStream pour les flux adaptatifs. Les protocoles de streaming courants tels que MPEG-DASH, HLS et Microsoft Smooth Streaming sont pris en charge.[CR][CR]Le module complémentaire prend également en charge les flux protégés par DRM, tels que Google Widevine, Microsoft PlayReady et autres.[CR][CR] ]Pour la documentation, visitez : https://github.com/xbmc/inputstream.adaptive</description>
     <description lang="he_IL">לקוח InputStream לתזרימים מסתגלים</description>
     <description lang="hr_HR">InputStream klijent za prilagodljiva strujanja</description>
     <description lang="hu_HU">InputStream kliens az adaptív streamekhez</description>
+    <description lang="it_IT">Client InputStream per flussi adattivi. Sono supportati protocolli di streaming comuni come MPEG-DASH, HLS e Microsoft Smooth Streaming.[CR][CR]L'add-on supporta anche flussi protetti da DRM, come Google Widevine, Microsoft PlayReady e altri.[CR][CR] ]Per la documentazione visita: https://github.com/xbmc/inputstream.adaptive</description>
     <description lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</description>
+    <description lang="lv_LV">InputStream klients adaptīvām straumēm</description>
     <description lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</description>
     <description lang="ru_RU">InputStream клиент для адаптивных трансляций</description>
     <description lang="zh_CN">用于自适应流的 InputStream 客户端</description>
